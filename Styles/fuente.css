@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+.letra{
+    font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 24px;
+}
+.titulo{
+    font-family: 'Yanone Kaffeesatz', sans-serif; color: white; font-size: 45px;
+
+}.tituloBlack{
+    font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 45px;
+}
+.subtitulo{
+    font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 35px;
+}

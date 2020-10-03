@@ -1,0 +1,17 @@
+.form-principal{
+    width: 100%; align-items: center;
+
+}
+.form-principal form{
+    margin: 0px 5px 0px 0px;
+}
+.form-principal .centrar{
+    width: 80%; margin: 10% 10% 10% 10%;
+}
+.form-principal .centrar *{
+    margin: 0px 5px 0px 5px;
+}
+
+legend{
+    width: 200px; margin: 0 10px 0 0 ;
+}

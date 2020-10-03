@@ -1,0 +1,14 @@
+window.setTimeout(function(){
+    $(".alert").fadeTo(500,0).slideDown(1000,function(){
+      $(this).remove();
+    });
+   },1200);
+$("#ClickBebidac").click(function(){
+    $("#bebidac").toggle();
+});
+$("#ClickBebidah").click(function(){
+    $("#bebidah").toggle();
+});
+$("#ClickComida").click(function(){
+    $("#comida").toggle();
+});

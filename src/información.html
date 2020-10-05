@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../Styles/css/bootstrap.min.css" >
     <link rel="stylesheet" href="../Styles/css/mdb.min.css" >
-    <!-- <link rel="stylesheet" href="../Styles/pruebacss.css"> -->
-
+    <link rel="stylesheet" href="../Styles/styles.css">
     <title>Información</title>
 </head>
 <body >
@@ -88,60 +87,7 @@
         ofrecemos diferentes tipos de tés e infusiones como bebidas de cafetería: cada uno de ellos ofrece un sabor diferente y tienen la máxima calidad.</p>
     
       <!-- Grid row -->
-      <div style="display: inline-flex;" class="row">
-    
-        <!-- Grid column -->
-        <div class="col-lg-12 mb-lg-0 mb-4">
-    
-          <!-- Form with header -->
-          <div class="card col-lg-5 mb-5">
-            <div class="card-body">
-              <!-- Header -->
-              <div class="form-header blue accent-1">
-                <h3 class="mt-2"><i class="fas fa-envelope"></i> Escríbenos:</h3>
-              </div>
-              <p class="dark-grey-text">Escriba a nuestra cafetería para cualquier consulta o pedido</p>
-              <!-- Body -->
-              <div class="md-form">
-                <i class="fas fa-user prefix grey-text"></i>
-                <input type="text" id="form-name" class="form-control" placeholder="Nombre">
-                
-              </div>
-              <div class="md-form">
-                <i class="fas fa-envelope prefix grey-text"></i>
-                <input type="text" id="form-email" class="form-control" placeholder="Email">
-              
-              </div>
-              <div class="md-form">
-                <i class="fas fa-tag prefix grey-text"></i>
-                <input type="text" id="form-Subject" class="form-control">
-                <label for="form-Subject">Teléfono</label>
-              </div>
-              <div class="md-form">
-                <i class="fas fa-pencil-alt prefix grey-text"></i>
-                <textarea id="form-text" class="form-control md-textarea" rows="3" placeholder="Mensaje"></textarea>
-              </div>
-              <div class="text-center">
-                <button class="btn btn-light-blue">Enviar</button>
-              </div>  
-            </div>
-          </div>
-       
-        
-          <!-- Form with header -->
-          <div class="card col-lg-5 mb-4 conte">
-            <div class="card-body">
-              <div class="form-header blue accent-1">
-                <h3 class="mt-2"><i class="fas fa-envelope"></i>Nuestra Ubicación:</h3>
-              </div>
-               <div class="mb-4">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.3198228799033!2d-88.24041888584405!3d14.919264673189161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f642c1adcc94229%3A0x3cefde26b0fe56a1!2sLa%20Ruta%20Del%20Caf%C3%A9!5e0!3m2!1ses-419!2shn!4v1590861893046!5m2!1ses-419!2shn" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-              </div>
-            </div>
-                
-              </div>
-        </div>
-       
+      <!--Section: Contact v.1-->
         <div class="text-md-left w-responsive mx-auto pb-5">
           <h3 class="h1-responsive font-weight-bold text-center my-5">Politicas de la cafetería</h3>
           <div>
@@ -189,9 +135,78 @@
     
     </section>
 
-            
-         
-      
+    <!--Section: Contact v.1-->
+ <div style="width: 80%; margin: 0 10% 0 10%;" class="mb-4">
+   <!--Section: Contact v.2-->
+<section class="section">
+
+  <!--Section heading-->
+  <h2 class="section-heading h1 pt-4 mb-5">Contáctenos</h2>
+
+  <div class="card">
+
+    <div class="card-body">
+
+      <!--Google map-->
+      <div id="map-container-google-3" class="z-depth-1-half map-container-7" style="height: 200px">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.3198228799033!2d-88.24041888584405!3d14.919264673189161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f642c1adcc94229%3A0x3cefde26b0fe56a1!2sLa%20Ruta%20Del%20Caf%C3%A9!5e0!3m2!1ses-419!2shn!4v1590861893046!5m2!1ses-419!2shn" frameborder="0"
+        style="border:0" allowfullscreen></iframe>
+      </div>
+
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+          <form>
+
+            <div class="md-form">
+              <input type="text" id="contact-name" class="form-control" placeholder="Nombre">
+              
+            </div>
+
+            <div class="md-form">
+              <input type="text" id="contact-email" class="form-control" placeholder="Email">
+           
+            </div>
+
+            <div class="md-form">
+              <input type="text" id="contact-Subject" class="form-control">
+              <label for="contact-Subject" class="">Subject</label>
+            </div>
+
+          </form>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+          <div class="md-form primary-textarea">
+            <textarea id="contact-message" class="md-textarea form-control mb-0" rows="5" style="padding-bottom: 1.2rem;"></textarea>
+            <label for="contact-message">Mensaje</label>
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-12">
+          <div class="text-center">
+            <a class="btn btn-mdb-color btn-block">Enviar Mensaje</a>
+          </div>
+        </div>
+        <!--Grid column-->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!--Section: Contact v.2-->
+ </div>   
+
+
+    
 <footer class="page-footer font-small special-color-dark pt-4">
 
   <!-- Footer Elements -->

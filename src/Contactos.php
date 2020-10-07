@@ -33,7 +33,7 @@
               <a class="nav-link " href="Sobre nosotros.html">Sobre nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="información.html">Información</a>
+              <a class="nav-link " href="información.php">Información</a>
             </li>
             <li class="nav-item">
               <a class="nav-link "href="Carta.html">Carta</a>

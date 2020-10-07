@@ -49,7 +49,7 @@
                       </div>
                   <li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Contactos.html" tabindex="-1" aria-disabled="false">Contactos</a>
+                      <a class="nav-link" href="Contactos.php" tabindex="-1" aria-disabled="false">Contactos</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="Galería.html" tabindex="-1" aria-disabled="false">Galería</a>

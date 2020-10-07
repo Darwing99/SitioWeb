@@ -33,7 +33,7 @@
                 <a class="nav-link " href="información.php">Información</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link "href="Carta.html">Carta</a>
+                <a class="nav-link "href="Carta.php">Carta</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="#" tabindex="-1" aria-disabled="false"> Finca</a>
@@ -43,7 +43,7 @@
                   Aprende con nosotros
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item " href="recetas.html">Recetas</a>
+                  <a class="dropdown-item " href="recetas.php">Recetas</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item " href="videotutorial.html">VideoTutoriales </a>
                 </div>
@@ -52,10 +52,10 @@
                 <a class="nav-link" href="Contactos.php" tabindex="-1" aria-disabled="false">Contactos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Galería.html" tabindex="-1" aria-disabled="false">Galería</a>
+                <a class="nav-link" href="Galería.php" tabindex="-1" aria-disabled="false">Galería</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html" tabindex="-1" aria-disabled="false">Blog</a>
+                <a class="nav-link" href="blog.php" tabindex="-1" aria-disabled="false">Blog</a>
               </li>
               <li class="nav-item">
               <a class="nav-link" href="../app/Formularios/login.php" tabindex="-1" aria-disabled="false">System Coffee</a>

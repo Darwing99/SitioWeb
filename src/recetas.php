@@ -29,13 +29,13 @@
               <a class="nav-link " href="Sobre nosotros.html">Sobre nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="información.html">Información</a>
+              <a class="nav-link " href="información.php">Información</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link "href="Carta.html">Carta</a>
+              <a class="nav-link "href="Carta.php">Carta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="finca.html" tabindex="-1" aria-disabled="false"> Finca</a>
+              <a class="nav-link " href="finca.php" tabindex="-1" aria-disabled="false"> Finca</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,13 +48,13 @@
               </div>
           <li>
             <li class="nav-item">
-              <a class="nav-link" href="Contactos.html" tabindex="-1" aria-disabled="false">Contactos</a>
+              <a class="nav-link" href="Contactos.php" tabindex="-1" aria-disabled="false">Contactos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Galería.html" tabindex="-1" aria-disabled="false">Galería</a>
+              <a class="nav-link" href="Galería.php" tabindex="-1" aria-disabled="false">Galería</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html" tabindex="-1" aria-disabled="false">Blog</a>
+              <a class="nav-link" href="blog.php" tabindex="-1" aria-disabled="false">Blog</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="../app/Formularios/login.php" tabindex="-1" aria-disabled="false">System Coffee</a>

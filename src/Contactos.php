@@ -86,7 +86,7 @@
     <br>
     <br>
     
-    <img class="card-img-top" src="../Media/img/BannerP.jpg" alt="Card image cap">
+   
       <!--Card content-->
       <div class="card-body">
     

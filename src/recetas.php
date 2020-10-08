@@ -7,8 +7,8 @@
     <link rel="icon" href="../Media/img/Logo.png">
     <link rel="stylesheet" href="../Styles/css/bootstrap.min.css" >
     <link rel="stylesheet" href="../Styles/css/mdb.min.css" >
-    <link rel="stylesheet" href="../Styles/Style.css">
-    <link rel="stylesheet" href="../Styles/Style_img.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../Styles/Style.css"> -->
     <title>Recetas</title>
 </head>
 <body >
@@ -147,56 +147,61 @@
 
     </div>
   
-    <footer class="page-footer font-small teal color_footer">
+    
+    <footer class="page-footer font-small special-color-dark pt-4">
 
-        <div class="container-fluid text-center text-md-left">
-      
-          <!-- Grid row -->
-          <div class="row">
-      
-            <!-- Grid column -->
-            <div class="col-md-6 mt-md-0 mt-3">
-      
-                   <!-- Links -->
-                   <h3 class="text-uppercase">Contáctanos a través de nuestras redes sociales</h3>
-      
-                   <ul class="list-unstyled">
-                     <li>
-                       <a  class="nav-link" href=""><img src="../Media/img/png/Whatsapp.png" alt="" width="30 px" height="30 px"> Whatsapp</a>
-                     </li>
-                     <li>
-                       <a class="nav-link" href="https://www.facebook.com/larutadelcafehn/?__tn__=kC-R&eid=ARAnd3PedC7D_JfvK1KD_Gt8gFLCC9uGXySBpwNtJLRthW9qPpL7COFVADDuJMOFfgyAZbUnjKPDdWh0&hc_ref=ARR3MP5or1MH3Ug-7mPMEUy3VBJj_xGNDJyPw4k7gksrFJaGKy3zYwd7gYnhi9O8fjM&fref=nf"><img src="../Media/img/png/Facebook.png" alt="" width="30 px" height="30 px"> Facebook</a>
-                     </li>
-                     <li>
-                       <a class="nav-link" href=""><img src="../Media/img/png/Instagram.png" alt="" width="30 px" height="30 px"> Instagram</a>
-                     </li>
-                     <li>
-                       <a class="nav-link" href=""><img src="../Media/img/png/Skipe.png" alt="" width="30 px" height="30 px"> Skipe</a>
-                     </li>
-                   </ul>
-      
-            </div>
-            <!-- Grid column -->
-      
-            <hr class="clearfix w-100 d-md-none pb-3">
-      
-            <!-- Grid column -->
-            <div class="col-md-6 mb-md-0 mb-3">
-              <div class="footer-copyright text-center py-3"> 
-      
-                <h6>derechos reservados © 2020 Copyright</h6>
-                <h6>Políticas de privacidad</h6>
-                <h6> autor: darwing1999.h@gmail.com</h6>
-              </div>
-      
-            </div>
-            <!-- Grid column -->
-      
+      <!-- Footer Elements -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 py-5">
+            <div class="mb-5 flex-center">
+              
+           
+          
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center  ">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1 fb-ic">
+                  <i class="fab fa-facebook-f"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                  <i class="fab fa-twitter"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1" href="mailto:darwing01000100@gmail.com">
+                  <i class="fab fa-google-plus-g"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1">
+                  <i class="fab fa-linkedin-in"> </i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-dribbble mx-1">
+                  <i class="fab fa-dribbble"> </i>
+                </a>
+              </li>
+            </ul>
           </div>
-          <!-- Grid row -->
-      
-        </div> 
-      </footer>
+
+      </div>
+      </div>
+        <!-- Social buttons -->
+    
+      </div>
+      <!-- Footer Elements -->
+    
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="mailto:darwing01000100@gmail.com">Darwing Hernandez</a>
+      </div>
+      <!-- Copyright -->
+    
+    </footer>
     </div>
   
   

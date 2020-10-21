@@ -7,9 +7,7 @@ $mensajeError="";
             if ($_POST['_tipoUser']!=="") {
                 $tipo=$_POST['_tipoUser'];
                 $sql="INSERT INTO rtipouser(idtipo,tipo) VALUES(null,'$tipo')";
-                session_start();
-                mysqli_query($conn, $sql);
-               
+                 
                 print "<script>
                     alert('Registro creado satisfactoriamente');
                     window.location='../Formularios/tipos_Usuarios.php';

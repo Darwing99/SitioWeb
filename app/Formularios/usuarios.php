@@ -78,7 +78,7 @@
                 <!-- Password -->
                 <div class="md-form">
                     <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" value="">
-                    <label for="materialRegisterFormPassword">Password</label>
+                    <label for="password">Password</label>
                     <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
                        
                     </small>

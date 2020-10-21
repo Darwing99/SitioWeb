@@ -13,7 +13,7 @@ if(isset($_POST['_email'],$_POST['_password'])){
                     $usera=$_POST['_email'];
                     $passa=$_POST['_password'];
                     
-                    $consulta="SELECT * FROM rusuario WHERE nombre_user='$usera' AND pass=sha1('$passa') AND estado='1'";
+                    $consulta="SELECT * FROM rusuario WHERE usuario='$usera' AND pass=sha1('$passa') AND estado='1'";
                     $QueryDB=mysqli_query($conn,$consulta);
 
                     session_start();
@@ -22,8 +22,8 @@ if(isset($_POST['_email'],$_POST['_password'])){
                     
                         $datos=mysqli_fetch_array($QueryDB);
                         $_SESSION['id']=$datos[0];
-                        $_SESSION['nombre']=$datos[1];
-                        $_SESSION['nameUser']=$datos[2];
+                        $_SESSION['usuario']=$datos[1];
+                        $_SESSION['nombre']=$datos[2];
                         $_SESSION['estado']=$datos[4];
                         $_SESSION['rol']=$datos[5]; 
                        

@@ -22,7 +22,7 @@
 </header>
 <br>
 <br>
-<div " class="margenes card-deck">
+<div  class="margenes card-deck">
 
         <!-- Card -->
         <div class=" col-sm-1">
@@ -37,7 +37,16 @@
                 <h4 class="modal-title black-text w-100 font-weight-bold py-2">Registro de Empleado</h4>
             </div>
             <br>
+            <form action="buscar_usuario.php" method="get">
+            <div class="md-form">
+                            <input type="text" id="buscar" name="buscar" class="form-control" placeholder="Buscar">
+                            <button class="btn btn-deep-orange" type="submit">Buscar</button>
+                           
+            </div>
         
+            
+            </form>
+            
             <div class="tabla_hide">
 
             <div class="tabla_hide centrar_form">
@@ -61,16 +70,16 @@
                        <!-- ######Mostrar Empleados o usuarios desde la base de datos###### -->
                        <?php 
                          include('../BD/conexion.php');
-                         $sql="SELECT A.identidad,A.name, A.nombre_user,if(A.estado=0,'Inactivo','Activo') as Estad,B.tipo FROM rusuario AS A INNER JOIN rtipouser AS B where A._idtipo=B.idtipo";
+                         $sql="SELECT A.id,A.nombre, A.usuario,if(A.estado=0,'Inactivo','Activo') as Estad,B.tipo FROM rusuario AS A INNER JOIN rtipouser AS B where A._idtipo=B.idtipo";
                          $result=mysqli_query($conn,$sql);
 
                          while($mostrar=mysqli_fetch_array($result)){ $i=0;
                          ?>
 
                          <tr>
-                           <td><?php echo $mostrar['identidad'] ?></td>
-                           <td><?php echo $mostrar['name'] ?></td>
-                           <td><?php echo $mostrar['nombre_user']?></td>
+                           <td><?php echo $mostrar['id'] ?></td>
+                           <td><?php echo $mostrar['nombre'] ?></td>
+                           <td><?php echo $mostrar['usuario']?></td>
                            <td><?php echo $mostrar['Estad'] ?></td>
                            <td><?php echo $mostrar['tipo'] ?></td>
                           

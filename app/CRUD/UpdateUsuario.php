@@ -16,11 +16,11 @@ if (isset($_POST['_identidad'],$_POST['_nombre'],$_POST['_email'],$_POST['_Passw
             $newPass=$_POST['_newPass'];
             $nombre=$_POST['_nombre'];
 
-            $consulta="SELECT * FROM rusuario WHERE identidad='$identidad' and pass=sha1('$passa')";
+            $consulta="SELECT * FROM rusuario WHERE id='$identidad' and pass=sha1('$passa')";
             
             $QueryDB=mysqli_query($conn, $consulta);
             if(mysqli_num_rows($QueryDB)>0){
-                    $update="UPDATE rusuario SET nombre_user='$usera',name='$nombre',pass=sha1('$newPass') where identidad='$identidad'";
+                    $update="UPDATE rusuario SET usuario='$usera',nombre='$nombre',pass=sha1('$newPass') where id='$identidad'";
                     mysqli_query($conn,$update) or die(mysqli_error($conn));
                     print "<script>
                     alert('Datos de usuario actualizados');

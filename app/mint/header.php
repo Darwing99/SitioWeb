@@ -8,9 +8,9 @@
     </script>";
    }
       $id= $_SESSION['id'];
-      $sql="SELECT A.identidad as identidad,A.NAME AS name, A.nombre_user as nombre_user,A.estado as estado,A._idtipo as 
+      $sql="SELECT A.id as id,A.nombre AS nombre, A.usuario as usuario,A.estado as estado,A._idtipo as 
       idtipo, B.idtipo,B.tipo as tipo FROM rusuario as A JOIN 
-      rtipouser as B on A._idtipo=B.idtipo where A.identidad='$id'";
+      rtipouser as B on A._idtipo=B.idtipo where A.id='$id'";
       $resultado=$conn->query($sql);
       $row=$resultado->fetch_assoc();
  ?> 
@@ -141,7 +141,7 @@
     <ul class="navbar-nav ml-auto nav-flex-icons">
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false"><?php echo utf8_decode($row['name']);?>
+          aria-haspopup="true" aria-expanded="false"><?php echo utf8_decode($row['nombre']);?>
           <i class="fas fa-user"></i>
         </a>
 
@@ -206,7 +206,7 @@
         <form action="../CRUD/UpdateUsuario.php" method="POST">
               <div class="md-form form-group col-md-12">
               <i class="fas fa-fingerprint prefix"></i>
-              <input style="text-align: center; color: black;" type="text" class="form-control" readonly  name="_identidad" value="   <?php echo utf8_decode($row['identidad']);?>">
+              <input style="text-align: center; color: black;" type="text" class="form-control" readonly  name="_identidad" value="   <?php echo utf8_decode($row['id']);?>">
               </div>
              <div class="md-form form-group col-md-12">
               <i class="fas fa-user-cog prefix"></i>
@@ -215,13 +215,13 @@
               <div class="md-form form-group col-md-12">
            
                <i class="fa fa-user  prefix" aria-hidden="true"></i>
-                <input style="text-align: center; color: black;" type="text" class="form-control"  name="_nombre" value="  <?php echo utf8_decode($row['name']);?>">
+                <input style="text-align: center; color: black;" type="text" class="form-control"  name="_nombre" value="  <?php echo utf8_decode($row['nombre']);?>">
                
               </div>
               <div class="md-form form-group col-md-12">
            
               <i class="fa fa-envelope prefix" aria-hidden="true"></i>
-                <input style="text-align: center; color: black;" type="email" class="form-control"  name="_email" value="  <?php echo utf8_decode($row['nombre_user']);?>">
+                <input style="text-align: center; color: black;" type="email" class="form-control"  name="_email" value="  <?php echo utf8_decode($row['usuario']);?>">
            
               </div>
 

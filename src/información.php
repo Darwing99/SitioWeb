@@ -114,14 +114,16 @@
           <div>
               <h4>Misión</h4>
               <p>
-                  Nuestra misión es participar en la vida cotidiana de las personas y, a través de una taza de café, transformar una región, un vecindario, haciendo que las personas sean más felices y más unidas. La búsqueda de la excelencia está en el ejercicio de la calidad, en todo.
-              </p>
+                  Somos una empresa Familiar, que Elabora productos fabricados con amor, pasión y detalles
+                  Mismos que  nacen en nuestra casa y se trasladad a nuestros clientes, ofreciendo la mejor la experiencia en este proceso, comprometidos con nuestra tierra e inspirados en nuestra gente
+
+                   </p>
 
           </div><!--Mision de la empresa-->
           <div>
               <h4>Visión</h4>
               <p>
-                  Ser una referencia de excelencia en productos y servicios. Estar entre las compañías favoritas de los consumidores y crear una legión de personas conectadas por el mismo objetivo, estar en un ambiente agradable, que se convierte en un refugio, un descanso de la vida cotidiana y aún así, disfrutar de una bebida perfecta, hecha a la medida, para él.
+              Queremos ser una empresa, referente de calidad y experiencia en cada negocio que emprendamos, contribuyendo siempre a generar, empleo, dinamizar la economía, cuidar el medio ambiente pero sobre todo regalar sonrisas en nuestras zonas de operación.
               </p>
 
           </div><!--vision de la empresa-->

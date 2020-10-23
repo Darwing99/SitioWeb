@@ -193,15 +193,7 @@
 
 </footer>   
     
-    <script type="text/javascript" src="styles/js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="styles/js/popper.min.js"></script>
-    <script type="text/javascript" src="styles/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="styles/js/mdb.min.js"></script>
-    <script>new WOW().init();
-    $(document).ready(function () {
-      $('.mdb-select').material_select();
-    }); </script>
-  
+   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../../Scripts/Funciones.js"></script>
     <script src="../../Scripts/validaciones.js"></script>

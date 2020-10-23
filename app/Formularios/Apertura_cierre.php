@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apertura/Cierre</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
+    <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">  
     <link rel="stylesheet" href="../../Styles/form.css">
+    <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
+  
+    <script src="../../Scripts/jquery-3.1.1.js"></script>
  
 
 </head>
@@ -70,7 +72,30 @@
                        <!-- ######Mostrar Empleados o usuarios desde la base de datos###### -->
                        <?php 
                          include('../BD/conexion.php');
-                         $sql="SELECT A.id,A.nombre, A.usuario,if(A.estado=0,'Inactivo','Activo') as Estad,B.tipo FROM rusuario AS A INNER JOIN rtipouser AS B where A._idtipo=B.idtipo";
+                        //  Paginador
+                        $cantidad="SELECT count(*) AS total from rusuario where estado=1";
+                        $captura=mysqli_query($conn,$cantidad);
+                        $resultado=mysqli_fetch_array($captura);
+                        $total=$resultado['total'];
+                        $por_pagina=3;
+                        if(empty($_GET['pagina']))
+                        {
+                            $pagina=1;
+                            
+                        }else{
+                            $pagina=$_GET['pagina'];
+
+                        }
+                        $desde=($pagina-1)*$por_pagina;
+                        //Mostrar cantidad de paginas segun cantidad de registros
+                        $total_paginas=ceil($total/$por_pagina);
+
+
+                        $sql_register=mysqli_query($conn,$cantidad);
+                         $sql="SELECT A.id,A.nombre, A.usuario,if(A.estado=0,'Inactivo','Activo') 
+                         as Estad,B.tipo FROM rusuario AS A 
+                         INNER JOIN rtipouser AS B where A._idtipo=B.idtipo
+                         ORDER BY  A.usuario ASC limit $desde,$por_pagina";
                          $result=mysqli_query($conn,$sql);
 
                          while($mostrar=mysqli_fetch_array($result)){ $i=0;
@@ -105,15 +130,15 @@
                                         <div class="modal-body mx-3">
                                                 <div class="form-group col-md-12">
                                                     <label for="inputEmail4">Id</label>
-                                                    <input name="idUsuarioA" type="text" class="form-control" id="numero" readonly value="<?php echo $mostrar[0] ?>">
+                                                    <input name="idUsuarioA" type="text" class="form-control" id="id" readonly value="<?php echo $mostrar[0] ?>">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="inputEmail4">Nombre</label>
-                                                    <input name="nombreUserA" type="text" class="form-control" id="numero" readonly value="<?php echo $mostrar[1] ?>">
+                                                    <input name="nombreUserA" type="text" class="form-control" id="nombre" readonly value="<?php echo $mostrar[1] ?>">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                     <label for="inputEmail4">Usuario</label>
-                                                    <input name="usuarioA" type="text" class="form-control" id="numero" readonly value="<?php echo $mostrar[2] ?>">
+                                                    <input name="usuarioA" type="text" class="form-control" id="usuario" readonly value="<?php echo $mostrar[2] ?>">
                                                 </div>
                                                 <div class="form-group col-md-12">
                                                 <label for="inputEmail4">Estado</label>
@@ -141,6 +166,38 @@
                    
                        </tbody>
                    </table>
+
+                   <!-- ####Paginador#### -->
+                   <div class="paginador">
+                       <ul>
+
+                            <?php 
+                            if($pagina!=1){
+
+                          
+                            ?>
+                           <li><a href="?pagina=<?php echo 1; ?>"><i class="fas fa-step-backward"></i></a></li>
+                           <li><a href="?pagina=<?php echo $pagina-1;?>"><i class="fas fa-backward"></i></a></li>
+                           <?php  
+                           
+                           }
+                           for($i=1;$i<=$total_paginas;$i++){
+                               if($i==$pagina)
+                               {
+                                     echo ' <li class="pageSelected">'.$i.'</li>';
+                               }else{
+                               echo ' <li><a href="?pagina='.$i.'">'.$i.'</a></li>';
+                               }
+                           }
+                           if($pagina!=$total_paginas){
+                           ?>
+                          
+                           <li><a href="?pagina=<?php echo $pagina+1;?>"><i class="fas fa-fast-forward"></i></a></li>
+                           <li><a href="?pagina=<?php echo $total_paginas;?>"><i class="fas fa-step-forward"></i></a></li>
+                      <?php }?>
+                    </ul>
+
+                   </div>
                 </div>
             </div>
             </div>
@@ -156,17 +213,29 @@
     include("../mint/footer.php");
     ?>
 </footer>   
-    <script src="../../Scripts/Eventos.js"></script>
-    <script type="text/javascript" src="styles/js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="styles/js/popper.min.js"></script>
-    <script type="text/javascript" src="styles/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="styles/js/mdb.min.js"></script>
-    <script>new WOW().init();
-    $(document).ready(function () {
-      $('.mdb-select').material_select();
-    }); </script>
 
- 
+<!-- estilos de paginaador -->
+<style>
+
+.paginador ul{
+    padding: 15px;list-style: none;background: #ffffff; margin-top: 15px; display: -webkit-flex;
+    display: -moz-flex;display: -o-flex;display: flex;justify-content: flex-end;
+}
+.paginador a, .pageSelected{
+    color: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px; display: inline-block; font-size: 14px; text-align: center;
+    width: 35px;
+}.paginador a:hover{
+background: #ddd;
+}
+.pageSelected{
+    color: #fff;
+    background: #428bca;
+    border: 1px solid #428bca;
+}
+
+</style>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

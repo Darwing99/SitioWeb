@@ -7,7 +7,7 @@ $mensajeError="";
     if ($_POST['estadoA']!="") {
         $id=$_POST['idUsuarioA'];
         $estado=$_POST['estadoA'];
-        $update="UPDATE rusuario SET estado='$estado' WHERE identidad='$id'";
+        $update="UPDATE rusuario SET estado='$estado' WHERE id='$id'";
         mysqli_query($conn,$update) or die(''.mysqli_error($conn).'');
         print "<script>
                     alert('Datos actualizados');

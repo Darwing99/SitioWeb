@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Styles/css/mdb.min.css" >
-    <link rel="stylesheet" href="../../Styles/Style_men.css" >
     <script src="../../Scripts/jquery-3.1.1.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset = " utf-8 "></script>

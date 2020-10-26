@@ -1,7 +1,11 @@
 Options All -Indexes
-ErrorDocument 403 /error404.html
+ErrorDocument 404 /SitioWeb/error404.html
+ErrorDocument 403 /SitioWeb/error403.html
+ErrorDocument 401 /SitioWeb/error401.html
+ErrorDocument 500 /SitioWeb/error500.html
+
 RewriteEngine On
 RewriteBase /SitioW20/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L] 

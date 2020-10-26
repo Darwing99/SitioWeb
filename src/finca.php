@@ -8,69 +8,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../Styles/css/bootstrap.min.css" >
     <link rel="stylesheet" href="../Styles/css/mdb.min.css" >
-    <link rel="stylesheet" href="../Styles/pruebacss.css">
+    <link rel="stylesheet" href="../Styles/fuente.css">
     <title>Finca</title>
 </head>
 <body>
      
       <header>
-   
-        <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
-          <a class="navbar-brand" href="../index.html">
-            <img src="../Media/img/Logo.png" height="100" class="d-inline-block align-top"
-              alt="mdb logo" style="border-radius: 50%;">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
-            aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link " href="Sobre nosotros.html">Sobre nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="información.php">Información</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link "href="Carta.php">Carta</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="false"> Finca</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Aprende con nosotros
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item " href="recetas.php">Recetas</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item " href="videotutorial.html">VideoTutoriales </a>
-                </div>
-            <li>
-              <li class="nav-item">
-                <a class="nav-link" href="Contactos.php" tabindex="-1" aria-disabled="false">Contactos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Galería.php" tabindex="-1" aria-disabled="false">Galería</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.php" tabindex="-1" aria-disabled="false">Blog</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="../app/Formularios/login.php" tabindex="-1" aria-disabled="false">System Coffee</a>
-            </li>
-            </ul>
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-              <li class="nav-item avatar">
-                <a class="nav-link p-0" href="#">
-                
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      
+      <?php include('header.php');?> 
       </header>
 
       <!-- Card -->
@@ -89,20 +33,20 @@
   <div class="card-body card-body-cascade text-center">
 
     <!-- Title -->
-    <h4 class="card-title"><strong>Finca la Ruta</strong></h4>
+    <h4 class="subtitulo card-title"><strong>Finca la Ruta</strong></h4>
     <!-- Subtitle -->
     
     <!-- Text -->
-    <p class="card-text"> Degustar una taza de café recién molido con el aroma de la naturaleza es ahora una realidad
+    <p class="fuente grey-text "> Degustar una taza de café recién molido con el aroma de la naturaleza es ahora una realidad
        para propios y extraños que visitan la Finca Savanna, o Café Savanna, ubicada en la aldea San Francisco, 
        San Marcos de Colón Choluteca, un grano que ya trasciende las fronteras.
     </p>
-    <p class="card-text">Con un área de siembra de más de 20 manzanas de cultivo,
+    <p class="fuente grey-text ">Con un área de siembra de más de 20 manzanas de cultivo,
        esta finca de café orgánico cuenta con un modelo único de producción, al incorporar agua
         de pozo a través de riego por goteo y utilizar al máximo los recursos de la naturaleza,
          la fertilidad del suelo y la aplicación de fertilizantes orgánicos.
     </p>
-    <p class="card-text"> Además, posee su propio vivero y la planta procesadora, 
+    <p class="fuente grey-text "> Además, posee su propio vivero y la planta procesadora, 
       la cual tiene incorporado un beneficio húmedo, dos secadoras solares donde durante 20 días 
       se mantiene el café bajo un ambiente controlado con termómetros instalado para el control de la temperatura, 
       un área de almacenamiento, de proceso, empaque y envió.
@@ -110,6 +54,196 @@
 
   
   </div>
+
+</div>
+<div  class="col-sm-12 card-body card-body-cascade text-center">
+
+
+    <section class="contact-section my-5">
+
+    <!-- Form with header -->
+    <div class="card">
+
+      <!-- Grid row -->
+      <div class="row">
+    <!-- Grid column -->
+    <div class="col-lg-4">
+
+    <div class="card-body contact text-center h-100  danger-color-dark white-text  view zoom overlay z-depth-2 rounded">
+
+      <h3 class="titulo my-4 pb-2">Nuestro Café</h3>
+      <div class="view overlay">
+        <img src="../Media/img/Cafe la ruta.jpg" class="img-fluid" alt="placeholder">
+        <div class="mask flex-center waves-effect waves-light rgba-teal-strong">
+          <p class="white-text"></p>
+        </div>
+      </div>
+      <hr class="hr-light my-4">
+      <ul class="list-inline text-center list-unstyled">
+        <li class="list-inline-item">
+          <a class="p-2 fa-lg tw-ic">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="p-2 fa-lg li-ic">
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="p-2 fa-lg ins-ic">
+            <i class="fab fa-instagram"> </i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+    </div>
+
+        <!-- Grid column -->
+        <div class="col-lg-8">
+
+          <div class="card-body form">
+
+            <!-- Header -->
+            <h3 class="subtitulo card-title" alt="cafe especial de la ruta">Un café especial</h3>
+            <p class="fuente grey-text section-description " >
+              Inveruta produce café de origen, cuidadosamente tratado, con un manejo integral de plantas durante la temporada pre cosecha, haciendo énfasis en la recolección para garantizar la calidad, cuidando cada paso del proceso, utilizando procesos de beneficiado alternativos para obtener el máximo aprovechamiento y los mejores sabores en taza.
+            </p>
+
+            <hr>
+            <h3 class="subtitulo card-title" alt="cafe especial de la ruta">Microlotes A Su Gusto</h3>
+            <p class="fuente grey-text section-description" >
+            Trabajamos microlotes específicos para clientes tomando en consideración sus gustos mediante a acuerdos previamente establecidos. </p>
+          
+            <div class="row">
+
+            </div>
+          
+          </div>
+        
+        </div>
+      
+      </div>
+
+    </div>
+
+    </section>
+    <section class="contact-section my-5">
+
+    <div class="card">
+        <div class="row">
+          <!-- Section: Features v.3 -->
+    <section class="my-5">
+
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Servicios</h2>
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-lg-5 text-center text-lg-left">
+        <img class="img-fluid" src="../Media/img/svg/ilustracion.svg" alt="Sample image">
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-7">
+
+        <!-- Grid row -->
+        <div class="row mb-3">
+
+          <!-- Grid column -->
+          <div class="col-1">
+            <i class="fas fa-share fa-lg indigo-text"></i>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-xl-10 col-md-11 col-10">
+            <h5 class="subtitulo font-weight-bold mb-3">Cafetería</h5>
+            <p  class="fuente d-flex justify-content-start grey-text">
+            Ubicada en el centro Histórico de Santa Bárbara Finca la Ruta café ofrece desde el 2015 café de especialidad, traído desde nuestra finca, en diversos métodos de extracción, con un amplio menú que incluye bebidas frías, coktails y deliciosas combinaciones, así como también snacks y postres
+          <br> En un ambiente donde el arte y la cultura se juntan, con imponentes vistas de la ciudad, la ruta café es un lugar que no debes de dejar de visitar cuando vengas por la ciudad de Santa Bárbara. 
+          <br> La ruta café es el lugar correcto para aprender un poco de la gran cultura del café en nuestra ciudad.
+
+            </p>
+            </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+        <!-- Grid row -->
+        <div class="row mb-3">
+
+          <!-- Grid column -->
+          <div class="col-1">
+            <i class="fas fa-share fa-lg indigo-text"></i>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-xl-10 col-md-11 col-10">
+            <h5 class="subtitulo font-weight-bold mb-3">Finca Tour</h5>
+            <p class="fuente d-flex justify-content-start grey-text">Próximamente podrás disfrutar de paseos turísticos por nuestra finca. </p></div>
+          <!-- Grid column -->
+
+        </div>
+
+      </div>
+    
+    </div>
+
+</section>
+<!-- Section: Features v.3 -->
+
+    </div>    
+</div>
+<br>
+<br>
+<div class="card">
+    <div class="row">
+
+          <div class="col-sm-6">
+            <ul class="">
+              <br>
+              <br>
+              <ul  class="list-group">
+                <li class="d-flex justify-content-start list-group-item">
+                  <a class="fuente text-white btn-floating btn-fb btn-sm"><i class="fas fa-check-double"></i></a> REGIÓN MONTECILLOS
+                </li>
+                <li class="d-flex justify-content-start list-group-item">
+                  <a class="fuente btn-floating btn-tw btn-sm"><i class="fas fa-check-double"></i></a> DEPARTAMENTO DE SANTA BÁRBARA
+                </li>
+                <li class="d-flex justify-content-start list-group-item">
+                  <a  class="text-white btn-floating btn-li btn-sm"><i class="fas fa-check-double"></i></a>ALDEA MONTEVISTA SAN JOSE DE COLINAS
+                </li>
+                <li class="d-flex justify-content-start list-group-item">
+                  <a class="text-white btn-floating btn-slack btn-sm"><i class="fas fa-check-double"></i></a>ALTURA 1400 MTS EN PROMEDIO
+                  
+                </li>
+                <li class="d-flex justify-content-start list-group-item">
+                  <a class="text-white btn-floating btn-yt btn-sm"><i class="fas fa-check-double"></i></a>PRECIPITACIONES
+                </li>
+                <li class="d-flex justify-content-start list-group-item">
+                  <a class="text-white btn-floating btn-yt btn-sm"><i class="fas fa-check-double"></i></a>TEMPERATURA 15 °C
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div class="view overlay zoom col-lg-6 text-center text-lg-left">
+              <img class="img-fluid" src="../Media/img/Finca3.jpeg" alt="Sample image">
+              <div class="mask waves-effect rgba-white-slight">
+               <p class="white-text"></p>
+               </div>
+            </div>
+    </div>    
+</div>
+
+</section>
+
+
 
 </div>
 <h3 style="text-align: center;">Visitas a nuestras plantaciones de finca de la ruta</h3>
@@ -132,67 +266,9 @@
       </div>
     </div>
   </div>
-  <div class="card-deck">
-    <div class="card">
-      <img src="../Media/img/Finca3.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-     
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../Media/img/Finca3.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-      
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
 </div>
 <footer class="page-footer font-small special-color-dark pt-4">
-
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fab fa-twitter"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-gplus mx-1">
-          <i class="fab fa-google-plus-g"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fab fa-linkedin-in"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fab fa-dribbble"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
+      <?php include('footer.php');?>
 </footer>
 
     

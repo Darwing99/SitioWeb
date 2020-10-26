@@ -17,7 +17,7 @@
             <a class="navbar-brand" href="#">
             <img src="../../Media/img/logo.png" height="70" alt="mdb logo">
           </a>
-          <a class="navbar-brand" href="../../index.html">La Ruta del café</a>
+          <a class="navbar-brand" href="../../index.php">La Ruta del café</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

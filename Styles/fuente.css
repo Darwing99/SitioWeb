@@ -1,10 +1,9 @@
+ 
 
-@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
-.letra{
-    font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 24px;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
 .titulo{
     font-family: 'Yanone Kaffeesatz', sans-serif; color: white; font-size: 45px;
 
@@ -14,6 +13,17 @@
 .subtitulo{
     font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 35px;
 }
-/* p{
-    font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 20px;
-} */
+ 
+.fuente{
+    font-family: 'Gentium Book Basic', serif; color: rgb(94, 88, 88); font-size: 20px;
+}
+.fondo_historia{
+background: url(../Media/img/fondo_historia.png) no-repeat center center fixed;
+background-size: cover; opacity: 5; }
+
+.fuente_nav{
+    font-family: 'Gentium Book Basic', bold; color: rgb(255, 255, 255); font-size: 20px; 
+}
+.fuente_nav ::shadow{
+    font-family: 'Gentium Book Basic', bold; color: rgb(3, 3, 3); font-size: 20px;
+}

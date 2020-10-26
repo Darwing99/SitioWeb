@@ -159,13 +159,13 @@
                         <?php 
                             include('../BD/conexion.php');
                             $id=$_SESSION['id'];
-                            $sql="SELECT nombre_user,name,identidad FROM rusuario where identidad='$id'";
+                            $sql="SELECT usuario,nombre,id FROM rusuario where id='$id'";
                             $result=mysqli_query($conn,$sql);
                             while($mostrar=mysqli_fetch_array($result)){
                             ?>
                         <label for="inputEmail3" class="col-sm-12 col-form-label">Vendedor</label>
-                        <input style="color:red; " type="hidden" class="form-control" name="_idUsuario" id="_idUsuario" readonly value="<?php echo $mostrar['identidad'];?>">
-                        <input style="color:red; " type="text" class="form-control" readonly value="<?php echo $mostrar['name'];?>">
+                        <input style="color:red; " type="hidden" class="form-control" name="_idUsuario" id="_idUsuario" readonly value="<?php echo $mostrar['id'];?>">
+                        <input style="color:red; " type="text" class="form-control" readonly value="<?php echo $mostrar['nombre'];?>">
                         <?php } ?>
                         </div>
                         <hr>
@@ -177,6 +177,7 @@
                             $result=mysqli_query($conn,$sql);
                             while($mostrar=mysqli_fetch_array($result)){
                             ?>
+                            
                         <label for="inputEmail3" class="col-sm-12 col-form-label">N° Recibo</label>
                         <input style="color:red; " name="_idrecibo" type="text" class="form-control" id="colFormLabelSm" readonly value="<?php echo $mostrar['num'];?>">
                         <?php } ?>

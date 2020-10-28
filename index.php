@@ -31,10 +31,10 @@
               <a class="fuente_nav nav-link " href="src/sobre_nosotros.php">Sobre nosotros <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="fuente_nav nav-link " href="src/informacion.php">Información</a>
+              <a class="fuente_nav nav-link " href="src/servicios.php">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="fuente_nav nav-link "href="src/carta.php">Carta</a>
+              <a class="fuente_nav nav-link "href="src/carta.php">Coffee Shop</a>
             </li>
             <li class="nav-item">
               <a class="fuente_nav nav-link " href="src/finca.php" tabindex="-1" aria-disabled="false"> Finca</a>
@@ -75,7 +75,6 @@
 
     </header>
   
- 
   <div class="Slider">
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
@@ -100,10 +99,7 @@
       </div>
   </div>
   
-  <br>
-  <br>
-
-  <!-- imagen de fondo -->
+  <br><!-- imagen de fondo -->
   <section>
 
     <div class="row mx-1">
@@ -117,7 +113,7 @@
                         <h3 class="card-title py-3 font-weight-bold"><strong>Disfruta de un delicioso Café en la Ruta</strong></h3>
                         <p class="pb-3" alt="presentación de la ruta del café">Entre los muchos lujos de la mesa, el café puede ser considerado como uno de los más valiosos. El atisba la alegría sin intoxicación, y el placentero flujo de espíritus que ocasiona nunca es seguido de tristeza, languidez o debilidad</p>
                         <a href="https://www.facebook.com/628851103865100/" class="btn btn-primary btn-rounded"><i class="fab fa-facebook-f left"></i> Contacto Facebook</a>
-                        <a href="https://api.whatsapp.com/send?phone=+50498739415&text=Hola!%20Quiero%20hacer%20una%20compra!" class="btn success-color-dark btn-rounded"><i class="fab fa-whatsapp left"></i> Contacto Whatsapp</a>
+                        <a href="https://api.whatsapp.com/send?phone=+50433087022&text=Hola!%20Quiero%20hacer%20una%20compra!" class="btn success-color-dark btn-rounded"><i class="fab fa-whatsapp left"></i> Contacto Whatsapp</a>
                     </div>
                 </div>
             </div>
@@ -130,10 +126,9 @@
     <section class="my-5">
 
     <!-- Section heading -->
-    <h2 class="h1-responsive font-weight-bold text-center my-5">Nuestras Bebidas que enamoran a nuestros clientes</h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-5">Nuestras bebidas y platillos favoritos que enamoran a nuestros clientes</h2>
     <!-- Section description -->
-    <p class="fuente text-center w-responsive mx-auto mb-5">La ruta del café ofrece platillos exquisitos en desayunos y almuerzos, una combinación especial que la puedes hacer con un aromático café.</p>
-
+   
     <!-- Grid row -->
     <div class="row">
 
@@ -263,6 +258,9 @@
 <hr>   
 <!-- Footer -->
 <!-- Footer -->
+<!-- Load Facebook SDK for JavaScript -->
+
+
 <footer class="page-footer font-small special-color-dark pt-4">
 
   <div class="fixed-action-btn smooth-scroll" style="bottom: 45px; right: 24px;">
@@ -283,7 +281,7 @@
         <!-- Social buttons -->
         <ul class="list-unstyled list-inline text-center  ">
           <li class="list-inline-item">
-            <a class="btn-floating btn-fb mx-1 fb-ic">
+            <a class="btn-floating btn-fb mx-1 fb-ic" href="https://www.facebook.com/628851103865100/">
               <i class="fab fa-facebook-f"> </i>
             </a>
           </li>
@@ -293,7 +291,7 @@
             </a>
           </li>
           <li class="list-inline-item">
-            <a class="btn-floating btn-gplus mx-1" href="mailto:darwing01000100@gmail.com">
+            <a class="btn-floating btn-gplus mx-1" href="mailto:infoazhn@gmail.com">
               <i class="fab fa-google-plus-g"> </i>
             </a>
           </li>

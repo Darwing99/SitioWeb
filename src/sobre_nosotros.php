@@ -161,122 +161,71 @@
         </div>
           <hr>
           <br>
-        
-          <div class="row col-lg-12">
-        
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-12 mb-5">
-        
-              <!--Card-->
-              <div class="card testimonial-card view zoom overlay z-depth-2 rounded">
-        
-                <!--Background color-->
-                <div class="card-up danger-color-dark lighten-2">
-                </div>
-        
-                <!--Avatar-->
-                <div class="avatar mx-auto white"><img src="../Media/img/png/personal.png"
-                    alt="avatar mx-auto white" class="rounded-circle img-fluid">
-                </div>
-        
-                <div class="card-body">
-                  <!--Name-->
-                  <h4 class="card-title mt-1">Rodolfo Rivera</h4>
-                  <hr>
-                  <!--Quotation-->
-                  <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                    adipisci.</p>
-                </div>
-        
-              </div>
-              <!--Card-->
-        
-            </div>
-            <!--Grid column-->
-        
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-12 mb-5">
-        
-              <!--Card-->
-              <div class="card testimonial-card  view zoom overlay z-depth-2 rounded">
-        
-                <!--Background color-->
-                <div class="card-up danger-color-dark lighten-2">
-                </div>
-        
-                <!--Avatar-->
-                <div class="avatar mx-auto white"><img src="../Media/img/png/personal.png"
-                    alt="avatar mx-auto white" class="rounded-circle img-fluid">
-                </div>
-        
-                <div class="card-body">
-                  <!--Name-->
-                  <h4 class="card-title mt-1">Dr. </h4>
-                  <hr>
-                  <!--Quotation-->
-                  <p><i class="fas fa-quote-left"></i>Descripcion</p>
-                </div>
-        
-              </div>
-              <!--Card-->
-        
-            </div>
-            <!--Grid column-->
-        
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-12 mb-5">
-        
-              <!--Card-->
-              <div class="card testimonial-card  view zoom overlay z-depth-2 rounded">
-        
-                <!--Background color-->
-                <div class="card-up danger-color-dark lighten-2"></div>
-        
-                <!--Avatar-->
-                <div class="avatar mx-auto white"><img src="../Media/img/png/personal.png"
-                    alt="avatar mx-auto white" class="rounded-circle img-fluid">
-                </div>
-        
-                <div class="card-body">
-                  <!--Name-->
-                  <h4 class="card-title mt-1">Dr.</h4>
-                  <hr>
-                  <!--Quotation-->
-                  <p><i class="fas fa-quote-left"></i> Descripcion</p>
-                </div>
-        
-              </div>
-              <!--Card-->
-        
-            </div>
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-12 mb-5">
-        
-              <!--Card-->
-              <div class="card testimonial-card  view zoom overlay z-depth-2 rounded">
-        
-                <!--Background color-->
-                <div class="card-up danger-color-dark lighten-2"></div>
-        
-                <!--Avatar-->
-                <div class="avatar mx-auto white"><img src="../Media/img/png/personal.png"
-                    alt="avatar mx-auto white" class="rounded-circle img-fluid">
-                </div>
-        
-                <div class="card-body">
-                  <!--Name-->
-                  <h4 class="card-title mt-1">Dr</h4>
-                  <hr>
-                  <!--Quotation-->
-                  <p><i class="fas fa-quote-left"></i>ass</p>
-                </div>
-        
-              </div>
-              <!--Card-->
-        
-            </div>
-        
-          </div>
+
+          <!-- Section: Team v.1 -->
+<section class="team-section text-center my-5">
+
+<!-- Grid row -->
+<div class="row justify-content-center">
+  <!-- Grid column -->
+  <div class="col-lg-3 col-md-6 mb-md-0 mb-5">
+    <div class="avatar mx-auto">
+      <img src="../Media/img/Rodolfo.jpeg" width="250px" height="250px" class="rounded-circle z-depth-1 img-fluid"
+        alt="Rodolfo Rivera Sabillón">
+    </div>
+    <h5 class="font-weight-bold mt-4 mb-3">Lic. Rodolfo Rivera Sabillón</h5>
+    <p class="text-uppercase blue-text"><strong>Barista</strong></p>
+    <p class="grey-text">Barista, Emprendedor, una persona con grandes dotes en medios de comunicación, emprendedurismo  
+      y con un caracter especial con el cual atrae a muchas personas que le ayudan en su perfil profesional.</p>
+    <ul class="list-unstyled mb-0">
+      <!-- Facebook -->
+      <a class="p-2 fa-lg fb-ic" href="https://www.facebook.com/rodolfo.riverasabillon/about?lst=100042008250268%3A690175434%3A1603844790">
+        <i class="fab fa-facebook-f blue-text"> </i>
+      </a>
+      <!-- Instagram -->
+      <a class="p-2 fa-lg ins-ic">
+        <i class="fab fa-instagram blue-text"> </i>
+      </a>
+      <!-- Dribbble -->
+      <a class="p-2 fa-lg ins-ic">
+        <i class="fab fa-dribbble blue-text"> </i>
+      </a>
+    </ul>
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-lg-3 col-md-6">
+    <div class="super light overlay avatar mx-auto">
+      <img src="../Media/img/png/personal.png" width="250px" height="250px" class="rounded-circle z-depth-1 img-fluid"
+        alt="Sample avatar">
+    </div>
+    <h5 class="font-weight-bold mt-4 mb-3">Dr.</h5>
+    <p class="text-uppercase blue-text"><strong>Backend developer</strong></p>
+    <p class="grey-text">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur
+      totam officia voluptates perferendis voluptatibus aut.</p>
+    <ul class="list-unstyled mb-0">
+      <!-- Facebook -->
+      <a class="p-2 fa-lg fb-ic">
+        <i class="fab fa-facebook-f blue-text"> </i>
+      </a>
+      <!-- Github -->
+      <a class="p-2 fa-lg ins-ic">
+        <i class="fab fa-github blue-text"> </i>
+      </a>
+    </ul>
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+</section>
+<!-- Section: Team v.1 -->
+
+
+
+
         
         </section>
           <br>
@@ -292,7 +241,7 @@
                           <h6 class="red-text"><i class="fas fa-coffee"></i><strong> Coffee</strong></h6>
                           <h3 class="card-title py-3 font-weight-bold"><strong>Disfruta de un delicioso Café en la Ruta</strong></h3>
                           <p class="pb-3">Entre los muchos lujos de la mesa, el café puede ser considerado como uno de los más valiosos. El atisba la alegría sin intoxicación, y el placentero flujo de espíritus que ocasiona nunca es seguido de tristeza, languidez o debilidad</p>
-                          <a class="btn btn-primary btn-rounded"><i class="fab fa-facebook-f left"></i> Contacto Facebook</a>
+                          <a class="btn btn-primary btn-rounded" href="https://www.facebook.com/628851103865100/"><i class="fab fa-facebook-f left"></i> Contacto Facebook</a>
                           <a href="https://api.whatsapp.com/send?phone=+50433087022&text=Hola!%20Quiero%20hacer%20una%20compra!" class="btn success-color-dark btn-rounded"><i class="fab fa-whatsapp left"></i> Contacto Whatsapp</a>
                       </div>
                   </div>

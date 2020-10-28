@@ -13,10 +13,10 @@
               <a class="fuente_nav nav-link " href="sobre_nosotros.php">Sobre nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="fuente_nav nav-link " href="informacion.php">Información</a>
+              <a class="fuente_nav nav-link " href="servicios.php">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="fuente_nav nav-link "href="carta.php">Carta</a>
+              <a class="fuente_nav nav-link "href="carta.php">Coffee Shop</a>
             </li>
             <li class="nav-item">
               <a class="fuente_nav nav-link " href="finca.php" tabindex="-1" aria-disabled="false"> Finca</a>

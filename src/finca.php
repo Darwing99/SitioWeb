@@ -22,7 +22,7 @@
 
   <!-- Card image -->
   <div class="view view-cascade overlay">
-    <img class="card-img-top" src="../Media/img/finca.jpg"
+    <img class="card-img-top" src="../Media/img/finca.png"
       alt="Card image cap">
     <a href="#!">
       <div class="mask rgba-white-slight"></div>
@@ -37,19 +37,16 @@
     <!-- Subtitle -->
     
     <!-- Text -->
-    <p class="fuente grey-text "> Degustar una taza de café recién molido con el aroma de la naturaleza es ahora una realidad
-       para propios y extraños que visitan la Finca Savanna, o Café Savanna, ubicada en la aldea San Francisco, 
-       San Marcos de Colón Choluteca, un grano que ya trasciende las fronteras.
+    <p class="fuente grey-text "> Ubicada en las faldas del cerro de cantiles, 
+      sobre la carretera de que conduce al municipio de San Luis, exactamente en la comunidad 
+      de Monte vista en San José de Colinas, Departamento de Santa Bárbara en el Occidente de Honduras.
     </p>
-    <p class="fuente grey-text ">Con un área de siembra de más de 20 manzanas de cultivo,
-       esta finca de café orgánico cuenta con un modelo único de producción, al incorporar agua
-        de pozo a través de riego por goteo y utilizar al máximo los recursos de la naturaleza,
-         la fertilidad del suelo y la aplicación de fertilizantes orgánicos.
+    <p class="fuente grey-text ">Con una extensión de 30 manzanas de terreno de las cuales,
+      10 pertenecen a un hermoso bosque maderable que ayuda a mantener viva las fuentes de agua
+      en su interior, decretada como un área de reserva natural.
     </p>
-    <p class="fuente grey-text "> Además, posee su propio vivero y la planta procesadora, 
-      la cual tiene incorporado un beneficio húmedo, dos secadoras solares donde durante 20 días 
-      se mantiene el café bajo un ambiente controlado con termómetros instalado para el control de la temperatura, 
-      un área de almacenamiento, de proceso, empaque y envió.
+    <p class="fuente grey-text ">12 manzanas aproximadamente cultivadas, tratadas bajo un manejo 
+      integral en armonía con la naturaleza, a la sombra del árbol de liquidámbar, así nace nuestro café. 
     </p>
 
   
@@ -116,7 +113,11 @@
             <h3 class="subtitulo card-title" alt="cafe especial de la ruta">Microlotes A Su Gusto</h3>
             <p class="fuente grey-text section-description" >
             Trabajamos microlotes específicos para clientes tomando en consideración sus gustos mediante a acuerdos previamente establecidos. </p>
-          
+            <hr>
+            <h3 class="subtitulo card-title" alt="cafe especial de la ruta">Variedades</h3>
+            <p class="fuente grey-text section-description" >
+            Geisha, Ovato Rojo, IHCAFE90, Borbón, Parainema y Caracol.
+
             <div class="row">
 
             </div>
@@ -131,141 +132,88 @@
 
     </section>
     <section class="contact-section my-5">
-
+        
     <div class="card">
         <div class="row">
-          <!-- Section: Features v.3 -->
-    <section class="my-5">
 
-    <!-- Section heading -->
-    <h2 class="h1-responsive font-weight-bold text-center my-5">Servicios</h2>
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-lg-5 text-center text-lg-left">
-        <img class="img-fluid" src="../Media/img/svg/ilustracion.svg" alt="Sample image">
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-lg-7">
-
-        <!-- Grid row -->
-        <div class="row mb-3">
-
-          <!-- Grid column -->
-          <div class="col-1">
-            <i class="fas fa-share fa-lg indigo-text"></i>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-xl-10 col-md-11 col-10">
-            <h5 class="subtitulo font-weight-bold mb-3">Cafetería</h5>
-            <p  class="fuente d-flex justify-content-start grey-text">
-            Ubicada en el centro Histórico de Santa Bárbara Finca la Ruta café ofrece desde el 2015 café de especialidad, traído desde nuestra finca, en diversos métodos de extracción, con un amplio menú que incluye bebidas frías, coktails y deliciosas combinaciones, así como también snacks y postres
-          <br> En un ambiente donde el arte y la cultura se juntan, con imponentes vistas de la ciudad, la ruta café es un lugar que no debes de dejar de visitar cuando vengas por la ciudad de Santa Bárbara. 
-          <br> La ruta café es el lugar correcto para aprender un poco de la gran cultura del café en nuestra ciudad.
-
-            </p>
-            </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-        <!-- Grid row -->
-        <div class="row mb-3">
-
-          <!-- Grid column -->
-          <div class="col-1">
-            <i class="fas fa-share fa-lg indigo-text"></i>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-xl-10 col-md-11 col-10">
-            <h5 class="subtitulo font-weight-bold mb-3">Finca Tour</h5>
-            <p class="fuente d-flex justify-content-start grey-text">Próximamente podrás disfrutar de paseos turísticos por nuestra finca. </p></div>
-          <!-- Grid column -->
-
-        </div>
-
-      </div>
-    
+              <div class="col-sm-6">
+                <ul class="">
+                  <br>
+                  <br>
+                  <ul  class="list-group">
+                    <li class="d-flex justify-content-start list-group-item">
+                      <a class="fuente text-white btn-floating btn-fb btn-sm"><i class="fas fa-check-double"></i></a> REGIÓN MONTECILLOS
+                    </li>
+                    <li class="d-flex justify-content-start list-group-item">
+                      <a class="fuente btn-floating btn-tw btn-sm"><i class="fas fa-check-double"></i></a> DEPARTAMENTO DE SANTA BÁRBARA
+                    </li>
+                    <li class="d-flex justify-content-start list-group-item">
+                      <a  class="text-white btn-floating btn-li btn-sm"><i class="fas fa-check-double"></i></a>ALDEA MONTEVISTA SAN JOSE DE COLINAS
+                    </li>
+                    <li class="d-flex justify-content-start list-group-item">
+                      <a class="text-white btn-floating btn-slack btn-sm"><i class="fas fa-check-double"></i></a>ALTURA 1400 MTS EN PROMEDIO
+                      
+                    </li>
+                    <li class="d-flex justify-content-start list-group-item">
+                      <a class="text-white btn-floating btn-yt btn-sm"><i class="fas fa-check-double"></i></a>PRECIPITACIONES
+                    </li>
+                    <li class="d-flex justify-content-start list-group-item">
+                      <a class="text-white btn-floating btn-yt btn-sm"><i class="fas fa-check-double"></i></a>TEMPERATURA 15 °C
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="view overlay zoom col-lg-6 text-center text-lg-left">
+                  <img class="img-fluid" src="../Media/img/Finca1.jpeg" alt="finca la ruta">
+                  <div class="mask waves-effect rgba-white-slight">
+                  <p class="white-text"></p>
+                  </div>
+                </div>
+        </div>    
     </div>
 
 </section>
-<!-- Section: Features v.3 -->
 
-    </div>    
+
+
 </div>
+<h3 class="subtitulo text-center">Visitas a nuestras plantaciones de finca de la ruta</h3>
 <br>
-<br>
-<div class="card">
-    <div class="row">
 
-          <div class="col-sm-6">
-            <ul class="">
-              <br>
-              <br>
-              <ul  class="list-group">
-                <li class="d-flex justify-content-start list-group-item">
-                  <a class="fuente text-white btn-floating btn-fb btn-sm"><i class="fas fa-check-double"></i></a> REGIÓN MONTECILLOS
-                </li>
-                <li class="d-flex justify-content-start list-group-item">
-                  <a class="fuente btn-floating btn-tw btn-sm"><i class="fas fa-check-double"></i></a> DEPARTAMENTO DE SANTA BÁRBARA
-                </li>
-                <li class="d-flex justify-content-start list-group-item">
-                  <a  class="text-white btn-floating btn-li btn-sm"><i class="fas fa-check-double"></i></a>ALDEA MONTEVISTA SAN JOSE DE COLINAS
-                </li>
-                <li class="d-flex justify-content-start list-group-item">
-                  <a class="text-white btn-floating btn-slack btn-sm"><i class="fas fa-check-double"></i></a>ALTURA 1400 MTS EN PROMEDIO
-                  
-                </li>
-                <li class="d-flex justify-content-start list-group-item">
-                  <a class="text-white btn-floating btn-yt btn-sm"><i class="fas fa-check-double"></i></a>PRECIPITACIONES
-                </li>
-                <li class="d-flex justify-content-start list-group-item">
-                  <a class="text-white btn-floating btn-yt btn-sm"><i class="fas fa-check-double"></i></a>TEMPERATURA 15 °C
-                </li>
-              </ul>
-            </ul>
-          </div>
-          <div class="view overlay zoom col-lg-6 text-center text-lg-left">
-              <img class="img-fluid" src="../Media/img/Finca3.jpeg" alt="Sample image">
-              <div class="mask waves-effect rgba-white-slight">
-               <p class="white-text"></p>
-               </div>
-            </div>
-    </div>    
-</div>
-
-</section>
-
-
-
-</div>
-<h3 style="text-align: center;">Visitas a nuestras plantaciones de finca de la ruta</h3>
 <div class="col-sm-12">
   <div class="card-deck">
-    <div class="card">
-      <img src="../Media/img/Finca1.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
+    <div class="view overlay zoom card">
+      <img src="../Media/img/Finca1.jpeg" class="img-fluid card-img-top" alt="finca la ruta">
+      <div class="mask waves-effect rgba-white-slight card-body">
         
-       
         <p class="card-text"></p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text"><small class="text-muted"></small></p>
       </div>
     </div>
-    <div class="card">
-      <img src="../Media/img/Finca2.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
+    <div class="view overlay zoom card">
+      <img src="../Media/img/Finca2.jpeg" class="img-fluid card-img-top" alt="finca la ruta">
+      <div class="mask waves-effect rgba-white-slight card-body">
       
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="view overlay zoom card">
+      <img src="../Media/img/Finca3.jpeg" class="img-fluid card-img-top" alt="finca la ruta">
+      <div class="mask waves-effect rgba-white-slight card-body">
+      
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="view overlay zoom card">
+      <img src="../Media/img/Finca4.jpeg" class="img-fluid card-img-top" alt="finca la ruta">
+      <div class="card-body">
+        <p class="mask waves-effect rgba-white-slight card-text"><small class="text-muted"></small></p>
       </div>
     </div>
   </div>
+  <br>
+  <hr>
+  <br>
 </div>
 <footer class="page-footer font-small special-color-dark pt-4">
       <?php include('footer.php');?>

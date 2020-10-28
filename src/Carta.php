@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../Styles/css/mdb.min.css" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../Styles/fuente.css">
-    <title>Carta</title>
+    <title>Coffee Shop</title>
 </head>
 <body>
    
@@ -144,174 +144,444 @@
               <img src="../Media/img/expreso.jpg" alt="" class="img-fluid">
             </div>
           </div>
-          <div id="bebidac">
-              <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-              
-                <!--Controls-->
-                <div class="controls-top">
-                  <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                  <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                      class="fas fa-chevron-right"></i></a>
-                </div>
-                <!--/.Controls-->
-              
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                  <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                  <li data-target="#multi-item-example" data-slide-to="1"></li>
-                  <li data-target="#multi-item-example" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-              
-                <!--Slides-->
-                  
-                <div class="carousel-inner" role="listbox">
-              
-                  <!--First slide-->
-                  <div class="carousel-item active">
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                          alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                          alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                          alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                  </div>
-                  <!--/.First slide-->
-              
-                  <!--Second slide-->
-                  <div class="carousel-item">
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                  </div>
-                  <!--/.Second slide-->
-              
-                  <!--Third slide-->
-                  <div class="carousel-item">
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <div class="col-md-4">
-                      <div class="card mb-2">
-                        <img class="card-img-top"
-                          src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h4 class="card-title">Card title</h4>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                          <a class="btn btn-primary">Button</a>
-                        </div>
-                      </div>
-                    </div>
-              
-                  </div>
-                  <!--/.Third slide-->
-              
-                </div>
-                <!--/.Slides-->
-                <!--####Comida####-->
-              
+<!-- Section: Products v.5 -->
+          <section class="text-center my-5">
+
+            <!-- Carousel Wrapper -->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+              <!-- Controls -->
+              <div class="controls-top">
+                <a class="btn-floating primary-color waves-effect waves-light" href="#multi-item-example" data-slide="prev">
+                  <i class="fas fa-chevron-left"></i>
+                </a>
+                <a class="btn-floating primary-color waves-effect waves-light" href="#multi-item-example" data-slide="next">
+                  <i class="fas fa-chevron-right"></i>
+                </a>
               </div>
+              <!-- Controls -->
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li class="primary-color active" data-target="#multi-item-example" data-slide-to="0"></li>
+                <li class="primary-color" data-target="#multi-item-example" data-slide-to="1"></li>
+                <li class="primary-color" data-target="#multi-item-example" data-slide-to="2"></li>
+              </ol>
+              <!-- Indicators -->
+              <!-- Slides -->
+              <div class="carousel-inner" role="listbox">
+                <!-- First slide -->
+                <div class="carousel-item active">
+                  <div class="col-md-4 mb-2">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(39).jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Shoes</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Leather boots</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">69$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                  <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(22).jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Jeans</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Slim jeans</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">99$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                  <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/img%20(31).jpg" class="card-img-top" alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Shorts</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Denim shorts</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">49$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                </div>
+                <!-- First slide -->
+                <!-- Second slide -->
+                <div class="carousel-item">
+                  <div class="col-md-4 mb-2">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(30).jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Accessories</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Summer hat</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">39$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                  <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(37).jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Shoes</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Black heels</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">79$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                  <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(31).jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Outerwear</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Black jacket</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">149$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                </div>
+                <!-- Second slide -->
+                <!--Third slide -->
+                <div class="carousel-item">
+                  <div class="col-md-4 mb-2">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(38).jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Accessories</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Leather bag</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">29$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                  <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Accessories</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Leather belt</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">89$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                  <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                    <!-- Card -->
+                    <div class="card card-cascade narrower card-ecommerce">
+                      <!-- Card image -->
+                      <div class="view view-cascade overlay">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(57).jpg" class="card-img-top"
+                          alt="sample photo">
+                        <a>
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!-- Card image -->
+                      <!-- Card content -->
+                      <div class="card-body card-body-cascade text-center">
+                        <!-- Category & Title -->
+                        <a href="" class="text-muted">
+                          <h5>Shoes</h5>
+                        </a>
+                        <h4 class="card-title my-4">
+                          <strong>
+                            <a href="">Sneakers</a>
+                          </strong>
+                        </h4>
+                        <!-- Description -->
+                        <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                          consectetur, adipisci.
+                        </p>
+                        <!-- Card footer -->
+                        <div class="card-footer px-1">
+                          <span class="float-left">129$</span>
+                          <span class="float-right">
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                              <i class="fas fa-eye ml-3"></i>
+                            </a>
+                            <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                              <i class="fas fa-heart ml-3"></i>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Card content -->
+                    </div>
+                    <!-- Card -->
+                  </div>
+                </div>
+                <!--Third slide -->
               </div>
-          </div>
+              <!-- Slides -->
+            </div>
+            <!-- Carousel Wrapper -->
+
+          </section>
+          <!-- Section: Products v.5 -->
         </div>
       </div>
     </div>
@@ -342,176 +612,444 @@
               <img class="img-fluid" src="../Media/img/Bebidas Frias.jpg" alt="bebidas frias">
             </div>
           </div>
-          <div id="bebidah">
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-            
-              <!--Controls-->
-              <div class="controls-top">
-                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                    class="fas fa-chevron-right"></i></a>
-              </div>
-              <!--/.Controls-->
-            
-              <!--Indicators-->
-              <ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-                <li data-target="#multi-item-example" data-slide-to="2"></li>
-              </ol>
-              <!--/.Indicators-->
-            
-              <!--Slides-->
-                
-              <div class="carousel-inner" role="listbox">
-            
-                <!--First slide-->
-                <div class="carousel-item active">
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                        alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                        alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                        alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                </div>
-                <!--/.First slide-->
-            
-                <!--Second slide-->
-                <div class="carousel-item">
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                </div>
-                <!--/.Second slide-->
-            
-                <!--Third slide-->
-                <div class="carousel-item">
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-            
-                </div>
-                <!--/.Third slide-->
-            
-              </div>
-              <!--/.Slides-->
-              <!--####Comida####-->
-            
+                    <!-- Section: Products v.5 -->
+          <section class="text-center my-5">
+
+          <!-- Carousel Wrapper -->
+          <div id="multi-item-example1" class="carousel slide carousel-multi-item" data-ride="carousel">
+            <!-- Controls -->
+            <div class="controls-top">
+              <a class="btn-floating primary-color waves-effect waves-light" href="#multi-item-example1" data-slide="prev">
+                <i class="fas fa-chevron-left"></i>
+              </a>
+              <a class="btn-floating primary-color waves-effect waves-light" href="#multi-item-example1" data-slide="next">
+                <i class="fas fa-chevron-right"></i>
+              </a>
             </div>
+            <!-- Controls -->
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li class="primary-color active" data-target="#multi-item-example1" data-slide-to="0"></li>
+              <li class="primary-color" data-target="#multi-item-example1" data-slide-to="1"></li>
+              <li class="primary-color" data-target="#multi-item-example1" data-slide-to="2"></li>
+            </ol>
+            <!-- Indicators -->
+            <!-- Slides -->
+            <div class="carousel-inner" role="listbox">
+              <!-- First slide -->
+              <div class="carousel-item active">
+                <div class="col-md-4 mb-2">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(39).jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Shoes</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Leather boots</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">69$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(22).jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Jeans</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Slim jeans</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">99$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Others/img%20(31).jpg" class="card-img-top" alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Shorts</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Denim shorts</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">49$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+              <!-- First slide -->
+              <!-- Second slide -->
+              <div class="carousel-item">
+                <div class="col-md-4 mb-2">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(30).jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Accessories</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Summer hat</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">39$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(37).jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Shoes</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Black heels</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">79$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(31).jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Outerwear</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Black jacket</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">149$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+              <!-- Second slide -->
+              <!--Third slide -->
+              <div class="carousel-item">
+                <div class="col-md-4 mb-2">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(38).jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Accessories</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Leather bag</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">29$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Accessories</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Leather belt</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">89$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+                <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                  <!-- Card -->
+                  <div class="card card-cascade narrower card-ecommerce">
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(57).jpg" class="card-img-top"
+                        alt="sample photo">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                    <!-- Card image -->
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+                      <!-- Category & Title -->
+                      <a href="" class="text-muted">
+                        <h5>Shoes</h5>
+                      </a>
+                      <h4 class="card-title my-4">
+                        <strong>
+                          <a href="">Sneakers</a>
+                        </strong>
+                      </h4>
+                      <!-- Description -->
+                      <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci.
+                      </p>
+                      <!-- Card footer -->
+                      <div class="card-footer px-1">
+                        <span class="float-left">129$</span>
+                        <span class="float-right">
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                            <i class="fas fa-eye ml-3"></i>
+                          </a>
+                          <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                            <i class="fas fa-heart ml-3"></i>
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Card content -->
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+              <!--Third slide -->
             </div>
-            <!--####bebida fria###-->
-          
-        </div>
+            <!-- Slides -->
+          </div>
+          <!-- Carousel Wrapper -->
+
+          </section>
+<!-- Section: Products v.5 -->
       </div>
     </div>
   </div>
@@ -538,176 +1076,445 @@
               <img src="../Media/img/comida.jpg" alt="desayunos y almuerzos" class="img-fluid">
             </div>
           </div>
-          <div id="comida" class="display-none">
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+          <!-- Section: Products v.5 -->
+          <section class="text-center my-5">
 
-              <!--Controls-->
-              <div class="controls-top">
-                <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                    class="fas fa-chevron-right"></i></a>
+        <!-- Carousel Wrapper -->
+        <div id="multi-item-example2" class="carousel slide carousel-multi-item" data-ride="carousel">
+          <!-- Controls -->
+          <div class="controls-top">
+            <a class="btn-floating primary-color waves-effect waves-light" href="#multi-item-example2" data-slide="prev">
+              <i class="fas fa-chevron-left"></i>
+            </a>
+            <a class="btn-floating primary-color waves-effect waves-light" href="#multi-item-example2" data-slide="next">
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+          <!-- Controls -->
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li class="primary-color active" data-target="#multi-item-example2" data-slide-to="0"></li>
+            <li class="primary-color" data-target="#multi-item-example2" data-slide-to="1"></li>
+            <li class="primary-color" data-target="#multi-item-example2" data-slide-to="2"></li>
+          </ol>
+          <!-- Indicators -->
+          <!-- Slides -->
+          <div class="carousel-inner" role="listbox">
+            <!-- First slide -->
+            <div class="carousel-item active">
+              <div class="col-md-4 mb-2">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(39).jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Shoes</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Leather boots</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">69$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
               </div>
-              <!--/.Controls-->
-
-              <!--Indicators-->
-              <ol class="carousel-indicators">
-                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                <li data-target="#multi-item-example" data-slide-to="1"></li>
-                <li data-target="#multi-item-example" data-slide-to="2"></li>
-              </ol>
-              <!--/.Indicators-->
-
-              <!--Slides-->
-                
-              <div class="carousel-inner" role="listbox">
-
-                <!--First slide-->
-                <div class="carousel-item active">
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                        alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
+              <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(22).jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Jeans</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Slim jeans</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">99$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
                     </div>
                   </div>
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                        alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                        alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
+                  <!-- Card content -->
                 </div>
-                <!--/.First slide-->
-
-                <!--Second slide-->
-                <div class="carousel-item">
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!--/.Second slide-->
-
-                <!--Third slide-->
-                <div class="carousel-item">
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="card mb-2">
-                      <img class="card-img-top"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                          card's content.</p>
-                        <a class="btn btn-primary">Button</a>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!--/.Third slide-->
-
+                <!-- Card -->
               </div>
-              <!--/.Slides-->
-              <!--####Comida####-->
-
+              <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Others/img%20(31).jpg" class="card-img-top" alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Shorts</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Denim shorts</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">49$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
             </div>
+            <!-- First slide -->
+            <!-- Second slide -->
+            <div class="carousel-item">
+              <div class="col-md-4 mb-2">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(30).jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Accessories</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Summer hat</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">39$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
+              <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(37).jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Shoes</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Black heels</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">79$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
+              <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(31).jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Outerwear</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Black jacket</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">149$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
             </div>
-            <!--/.Carousel Wrapper-->
-
+            <!-- Second slide -->
+            <!--Third slide -->
+            <div class="carousel-item">
+              <div class="col-md-4 mb-2">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(38).jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Accessories</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Leather bag</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">29$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
+              <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Accessories</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Leather belt</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">89$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
+              <div class="col-md-4 mb-2 clearfix d-none d-md-block">
+                <!-- Card -->
+                <div class="card card-cascade narrower card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view view-cascade overlay">
+                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(57).jpg" class="card-img-top"
+                      alt="sample photo">
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body card-body-cascade text-center">
+                    <!-- Category & Title -->
+                    <a href="" class="text-muted">
+                      <h5>Shoes</h5>
+                    </a>
+                    <h4 class="card-title my-4">
+                      <strong>
+                        <a href="">Sneakers</a>
+                      </strong>
+                    </h4>
+                    <!-- Description -->
+                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                      consectetur, adipisci.
+                    </p>
+                    <!-- Card footer -->
+                    <div class="card-footer px-1">
+                      <span class="float-left">129$</span>
+                      <span class="float-right">
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Quick Look">
+                          <i class="fas fa-eye ml-3"></i>
+                        </a>
+                        <a class="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Wishlist">
+                          <i class="fas fa-heart ml-3"></i>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
+            </div>
+            <!--Third slide -->
+          </div>
+          <!-- Slides -->
         </div>
+        <!-- Carousel Wrapper -->
+
+        </section>
+<!-- Section: Products v.5 -->
+          
       </div>
     </div>
   </div>

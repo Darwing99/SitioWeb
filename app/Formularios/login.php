@@ -15,7 +15,7 @@
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark elegant-color-dark">
             <a class="navbar-brand" href="#">
-            <img src="../../Media/img/logo.png" height="70" alt="mdb logo">
+            <img src="../../Media/img/Logo.png" height="70" alt="mdb logo">
           </a>
           <a class="navbar-brand" href="../../index.php">La Ruta del café</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"

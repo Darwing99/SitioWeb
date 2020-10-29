@@ -16,10 +16,11 @@
     <header>
     <?php include('header.php');?> 
     </header>
+
 <div class="col-sm-12 mb-5">
           <section class="my-5">
             <div class="">
-              <img class="card-img-top" src="../Media/img/servicios.png" alt="Card image cap">
+              <img class="card-img-top" src="../Media/img/servicios.png" alt="Servicios de la ruta del café">
             </div><!--Divisor para  imagen-->
 
             <div class="text-md-left w-responsive mx-auto pb-5">
@@ -92,10 +93,8 @@
           
                     <!-- Grid column -->
                     <div class="col-xl-10 col-md-11 col-10">
-                      <h5 class="subtitulo font-weight-bold mb-3">Finca Tour</h5>
-                      <p class="fuente d-flex justify-content-start grey-text">Próximamente podrás disfrutar de paseos turísticos por nuestra finca. </p></div>
-                    <!-- Grid column -->
-          
+                    <button class="btn btn-success"><i class="fas fa-magic mr-1"></i> Finca Tour</button>
+                      
                   </div>
           
                 </div>
@@ -111,10 +110,10 @@
     <div class="card">
                   <div class="row">
                     <!-- Section: Features v.3 -->
-              <section class="my-5">
+              <section class="my-5" >
           
               
-              <div class="row">
+              <div class="row" id="direccion">
               <div class="col-lg-1"></div>
           
                 <!-- Grid column -->
@@ -129,7 +128,7 @@
                   <!-- Grid row -->
                   <div class="row mb-7">
                   <div class="col-1">
-                      <i class="fas fa-share fa-lg indigo-text"></i>
+                      <i class="fas fa-directions fa-lg indigo-text"></i>
                     </div>
           
                     <!-- Grid column -->
@@ -161,9 +160,10 @@
       <?php include('footer.php');?>
 </footer>
      
- 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="../Styles/js/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../Scripts/Funciones.js"></script>
 </body>
 </html>

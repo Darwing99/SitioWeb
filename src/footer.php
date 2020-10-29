@@ -22,7 +22,7 @@
               </li>
               <li class="list-inline-item">
                 <a class="btn-floating btn-tw mx-1">
-                  <i class="fab fa-twitter"> </i>
+                  <i class="fab fa-instagram"> </i>
                 </a>
               </li>
               <li class="list-inline-item">
@@ -33,11 +33,6 @@
               <li class="list-inline-item">
                 <a class="btn-floating btn-li mx-1">
                   <i class="fab fa-linkedin-in"> </i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn-floating btn-dribbble mx-1">
-                  <i class="fab fa-dribbble"> </i>
                 </a>
               </li>
             </ul>

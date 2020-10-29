@@ -20,7 +20,7 @@
       <?php include('header.php');?>    
     <header>
       <main>
-        <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+        <div id="carousel-example-1z" class="carousel slide " data-ride="carousel">
           <!--Indicators-->
           <ol class="carousel-indicators">
             <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
@@ -32,17 +32,17 @@
           <div class="carousel-inner" role="listbox">
             <!--First slide-->
             <div class="carousel-item active">
-              <img class="d-block w-100 card card-image" src="../Media/img/banners.jpg" alt="First slide">
+              <img class="d-block w-100 card card-image" src="../Media/img/banner4.png" alt="First slide">
             </div>
             <!--/First slide-->
             <!--Second slide-->
             <div class="carousel-item">
-              <img class="d-block w-100" src="../Media/img/portada.jpg" alt="Second slide">
+              <img class="d-block w-100" src="../Media/img/banner2.png" alt="La vida es tan corta, como para tomar cafés malos.">
             </div>
             <!--/Second slide-->
             <!--Third slide-->
             <div class="carousel-item">
-              <img class="d-block w-100" src="../Media/img/BANNERS3.jpg" alt="Third slide">
+              <img class="d-block w-100" src="../Media/img/banner3.png" alt="Third slide">
             </div>
             <!--/Third slide-->
           </div>
@@ -62,15 +62,13 @@
           <hr>
      
         <section  class="section pb-3 text-center">
-
-           <br>
           <!--Accordion wrapper-->
           <div class="accordion md-accordion accordion-1" id="accordionEx23" role="tablist">
             <div class="card">
               
               <div class="card-header black lighten-3 z-depth-1" role="tab" id="heading97">
                 <h5 class="text-uppercase mb-0 py-1">
-                  <a class="subtitulo d-flex justify-content-start white-text font-weight-bold" data-toggle="collapse" href="#collapse97" aria-expanded="false"
+                  <a class="subtitulo d-flex justify-content-start white-text font-weight-bold" id="historia" data-toggle="collapse" href="#collapse97" aria-expanded="false"
                     aria-controls="collapse97">
                     <i class="fas fa-book"></i>Leer Historia De Nuestro Café
                   </a>
@@ -187,9 +185,7 @@
         <i class="fab fa-instagram blue-text"> </i>
       </a>
       <!-- Dribbble -->
-      <a class="p-2 fa-lg ins-ic">
-        <i class="fab fa-dribbble blue-text"> </i>
-      </a>
+      
     </ul>
   </div>
   <!-- Grid column -->
@@ -222,12 +218,7 @@
 
 </section>
 <!-- Section: Team v.1 -->
-
-
-
-
-        
-        </section>
+</section>
           <br>
           <hr>
               
@@ -248,7 +239,7 @@
               </div>
           </div>
       </div>
-        <section class="contact-section my-5">
+        <section class="contact-section my-5" id="mision">
 
           <!-- Form with header -->
           <div class="card">
@@ -279,7 +270,7 @@
         
                   <!-- Header -->
                
-                  <div class="row d-flex justify-content-center">
+                  <div class="row d-flex justify-content-center" >
                     <div class="col-md-9 mb-5 text-center">
                     <h1 class="subtitulo section-heading h1 pt-4">Misión</h1>
                  
@@ -303,7 +294,7 @@
         
                   <!-- Header -->
 
-                  <div class="row d-flex justify-content-center">
+                  <div class="row d-flex justify-content-center" id="vision">
                     <div class="col-md-9 mb-5 text-center">
                     <h1 class="subtitulo section-heading h1 pt-4">Visión</h1>
                  
@@ -341,10 +332,11 @@
       <?php include('footer.php');?>
     </footer>
     
-  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="../Styles/js/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-   
+    <!-- <script>$(function () {$("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");});</script> -->
+    <script src="../Scripts/Funciones.js"></script>
 </body>
 </html>

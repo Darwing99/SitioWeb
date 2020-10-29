@@ -8,84 +8,99 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="icon" href="Media/img/Logo.png">
     <link rel="stylesheet" href="Styles/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="Styles/css/mdb.css" >
+    <link rel="stylesheet" href="Styles/css/mdb.min.css" >
     <link rel="stylesheet" href="Styles/fuente.css">
     <title>La ruta del café</title>
 </head>
 <body>
  
     <header>
-      <!--Navbar -->
-      <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1" id="top-section">
+      <nav class="navbar navbar-dark red" id="top-section">
         <a class="navbar-brand" href="#">
-          <img src="Media/img/Logo.png" height="100" class="d-inline-block align-top"
-            alt="mdb logo" style="border-radius: 50%;">
+          <img src="Media/img/Logo.png" height="84" alt="La ruta">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
-          aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="fuente_nav nav-link " href="src/sobre_nosotros.php">Sobre nosotros <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="fuente_nav nav-link " href="src/servicios.php">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="fuente_nav nav-link "href="src/carta.php">Coffee Shop</a>
-            </li>
-            <li class="nav-item">
-              <a class="fuente_nav nav-link " href="src/finca.php" tabindex="-1" aria-disabled="false"> Finca</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="fuente_nav nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Aprende con nosotros
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="fuente_nav dropdown-item " href="src/recetas.php">Recetas</a>
-                <div class="dropdown-divider"></div>
-                <a class="fuente_nav dropdown-item " href="src/videotutorial.php">VideoTutoriales </a>
-              </div>
-          <li>
-            <li class="nav-item">
-              <a class="fuente_nav nav-link" href="src/contactos.php" tabindex="-1" aria-disabled="false">Contactos</a>
-            </li>
-            <li class="nav-item">
-              <a class="fuente_nav nav-link" href="src/galeria.php" tabindex="-1" aria-disabled="false">Galería</a>
-            </li>
-            <li class="nav-item">
-              <a class="fuente_nav nav-link" href="src/blog.php" tabindex="-1" aria-disabled="false">Blog</a>
-            </li>
-            <li class="nav-item">
-            <a class="fuente_nav nav-link" href="app/Formularios/login.php" tabindex="-1" aria-disabled="false">System Coffee</a>
-          </li>
-          </ul>
-          <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item avatar">
-              <a class="nav-link p-0" href="#">
-                
-              </a>
-            </li>
-          </ul>
-        </div>
       </nav>
-<!--/.Navbar -->
+      <nav class="nav navbar fixed-top pt-9" >
+      <div class="logo"> <a class="a" href="#"><img class="logotipo" src="Media/img/Logo.png" height="100" class="d-inline-block align-top" alt="logo de la inveruta" style="border-radius: 50%;"></a>
+     
+      </div>
+      <label  for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input class="input" type="checkbox" id="btn">
+      <ul class="ul">
+        <li class="li">   
+          <label for="btn-1" class="fuente_nav label">Sobre Nosotros <i class="fas fa-chevron-circle-down"></i></label>
+          <a class="fuente_nav a" href="src/sobre_nosotros.php">Sobre Nosotros</a>
+          <input class="input" type="checkbox" id="btn-1">
+          <ul  class="ul">
+            <li class="li"><a class="fuente_nav a"  href="#">Nuestra Historia</a></li>
+            <li class="li"><a class="fuente_nav a"  href="#">Misión</a></li>
+            <li class="li"><a class="fuente_nav a"  href="#">Visión</a></li>
+          </ul>
+      </li>
+        <li class="li">
+          <label for="btn-2" class=" fuente_nav label">Servicios <i class="fas fa-chevron-circle-down"></i></label>
+          <a class="a fuente_nav" href="src/servicios.php">Servicios</a>
+          <input class="input" type="checkbox" id="btn-2">
+          <ul  class="ul">
+            <li class="li"><a class="fuente_nav a" href="#">Finca Tour</a></li>
+            <li class="li"><a class="fuente_nav a" href="#">Ubicación</a></li>
+            <li class="li"><a class="fuente_nav a"  href="#">Recepción de Información</a></li>
+          </ul>
+        </li>
+        <li class="li">
+          <label  for="btn-3" class="fuente_nav label">Coffee Shop <i class="fas fa-chevron-circle-down"></i></label>
+          <a class="fuente_nav a "href="src/carta.php">Coffee Shop</a>
+          <input class="input" type="checkbox" id="btn-3">
+          <ul  class="ul">
+            <li class="li"><a class="fuente_nav a" href="#">Bebidas Calientes</a></li>
+            <li class="li"><a class="fuente_nav a" href="#">Bebidas Frias</a></li>
+            <li class="li"><a class="fuente_nav a" href="#">Desayunos y almuerzos</a></li>
+          </ul>
+        </li>
+        <li class="li">
+          <label for="btn-5" class=" fuente_nav label">Finca <i class="fas fa-chevron-circle-down"></i></label>
+          <a class="a fuente_nav" href="src/finca.php">Finca</a>
+          <input class="input" type="checkbox" id="btn-5">
+          <ul  class="ul">
+            <li class="li"><a class="fuente_nav a" href="#">Finca Tour</a></li>
+            <li class="li"><a class="fuente_nav a" href="#">Ubicación</a></li>
+            <li class="li"><a class="fuente_nav a"  href="#">Recepción de Información</a></li>
+          </ul>
+        </li>
+        <li class="li">
+        <label for="btn-4" class="fuente_nav label">Aprende Con Nosotros<i class="fas fa-chevron-circle-down"></i></label>
+          <a class="fuente_nav a"href="#">Aprende Con Nosotros</a>
+          <input class="input" type="checkbox" id="btn-4">
+          <ul  class="ul">
+            <li class="li" ><a class="fuente_nav a" href="src/recetas.php">Recetas</a></li>
+            <li class="li"><a class="fuente_nav a" href="src/videotutoriales.php">VideoTutoriales</a></li>
+          </ul>
+        </li>
+        <li class="li"><a class="fuente_nav a" href="src/contactos.php">Contactos</a></li>
+        <li class="li"><a class="fuente_nav a" href="src/galeria.php">Galería</a></li>
+        <li class="li"><a class="fuente_nav a" href="src/blog.php">Blog</a></li>
+        <li class="li"><a class="fuente_nav a" href="app/Formularios/login.php">CoffeApp</a></li>
+      </ul>
+      
+    </nav>
+    
+    
 
     </header>
   
   <div class="Slider">
-      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
               <div class="carousel-item active">
-              <img src="Media/img/Slide.jpg" class="d-block w-100" alt="...">
+              <img src="Media/img/banner7.png" class="d-block w-100" alt="La ruta del café">
               </div>
               <div class="carousel-item">
-              <img src="Media/img/Slide4.jpg" class="d-block w-100" alt="...">
+              <img src="Media/img/banner6.png" class="d-block w-100" alt="La ruta del café">
               </div>
               <div class="carousel-item">
-              <img src="Media/img/slide4.png" class="d-block w-100" alt="...">
+              <img src="Media/img/banner.png" class="d-block w-100" alt="La ruta del café">
               </div> 
           </div>
           <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -98,8 +113,7 @@
           </a>
       </div>
   </div>
-  
-  <br><!-- imagen de fondo -->
+  <hr>
   <section>
 
     <div class="row mx-1">
@@ -151,7 +165,7 @@
 
         <!-- Category -->
         <a href="#!" class="green-text">
-        <h6 class="font-weight-bold mb-3"><i class="fas fa-utensils pr-2"></i>Food</h6>
+        <h6 class="font-weight-bold mb-3"><i class="fas fa-utensils pr-2"></i>breakfasts and lunches</h6>
         </a>
         <!-- Post title -->
         <h3 class="subtitulo font-weight-bold mb-3"><strong>Desayunos y almuerzos</strong></h3>
@@ -177,7 +191,7 @@
 
         <!-- Category -->
         <a href="#!" class="pink-text">
-        <h6 class="font-weight-bold mb-3"><i class="fas fa-image pr-2"></i>Lifestyle</h6>
+        <h6 class="font-weight-bold mb-3"><i class="fas fa-image pr-2"></i>Cold drinks</h6>
         </a>
         <!-- Post title -->
         <h3 class="subtitulo font-weight-bold mb-3"><strong>Bebidas Frias</strong></h3>
@@ -232,7 +246,7 @@
 
         <!-- Category -->
         <a href="#!" class="indigo-text">
-        <h6 class="font-weight-bold mb-3"><i class="fas fa-suitcase pr-2"></i>Travels</h6>
+        <h6 class="font-weight-bold mb-3"><i class="fas fa-suitcase pr-2"></i>Hot Drinks</h6>
         </a>
         <!-- Post title -->
         <h3 class="subtitulo font-weight-bold mb-3"><strong>Bebidas Calientes</strong></h3>
@@ -287,7 +301,7 @@
           </li>
           <li class="list-inline-item">
             <a class="btn-floating btn-tw mx-1">
-              <i class="fab fa-twitter"> </i>
+              <i class="fab fa-instagram"> </i>
             </a>
           </li>
           <li class="list-inline-item">
@@ -298,11 +312,6 @@
           <li class="list-inline-item">
             <a class="btn-floating btn-li mx-1">
               <i class="fab fa-linkedin-in"> </i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-dribbble mx-1">
-              <i class="fab fa-dribbble"> </i>
             </a>
           </li>
         </ul>
@@ -322,10 +331,12 @@
   <!-- Copyright -->
 </footer>
  
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="Styles/js/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src=""></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-   
+    <!-- <script>$(function () {$("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");});</script> -->
+    <script src="Scripts/Funciones.js"></script>
 </body>
 </html>

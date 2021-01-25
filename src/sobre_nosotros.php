@@ -68,7 +68,7 @@
               
               <div class="card-header black lighten-3 z-depth-1" role="tab" id="heading97">
                 <h5 class="text-uppercase mb-0 py-1">
-                  <a class="subtitulo d-flex justify-content-start white-text font-weight-bold" id="historia" data-toggle="collapse" href="#collapse97" aria-expanded="false"
+                  <a class="subtitulo d-flex justify-content-start white-text font-weight-bold" data-toggle="collapse" href="#collapse97" aria-expanded="false"
                     aria-controls="collapse97">
                     <i class="fas fa-book"></i>Leer Historia De Nuestro Café
                   </a>
@@ -185,7 +185,9 @@
         <i class="fab fa-instagram blue-text"> </i>
       </a>
       <!-- Dribbble -->
-      
+      <a class="p-2 fa-lg ins-ic">
+        <i class="fab fa-dribbble blue-text"> </i>
+      </a>
     </ul>
   </div>
   <!-- Grid column -->
@@ -239,7 +241,7 @@
               </div>
           </div>
       </div>
-        <section class="contact-section my-5" id="mision">
+        <section class="contact-section my-5">
 
           <!-- Form with header -->
           <div class="card">
@@ -270,7 +272,7 @@
         
                   <!-- Header -->
                
-                  <div class="row d-flex justify-content-center" >
+                  <div class="row d-flex justify-content-center">
                     <div class="col-md-9 mb-5 text-center">
                     <h1 class="subtitulo section-heading h1 pt-4">Misión</h1>
                  
@@ -294,7 +296,7 @@
         
                   <!-- Header -->
 
-                  <div class="row d-flex justify-content-center" id="vision">
+                  <div class="row d-flex justify-content-center">
                     <div class="col-md-9 mb-5 text-center">
                     <h1 class="subtitulo section-heading h1 pt-4">Visión</h1>
                  
@@ -336,7 +338,7 @@
     <script src="../Styles/js/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!-- <script>$(function () {$("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");});</script> -->
+    <script>$(function () {$("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");});</script>
     <script src="../Scripts/Funciones.js"></script>
 </body>
 </html>

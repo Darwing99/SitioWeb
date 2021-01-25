@@ -1,6 +1,8 @@
 <?php
 include('../BD/conexion.php');
+spl_autoload_register(function(){
 
+});
 
 $mensajeOK=false;
 $mensajeError="";
@@ -10,9 +12,11 @@ if(isset($_POST['_email'],$_POST['_password'])){
     if($_POST['_email']!=""){
         if($_POST['_password']!=""){
             try {
-                    $usera=$_POST['_email'];
+                    $user=$_POST['_email'];
+                    // Seguridad para evitar caracteres especiales
+                    $usera=mysqli_real_escape_string($conn,$user);
                     $passa=$_POST['_password'];
-                    
+
                     $consulta="SELECT * FROM rusuario WHERE usuario='$usera' AND pass=sha1('$passa') AND estado='1'";
                     $QueryDB=mysqli_query($conn,$consulta);
 
@@ -29,20 +33,20 @@ if(isset($_POST['_email'],$_POST['_password'])){
                        
                         //Función para mostrar sesiones
                             if(!isset($_SESSION['id'])){
-                            header("location:../Formularios/login.php");
+                            header("location:../Formularios/login");
                             }else if($_SESSION['rol']==1){
                                
-                                header("location:../Formularios/menu.php");
+                                header("location:../Formularios/menu");
 
                             }else{   
-                                header("location:../Formularios/ventas.php");
+                                header("location:../Formularios/ventas");
                             }
                             
                     }else{
                         $mensajeError="El usuario o contraseña no existen";
                         print "<script>
                                 alert('El usuario/contraseña no existen');
-                                window.location='../Formularios/login.php?sms=2';
+                                window.location='../Formularios/login?message=WarningMessage&type=WarningMessage';
                                 </script>";
                                 return false;
                 }
@@ -54,7 +58,7 @@ if(isset($_POST['_email'],$_POST['_password'])){
           
             print "<script>
                     alert('Iniciar Sesión');
-                    window.location='../Formularios/login.php?sms=1';
+                    window.location='../Formularios/login';
                     </script>";
         }
 
@@ -62,7 +66,7 @@ if(isset($_POST['_email'],$_POST['_password'])){
         
         print "<script>
                 alert('Acceso Denegado');
-                window.location='../Formularios/login.php?sms=1';
+                window.location='../Formularios/login?message=WarningMessage&type=WarningMessage';
                 </script>";
 
     }
@@ -70,7 +74,7 @@ if(isset($_POST['_email'],$_POST['_password'])){
    
     print "<script>
             alert('Todos los campos son requeridos');
-            window.location='../Formularios/login.php?sms=1';
+            window.location='../Formularios/login?message=SuccessMessage&type=SuccessMessage';
             </script>";
 }
 ?>

@@ -1,73 +1,56 @@
-<nav class="navbar navbar-dark red" id="top-section">
-  <a class="navbar-brand" href="#">
-    <img src="../Media/img/Logo.png" height="84" alt="La ruta">
-  </a>
-</nav>
-    <nav class="nav navbar fixed-top pt-9" >
-      <div class="logo"> <a class="a" href="../index.php"><img class="logotipo" src="../Media/img/Logo.png" height="100" class="d-inline-block align-top" alt="logo de la inveruta" style="border-radius: 50%;"></a>
-     
-      </div>
-      <label  for="btn" class="icon">
-        <span class="fa fa-bars"></span>
-      </label>
-      <input class="input" type="checkbox" id="btn">
-      <ul class="ul">
-        <li class="li">   
-          <label for="btn-1" class="fuente_nav label">Sobre Nosotros <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="fuente_nav a" href="sobre_nosotros.php">Sobre Nosotros</a>
-          <input class="input" type="checkbox" id="btn-1">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a"  href="sobre_nosotros.php">Quienes Somos?</a></li>
-            <li class="li"><a class="fuente_nav a" data-toggle="collapse" aria-expanded="true"   href="sobre_nosotros.php#collapse97">Historia</a></li>
-            <li class="li"><a class="fuente_nav a"  href="sobre_nosotros.php#mision">Misión y Visión</a></li>
-          
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark orange darken-3" id="top-section">
+        <a class="navbar-brand" href="../index.php">
+          <img src="../Media/img/Logo.png" height="100" class="d-inline-block align-top"
+            alt="logo de la inveruta" style="border-radius: 50%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+          aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="fuente_nav nav-link " href="sobre_nosotros.php">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="fuente_nav nav-link " href="servicios.php">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="fuente_nav nav-link "href="carta.php">Coffee Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="fuente_nav nav-link " href="finca.php" tabindex="-1" aria-disabled="false"> Finca</a>
+            </li>
+            <li class="nav-item dropdown" id="dmenu">
+              <a class="fuente_nav nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Aprende con nosotros
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="fuente_nav nav-item  dropdown-item " href="recetas.php">Recetas</a>
+                <div class="dropdown-divider"></div>
+                <a class="fuente_nav nav-item dropdown-item " href="videotutorial.php">VideoTutoriales </a>
+              </div>
+            </li>
+          <li>
+            <li class="nav-item">
+              <a class="fuente_nav nav-link" href="contactos.php" tabindex="-1" aria-disabled="false">Contactos</a>
+            </li>
+            <li class="nav-item">
+              <a class="fuente_nav nav-link" href="galeria.php" tabindex="-1" aria-disabled="false">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="fuente_nav nav-link" href="blog.php" tabindex="-1" aria-disabled="false">Blog</a>
+            </li>
+            <li class="nav-item">
+            <a class="fuente_nav nav-link" href="../app/Formularios/login.php" tabindex="-1" aria-disabled="false">System Coffee</a>
+          </li>
           </ul>
-      </li>
-        <li class="li">
-          <label for="btn-2" class=" fuente_nav label">Servicios <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="a fuente_nav" href="servicios.php">Servicios</a>
-          <input class="input" type="checkbox" id="btn-2">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a" href="servicios.php">Cafetería</a></li>
-            <li class="li"><a class="fuente_nav a" href="servicios.php#direccion">Ubicación</a></li>
-            <li class="li"><a class="fuente_nav a"  href="#">Recepción de Información</a></li>
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item avatar">
+              <a class="nav-link p-0" href="#">
+               
+              </a>
+            </li>
           </ul>
-        </li>
-        <li class="li">
-          <label  for="btn-3" class="fuente_nav label">Coffee Shop <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="fuente_nav a "href="carta.php">Coffee Shop</a>
-          <input class="input" type="checkbox" id="btn-3">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a" href="carta.php#heading96">Bebidas Calientes</a></li>
-            <li class="li"><a class="fuente_nav a" href="carta.php#heading97">Bebidas Frias</a></li>
-            <li class="li"><a class="fuente_nav a" href="carta.php#heading98">Desayunos y almuerzos</a></li>
-          </ul>
-        </li>
-        <li class="li">
-          <label for="btn-5" class=" fuente_nav label">Finca <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="a fuente_nav" href="finca.php">Finca</a>
-          <input class="input" type="checkbox" id="btn-5">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a" href="#">Finca Tour</a></li>
-            <li class="li"><a class="fuente_nav a" href="#">Ubicación</a></li>
-            <li class="li"><a class="fuente_nav a"  href="#">Recepción de Información</a></li>
-          </ul>
-        </li>
-        <li class="li">
-        <label for="btn-4" class="fuente_nav label">Aprende Con Nosotros<i class="fas fa-chevron-circle-down"></i></label>
-          <a class="fuente_nav a"href="#">Aprende Con Nosotros</a>
-          <input class="input" type="checkbox" id="btn-4">
-          <ul  class="ul">
-            <li class="li" ><a class="fuente_nav a" href="recetas.php">Recetas</a></li>
-            <li class="li"><a class="fuente_nav a" href="videotutoriales.php">VideoTutoriales</a></li>
-          </ul>
-        </li>
-        <li class="li"><a class="fuente_nav a" href="contactos.php">Contactos</a></li>
-        <li class="li"><a class="fuente_nav a" href="galeria.php">Galería</a></li>
-        <li class="li"><a class="fuente_nav a" href="blog.php">Blog</a></li>
-        <li class="li"><a class="fuente_nav a" href="../app/Formularios/login.php">CoffeApp</a></li>
-      </ul>
-      
-    </nav>
-    
-   
+        </div>
+      </nav>

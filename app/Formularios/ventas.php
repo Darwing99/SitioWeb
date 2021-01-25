@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
     <link rel="stylesheet" href="../../Styles/form.css">
-    <script src="../../Scripts/jquery-3.1.1.js"></script>
+   
     
     
 </head>
@@ -21,12 +21,12 @@
 </header>
 <br>
 <form id="ventas" method="POST" >
-    <div class="card-deck">
+    <div class="pt-5 card-deck">
 
           <div  class="col-sm-9 card mb-4">
             <br>
-            <div class="modal-header text-center  yellow darken-2">
-                    <h4 class="modal-title black-text w-100 font-weight-bold py-2">Nueva Venta</h4>
+            <div class="modal-header text-rigth  white darken-2">
+                    <h4 class="modal-title black-text w-100 font-weight-bold py-0">Nueva Venta</h4>
                 </div>
                 <br>
                 <div class="centrar_form" >
@@ -41,7 +41,7 @@
                       <select class="form-control" id="_cliente" name="_cliente">
                                   <option value="0" disabled selected>Cliente</option>
                                   <?php
-                                  include('../BD/conexion.php');
+                                  
                                   $sql="select*from rclientes";
                                   $result=mysqli_query($conn,$sql);
                                   while($mostrar=mysqli_fetch_array($result)){?>
@@ -56,7 +56,7 @@
                     <select class="form-control" id="_codigo" name="codigo">
                                   <option value="0" disabled selected>Producto</option>
                                   <?php
-                                  include('../BD/conexion.php');
+                                  
                                   $sql="select*from rproductos";
                                   $result=mysqli_query($conn,$sql);
                                   while($mostrar=mysqli_fetch_array($result)){?>
@@ -127,8 +127,8 @@
                 <!-- Card factura-->
           <div class=" col-sm-3 card mb-4">
                 <br>
-                <div class="modal-header text-center  yellow darken-2">
-                    <h4 class="modal-title black-text w-100 font-weight-bold py-2">Factura</h4>
+                <div class="modal-header text-rigth  white darken-2">
+                    <h4 class="modal-title black-text w-100 font-weight-bold py-0">Factura</h4>
                 </div>
                 <br>
                 <div>
@@ -138,7 +138,7 @@
                     <br>
                     <div class="form-group row"> 
                     <?php 
-                        include('../BD/conexion.php');
+                       
                         $id=$_SESSION['id'];
                         $sql="SELECT usuario,nombre,id FROM rusuario where id='$id'";
                         $result=mysqli_query($conn,$sql);
@@ -153,7 +153,7 @@
                     <div class="form-group row"> 
                  
                     <?php 
-                        include('../BD/conexion.php');
+                     
                         $sql="SELECT MAX(id_factura+1000000) AS num FROM rfactura";
                         $result=mysqli_query($conn,$sql);
                         while($mostrar=mysqli_fetch_array($result)){
@@ -203,9 +203,12 @@
     include("../mint/footer.php");
     ?>
 </footer>   
-  
-    
-    <script src="../../Scripts/Funciones.js"></script>
+<script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
+    <script src="../../Scripts/validaciones.js"></script>
+    <script src="../../Scripts/FuncionesApp.js"></script>
     <script src="../../Scripts/ventas.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

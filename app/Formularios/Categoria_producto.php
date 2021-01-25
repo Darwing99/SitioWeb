@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
     <link rel="stylesheet" href="../../Styles/form.css">
-
-  
+    
     
 
 </head>
@@ -24,33 +23,19 @@
 
 <br>
 
-<div  class="margenes card-deck">
+<div  class="margenes">
 
         <!-- Card -->
-        <div class=" col-sm-0">
-          
-        </div>
-        <div  class="col-sm-12 card mb-4">
+       
+        <div  class="pt-5 col-sm-12 mb-4">
         <br>
-        <div class="modal-header text-center  yellow darken-2">
-                <h4 class="modal-title black-text w-100 font-weight-bold py-2">Categoría de insumos</h4>
+        <div class="modal-header text-rigth  white darken-2">
+                <h4 class="modal-title black-text w-100 font-weight-bold py-0">Categoría de insumos</h4>
             </div>
             <br>
          
             <form name="form" action="../CRUD/insertCategoria.php" method="POST" class="centrar_form"">
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <!-- #####Consulta de numero de categoría#### -->
-                <?php 
-                    include('../BD/conexion.php');
-                    $sql="SELECT Max(id+1) AS num FROM rcategorias";
-                    $result=mysqli_query($conn,$sql);
-                    while($mostrar=mysqli_fetch_array($result)){
-                    ?>
-                <label for="inputEmail4">Número</label>
-                <input name="num" type="text" class="form-control" id="numero" readonly value="<?php echo $mostrar['num'] ?>">
-                </div>
-                <?php } ?>
+            <div class="pt-5 form-row">
                 <div class="form-group col-md-4">
                 <label for="inputPassword4">Categoría</label>
                 <input name="_categoria" type="text" class="form-control" id="categoria">
@@ -58,9 +43,9 @@
                 
             </div>
            
-            <button id="_agregar"  type="submit" class="btn btn-rounded btn-amber"><i class="fas fa-plus-square"></i>Agregar</button>
-            <button id="ver" type="button" class="btn btn-rounded btn-brown"><i class="fas fa-eye"></i>Mostrar</button>
-            <button type="reset" class="btn btn-rounded btn-blue-grey"><i class="far fa-save pr-2" aria-hidden="true"></i>Limpiar</button>
+            <button id="_agregar"  type="submit" class="btn btn-elegant"><i class="fas fa-plus-square"></i>Agregar</button>
+            <button id="ver" type="button" class="btn btn-elegant"><i class="fas fa-eye"></i>Mostrar</button>
+            <button type="reset" class="btn btn-elegant"><i class="far fa-save pr-2" aria-hidden="true"></i>Limpiar</button>
             </form>
             <br>
 
@@ -83,7 +68,7 @@
                         </thead>
                         <tbody>
                         <?php 
-                            include('../BD/conexion.php');
+                           
                             $sql="select id, categoria from rcategorias";
                             $result=mysqli_query($conn,$sql);
                           
@@ -193,11 +178,13 @@
 
 </footer>   
     
-   
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="../../Scripts/Funciones.js"></script>
+    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset = " utf-8 "></script>
     <script src="../../Scripts/validaciones.js"></script>
-    <script src="../../Scripts/categorias.js"></script>
+    <script src="../../Scripts/FuncionesApp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>

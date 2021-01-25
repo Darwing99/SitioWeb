@@ -1,0 +1,83 @@
+[33mcommit d5e6135e2d6fa3c3beb9c0fc9b3451fe09d94608[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Thu Nov 5 18:12:33 2020 -0600
+
+    Cambios
+
+[33mcommit 58455ca94afbe21e2fd229b35b4a0101ae862662[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Thu Oct 29 15:07:07 2020 -0600
+
+    Version 2
+
+[33mcommit 049b957d335d4bbbb75ce8c75fc8f5bfff79114e[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Wed Oct 28 01:37:58 2020 -0600
+
+    corrección de errores
+
+[33mcommit 5c61cba48b2b77564a350cd52ad6ba0b09832b80[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Mon Oct 26 05:05:58 2020 -0600
+
+    Eliminacióm de archivo basura y ahorro de codigo php
+
+[33mcommit 97f15198675e17b04d2d1f6e2bb05abaa122fefd[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Fri Oct 23 17:26:29 2020 -0600
+
+    Corrección de errores de consultas sql en dbempleado
+
+[33mcommit 4557762796f3e7f03519f9131a58372a8f8e8e77[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Wed Oct 21 11:33:30 2020 -0600
+
+    CAMBIOS AGREGADOS
+
+[33mcommit ff4188bd60ccebc625e5a8f6b8115eb695474fc8[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Wed Oct 7 20:43:50 2020 -0600
+
+    Cambios agregados
+
+[33mcommit 915fab6e8dfbfdfcd689e89488f8e08f40c5713d[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Wed Oct 7 10:29:18 2020 -0600
+
+    Cambios de extensiones
+
+[33mcommit a9d8217cf99d656896dc45e60a01a249da05cbf6[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Wed Oct 7 10:13:31 2020 -0600
+
+    Cambios de extensiones
+
+[33mcommit 69240859d571424f47f11ab0524ad5d0b0a74530[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Mon Oct 5 02:24:06 2020 -0600
+
+    Agregando nuevo estilos y email.php
+
+[33mcommit 2c64055d56a524b0a549d57d307898d01dcbd06e[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Sun Oct 4 12:37:08 2020 -0600
+
+    Cambios de estilos
+
+[33mcommit 0bffc41f3cec2d304fe03e4d7832f2b2a02c02a7[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Sat Oct 3 18:12:48 2020 -0600
+
+    Se modificaron los archivor para agregar el enlace de blog.html
+
+[33mcommit 81b4a2178ec0620567785762ba0245e25e12b51d[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Sat Oct 3 02:37:44 2020 -0600
+
+    Se creo un pagina para blog
+
+[33mcommit 3db2212f93b92e1ba00a2168d120fae37031de9b[m
+Author: Darwing Hernandez <darwing01000100@gmail.com>
+Date:   Sat Oct 3 02:31:51 2020 -0600
+
+    Commit Inicial

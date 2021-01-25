@@ -13,9 +13,8 @@
     <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
     <link rel="stylesheet" href="../../Styles/form.css">
-    <script src="../../Scripts/jquery-3.1.1.js"></script>
+   
     
-
 </head>
 <body>
 <header>
@@ -24,18 +23,14 @@
 ?>
 </header>
 <br>
-<div " class="margenes card-deck">
+<div  class="pt-5 margenes card-deck">
 
-        <!-- Card -->
-        <div class=" col-sm-1">
-          
-        </div>
-     
+      
 
-        <div  class="col-sm-10 card mb-4">
+        <div  class="col-sm-12 card mb-4">
         <br>
-        <div class="modal-header text-center  yellow darken-2">
-                <h4 class="modal-title black-text w-100 font-weight-bold py-2">Tipos de Usuario</h4>
+        <div class="modal-header text-rigth  white darken-2">
+                <h4 class="modal-title black-text w-100 font-weight-bold py-0">Tipos de Usuario</h4>
             </div>
             <br>
          
@@ -57,7 +52,7 @@
 
                        <!-- ######Mostrar Empleados o usuarios desde la base de datos###### -->
                        <?php 
-                            include('../BD/conexion.php');
+                        
                             $sql="select*from rtipouser";
                             $result=mysqli_query($conn,$sql);
                             while($mostrar=mysqli_fetch_array($result)){ $i=0;
@@ -168,7 +163,7 @@
             
             <div class="form-group col-md-12">
             <?php 
-                    include('../BD/conexion.php');
+                    
                     $sql="select Max(idtipo+1) as num from rtipouser";
                     $result=mysqli_query($conn,$sql);
                     while($mostrar=mysqli_fetch_array($result)){
@@ -200,9 +195,14 @@
     ?>
 
 </footer>   
-  
-  <script src="../../Scripts/empleados.js"></script>
-    
+    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
+        
+    <script src="../../Scripts/validaciones.js"></script>
+    <script src="../../Scripts/FuncionesApp.js"></script>
+ 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>

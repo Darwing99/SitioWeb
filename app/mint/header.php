@@ -1,5 +1,7 @@
-   <?php 
-   include('../BD/conexion.php');
+<?php 
+   include_once '../BD/conexion.php';
+   $objeto = new Conexion();
+   $conexion = $objeto->Conectar();
    session_start();
    if(!isset($_SESSION['id'])){
     print "<script>
@@ -14,181 +16,273 @@
       $resultado=$conn->query($sql);
       $row=$resultado->fetch_assoc();
  ?> 
-
-<nav class="navbar navbar-expand-lg navbar-dark amber darken-3"id="top-section">
-
-<!-- Navbar brand -->
-<a class="navbar-brand" href="#">
-    <img src="../../Media/img/logo.png" height="70" alt="mdb logo">
-  </a>
-
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-  aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-
-<!-- Collapsible content -->
-<div class="collapse navbar-collapse" id="basicExampleNav">
-
-  <!-- Links -->
-
-  <ul class="navbar-nav mr-auto">
-  <?php  if($_SESSION['rol']==1){?>
-    <li class="nav-item">
-      <a class="nav-link" href="menu.php">Inicio
-        <span class="sr-only">(current)</span>
-      </a>
-    </li>
-    <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
-
-      <li class="nav-item" aria-hidden="true">
-      <a class="nav-link" href="menu.php">Inicio
-        <span class="sr-only">(current)</span>
-      </a>
-    </li>
-    <?php } ?> 
-    <?php  if($_SESSION['rol']==1){?>
-    <li class="nav-item dropdown ">
-     
-      <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Empleado/Usuario</a>
-      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="empleado.php">Registro Empleado</a>
-        <a class="dropdown-item" href="tipos_Usuarios.php">Tipos de Usuarios</a>
-      </div>
+ <header  class="fixed-sn mdb-skin">
    
-    </li>
-    <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
-      <li class="nav-item dropdown " aria-hidden="true">
-     
-     <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
-       aria-haspopup="true" aria-expanded="false">Empleado/Usuario</a>
-     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-       <a class="dropdown-item" href="empleado.php">Registro Empleado</a>
-       <a class="dropdown-item" href="tipos_Usuarios.php">Tipos de Usuarios</a>
-     </div>
-
-   </li>
-
-    <?php } ?>      
-
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Almacen</a>
-      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="Categoria_producto.php">Categoría Insumo</a>
-        <a class="dropdown-item" href="insumos.php">Insumos</a>
+ <div id="slide-out" class="side-nav sn-bg-4" style="width: 240px; transform: translateX(0px);">
+    <ul class="custom-scrollbar ps">  
+        <!-- Logo -->
+        <li class="pt-0" >
+          <div class="logo-wrapper sn-ad-avatar-wrapper">
+            <a href="#"><img src="../../Media/img/Logo.png" class="rounded-circle"></a>
+          </div>
+        </li>
       
-      </div>
-    </li>
-    <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Compras</a>
-      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="proveedores.php">Proveedor</a>
-        <a class="dropdown-item" href="compras.php">Compras</a>
-        <?php  if($_SESSION['rol']==1){?>
-        <a class="dropdown-item" href="../Formularios/gestor_compras.php">Gestor de compras</a>
-        <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
-          <a class="dropdown-item" hidden="true" href="#">Gestor de compras</a>
-          <?php } ?>  
-      </div>
-    </li>
-  
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">Productos</a>
-      <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="productos.php">Crear Producto</a>
-        <a class="dropdown-item" href="categoria_producto.php">Categoría de producto</a>
-        <a class="dropdown-item" href="gestor_productos.php">Gestor de productos</a>
-      </div>
-    </li>
-    <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Ventas</a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="cliente.php">Clientes</a>
+        
+    
+          <ul class="collapsible collapsible-accordion">
           <?php  if($_SESSION['rol']==1){?>
-            <a class="dropdown-item" href="gestor_ventas.php">Gestor de ventas</a>
+              <li class="pt-2" >
+                <a class="collapsible-header waves-effect arrow-r" href="menu"><i class="fas fa-home fa-2x"></i>Inicio
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
+
+                <li class="pt-2" aria-hidden="true">
+                <a class="collapsible-header waves-effect arrow-r" href="menu">Inicio
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            <?php } ?> 
+          <?php  if($_SESSION['rol']==1){?>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r" aria-hidden="true"><i class="fas fa-users"></i>Empleado/Usuario<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a  class="waves-effect"  href="empleado">
+                    <span class="sv-slim"><i class="fas fa-user-plus"></i></span>
+                    <span class="sv-normal">Registro Usuarios</span></a>
+                  </li>
+                  <li><a href="tipos_Usuario" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fa fa-briefcase"></i> </span>
+                    <span class="sv-normal">Roles</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
-            <a class="dropdown-item" href="gestor_ventas.php" hidden>Gestor de ventas</a>
-            <?php } ?>  
-            <a class="dropdown-item" href="ventas.php">Ventas</a>
+              <li class="pt-2"><a class="collapsible-header waves-effect arrow-r" aria-hidden="false"><i class="fas fa-users"></i>Empleado/Usuario<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a  class="waves-effect black"  href="empleado">
+                    <span class="sv-slim"><i class="fas fa-user-plus"></i> </span>
+                    <span class="sv-normal">Registro Usuarios</span></a>
+                  </li>
+                  <li><a href="tipos_Usuarios" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fa fa-briefcase"></i> </span>
+                    <span class="sv-normal">Roles</span></a>
+                  </li>
+                
+                </ul>
+              </div>
+            </li>
+              <?php } ?> 
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-boxes"></i>Almacen<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="Categoria_producto" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fa fa-tags"></i> </span>
+                    <span class="sv-normal">Categoría de Insumos</span></a>
+                  </li>
+                  <li><a href="insumos" class="waves-effect ">
+                    <span class="sv-slim"> FA </span>
+                    <span class="sv-normal">Insumos</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-cart-arrow-down"></i> Compras<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="proveedores" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fas fa-user-tie"></i> </span>
+                    <span class="sv-normal">Proveedores</span></a>
+                  </li>
+                  <li><a href="compras" class="waves-effect">
+                    <span class="sv-slim"><i class="far fa-plus-square"></i></span>
+                    <span class="sv-normal">Nueva Compra</span></a>
+                  </li>
+                  <?php  if($_SESSION['rol']==1){?>
+                    <li><a href="gestor_compras" class="waves-effect">
+                    <span class="sv-slim"><i class="fas fa-list-alt"></i></span>
+                    <span class="sv-normal">Lista De Compras</span></a>
+                  </li>
+                  <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
+                    <li><a href="gestor_compras"  hidden="true" class="waves-effect ">
+                    <span class="sv-slim"><i class="fas fa-list-alt"></i></span>
+                    <span class="sv-normal">Lista De Compras</span></a>
+                  </li>
+                  <?php } ?>  
+                </ul>
+              </div>
+            </li>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-cubes"></i> Productos<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="productos" class="waves-effect">
+                    <span class="sv-slim"><i class="far fa-plus-square"></i> </span>
+                    <span class="sv-normal">Nuevo Producto</span></a>
+                  </li>
+                  <li><a href="categoria_producto" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fa fa-tags"></i></span>
+                    <span class="sv-normal">Categoría de Producto</span></a>
+                  </li>
+                  <li><a href="gestor_productos" class="waves-effect ">
+                    <span class="sv-slim"><i class="fas fa-list-alt"></i></span>
+                    <span class="sv-normal">Lista De Productos</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-user-friends"></i>Personas<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="gestor_usuarios" class="waves-effect ">
+                    <span class="sv-slim"><i class="far fa-plus-square"></i> </span>
+                    <span class="sv-normal">Usuarios</span></a>
+                  </li>
+                  <li><a href="gestor_clientes" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fas fa-list-alt"></i> </span>
+                    <span class="sv-normal">Clientes</span></a>
+                  </li>
+                  <li><a href="gestor_proveedores" class="waves-effect ">
+                    <span class="sv-slim"><i class="fa fa-tags"></i> </span>
+                    <span class="sv-normal">Proveedores</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-money-check-alt"></i> Ventas<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="cliente" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fas fa-user-tie"></i> </span>
+                    <span class="sv-normal">Clientes</span></a>
+                  </li>
+                  <?php  if($_SESSION['rol']==1){?>
+                  <li><a href="gestor_ventas" class="waves-effect">
+                    <span class="sv-slim"><i class="fas fa-list-alt"></i></span>
+                    <span class="sv-normal">Lista De Ventas</span></a>
+                  </li>
+                  <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
+                    <li><a href="gestor_ventas" class="waves-effect " hidden>
+                      <span class="sv-slim"> <i class="fas fa-list-alt"></i></span>
+                      <span class="sv-normal">Lista De Ventas</span></a>
+                    </li>
+                    <?php } ?>  
+                    <li><a href="ventas" class="waves-effect ">
+                      <span class="sv-slim"><i class="far fa-plus-square"></i></span>
+                      <span class="sv-normal">Nueva Venta</span></a>
+                    </li>
 
-          </div>
-    </li>
-    <?php  if($_SESSION['rol']==1){?>
-    <li class="nav-item dropdown" aria-disabled="false">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">Administrador de A/C</a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="Apertura_cierre.php">Apertura y cierre</a>
-          </div>
-    </li>
-    <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
-      <li class="nav-item dropdown" aria-disabled="false">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true" >Administrador de A/C</a>
-          <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="Apertura_cierre.php"  aria-disabled="true">Apertura y cierre</a>
-          </div>
-    </li>
-    <?php } ?>        
-      
-  </ul>
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false"><?php echo utf8_decode($row['nombre']);?>
-          <i class="fas fa-user"></i>
-        </a>
 
-        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-          aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#fullHeightModalRight">Cuenta</a>
-          <a class="dropdown-item" href="../mint/salir.php">Cerrar Sesión</a>
-          
+                </ul>
+              </div>
+            </li>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fab fa-blogger-b"></i>Blog<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="blog" class="waves-effect">
+                    <span class="sv-slim"><i class="far fa-plus-square"></i> </span>
+                    <span class="sv-normal">Nuevo Post</span></a>
+                  </li>
+                  <li><a href="gestor_post" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fas fa-list-alt"></i> </span>
+                    <span class="sv-normal">Lista de Post Publicados</span></a>
+                  </li>
+                  <li><a href="post" class="waves-effect">
+                    <span class="sv-slim"><i class="fa fa-tags"></i> </span>
+                    <span class="sv-normal">Categorias de post</span></a>
+                  </li>
+               
+                </ul>
+              </div>
+            </li>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-file-alt"></i>Informes<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="blog" class="waves-effect ">
+                    <span class="sv-slim"><i class="far fa-plus-square"></i> </span>
+                    <span class="sv-normal">Compra y venta</span></a>
+                  </li>
+                  <li><a href="post" class="waves-effect">
+                    <span class="sv-slim"> <i class="fas fa-list-alt"></i> </span>
+                    <span class="sv-normal">Lista de Post Publicados</span></a>
+                  </li>
+                  <li><a href="post" class="waves-effect">
+                    <span class="sv-slim"><i class="fa fa-tags"></i> </span>
+                    <span class="sv-normal">Categorias de post</span></a>
+                  </li>
+               
+                </ul>
+              </div>
+            </li>
+            <li class="pt-2"><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-cogs"></i>Configuración<i class="fas fa-angle-down rotate-icon"></i></a>
+              <div class="collapsible-body">
+                <ul>
+                <?php  if($_SESSION['rol']==1){?>
+                  <li><a href="empresa" class="waves-effect">
+                    <span class="sv-slim"> <i class="fas fa-info"></i> </span>
+                    <span class="sv-normal">Información Empresa</span></a>
+                  </li>
+                  <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
+                    <li><a href="empresa" class="waves-effect " hidden>
+                    <span class="sv-slim"> <i class="fas fa-info"></i> </span>
+                    <span class="sv-normal">Información Empresa</span></a>
+                  </li>
+                    <?php } ?>  
+                  <li><a href="categoria_producto" class="waves-effect ">
+                    <span class="sv-slim"> <i class="fas fa-question"></i></span>
+                    <span class="sv-normal">Acerca de</span></a>
+                  </li>
+             
+               
+                </ul>
+              </div>
+            </li>
+           
+          </li>
+          </ul>
+     
+        <!--/. Side navigation links -->
+      </ul>
+      <div class="sidenav-bg rgba-blue-strong"></div>
+    </div>
+    <!--/. Sidebar navigation -->
+    <!-- Navbar -->
+
+
+
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav">
+      <!-- SideNav slide-out button -->
+      <div class="float-left nav-item ">
+      <a href="#" data-activates="slide-out" class="button-collapse "><i class="fas fa-bars"></i></a>
+    </div>
+      <!-- Breadcrumb-->
+    
+      <ul class="nav navbar-nav nav-flex-icons ml-auto">
+        <li class="nav-item">
+          <a class="text-white nav-link"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contacto</span></a>
+        </li>
+       
+        <li class="nav-item dropdown">
+          <a class="text-white nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><?php echo utf8_decode($row['nombre']);?>
+            <i class="fas fa-user"></i>
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right dropdown-default"
+            aria-labelledby="navbarDropdownMenuLink-333">
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#fullHeightModalRight">Cuenta</a>
+            <a class="dropdown-item" href="../mint/salir.php">Cerrar Sesión</a>
         </div>
       </li>
-      <?php  if($_SESSION['rol']==1){?>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Configuración
-          <i class="fa fa-cog" aria-hidden="true"></i>
-        </a>
-        
-        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-          aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="empresa.php">Información de empresa</a>
-          
-        </div>
-      </li>
-      <?php } else if($_SESSION['rol']==2 and $_SESSION['rol']==3 and $_SESSION['rol']==4){ ?>
+      </ul>
+    </nav>
+    <!-- /.Navbar -->
+  </header>
+  <!--/.Double navigation-->
 
-        <li class="nav-item dropdown" aria-hidden="true">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Configuración
-          <i class="fa fa-cog" aria-hidden="true"></i>
-        </a>
-        
-        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-          aria-labelledby="navbarDropdownMenuLink-333">
-          <a class="dropdown-item" href="empresa.php">Información de empresa</a>
-          
-        </div>
-      </li>
-        <?php } ?>  
-    </ul> 
-  <!-- Links -->
-</div>
-<!-- Collapsible content -->
-
-</nav>
-<!-- #######Informacion de usuario######### -->
-<!-- Full Height Modal Right -->
-<div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
 
   <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
@@ -227,12 +321,12 @@
 
               <div class="md-form form-group col-md-12">
                 <i class="fas fa-lock prefix"></i>
-                <input style="text-align: center; color: black;"  type="password" name="_Password" id="modalLRInput11" class="form-control form-control-sm validate" placeholder="Password">
+                <input style="text-align: center; color: black;"  type="password" name="_Password" id="_Password" class="form-control form-control-sm validate" placeholder="Password">
                
               </div> 
               <div class="md-form form-group col-md-12">
                 <i class="fas fa-lock prefix"></i>
-                <input style="text-align: center; color: black;"  type="password" id="modalLRInput12" name="_newPass"class="form-control form-control-sm validate" placeholder="New Password">
+                <input style="text-align: center; color: black;"  type="password" id="_newPass" name="_newPass"class="form-control form-control-sm validate" placeholder="New Password">
                
               </div>  
               <div class="modal-footer justify-content-center">
@@ -248,8 +342,3 @@
   </div>
 </div>
 
-<div class="fixed-action-btn smooth-scroll" style="bottom: 45px; right: 24px;">
-      <a href="#top-section" class="btn-floating btn-large warning-color-dark">
-      <i class="fas fa-angle-up"></i>
-      </a>
-  </div>

@@ -1,5 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.titulo{
+    font-family: 'Yanone Kaffeesatz', sans-serif; color: rgb(146, 137, 137); font-size: 45px;
+
+}.tituloBlack{
+    font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 45px;
+}
+.subtitulo{
+    font-family: 'Yanone Kaffeesatz', sans-serif; color: black; font-size: 35px;
+}
+ 
+.fuente{
+    font-family: 'Gentium Book Basic', serif; color: rgb(252, 252, 252); font-size: 50px;
+}
+
+.side-nav{
+  background-color: #1e2933;  
+  margin-top: 49px !important;
+}
+.breadcrumb-dn{
+  font-size: 40px;
+}
 .tabla{
     display: none;
+
+}
+.navbar {
+  z-index: 1040;
+}
+
+
+.double-nav .breadcrumb-dn p {
+    color: #fff;
 }
 .flexContainer {
     display: flex;
@@ -86,3 +123,195 @@ background: #ddd;
     border: 1px solid #428bca;
 }
 
+.double-nav .breadcrumb-dn {
+  color: #fff;
+}
+.side-nav.wide.slim .sn-ad-avatar-wrapper a span {
+display: none;
+}
+
+
+.avatar-pic {
+  width: 1
+  50px;
+  }
+.rgba-blue-strong, .rgba-blue-strong:after{
+  background-color: rgba(0, 0, 0, 0.842);
+}
+.font-small, p{
+font-size: 20px;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-toggle::after {
+  content: none;
+}
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+/* imagen del side nav */
+.sn-bg-4{
+  background-image: url(../Media/img/prensa.jpg);
+
+}
+
+
+  
+.botones {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+
+.botones-app {
+  color: white;
+  box-shadow: none;
+  border-radius: 50%;
+  position: relative;
+  padding: 10px 15px;
+  margin: 0;
+  min-width: 50px;
+  max-width: 50px;
+  text-align: center;
+  border: none;
+  height: 50px;
+  background-color: #f4f4f4;
+  font-size: 12px;
+  transition: all .2s;
+  background-color:#2e2e2e!important;
+
+}
+
+.botones-app > .fa, .botones-app > .glyphicon, .botones-app > .ion {
+  font-size: 30px;
+  display: block;
+}
+
+.botones-app:hover {
+  border-color: #2e2e2e!important;
+  transform: scale(1.1);
+}
+
+.pdf {
+  background-color: #2e2e2e!important;
+  border-radius: 50%;
+  border:none;
+}
+
+.excel {
+  background-color: #2e2e2e!important;
+  border-radius: 50%;
+  border:none;
+}
+
+.csv {
+  background-color: #2e2e2e!important;
+  border-radius: 50%;
+  border:none;
+}
+
+.imprimir {
+  background-color: #2e2e2e!important;
+  border-radius: 50%;
+  border:none;
+}
+.btn-secondary.dropdown-toggle {
+  background-color:#2e2e2e!important;
+  
+
+  height: auto;
+}
+.btn-secondary.dropdown-toggle:focus, .btn-secondary.dropdown-toggle:hover {
+  background-color: #2e2e2e!important;
+}
+.btn-secondary:not([disabled]):not(.disabled).active, .btn-secondary:not([disabled]):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+  background-color: #2e2e2e!important;
+}
+table .dataTable thead {
+  background: #2e2e2e!important;
+  color:white;
+}
+
+
+/* Esto es opcional pero sirve para que todos los botones de exportacion se distribuyan de manera equitativa usando flexbox */
+
+.flexcontent {
+  display: inline-block;
+  justify-content: space-around;
+}  
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20rem;
+  list-style: none;
+  border-radius: .25rem;
+  align-content: right;
+}  
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  margin: 2px 2px;
+  white-space: nowrap;
+  justify-content: flex-end;
+}
+.selectTable{
+height:40px;
+float: right;;
+background-color: #aaa;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #4682b4;
+  border-color: #4682b4;
+}
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #315f86;
+  border-color: #545b62;
+}
+
+
+
+.titulos{
+color:#606263;
+text-align:center;
+margin-top:15px;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+@media(max-width: 2400px){
+  
+  .fixed-sn .double-nav, .fixed-sn footer, .fixed-sn main {
+      padding-left: 0;
+  }
+.double-nav .button-collapse {
+    display: block;
+    padding-right: 3px;
+    padding-left: 3px;
+  
+}
+
+.double-nav .button-collapse {
+  position: relative;
+  display: block;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}}

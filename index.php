@@ -10,86 +10,119 @@
     <link rel="stylesheet" href="Styles/css/bootstrap.min.css" >
     <link rel="stylesheet" href="Styles/css/mdb.min.css" >
     <link rel="stylesheet" href="Styles/fuente.css">
+    <script src="Scripts/jquery-3.2.1.min.js"></script>
     <title>La ruta del café</title>
 </head>
-<body>
- 
-    <header>
-      <nav class="navbar navbar-dark red" id="top-section">
-        <a class="navbar-brand" href="#">
-          <img src="Media/img/Logo.png" height="84" alt="La ruta">
-        </a>
-      </nav>
-      <nav class="nav navbar fixed-top pt-9" >
-      <div class="logo"> <a class="a" href="#"><img class="logotipo" src="Media/img/Logo.png" height="100" class="d-inline-block align-top" alt="logo de la inveruta" style="border-radius: 50%;"></a>
-     
-      </div>
-      <label  for="btn" class="icon">
-        <span class="fa fa-bars"></span>
-      </label>
-      <input class="input" type="checkbox" id="btn">
-      <ul class="ul">
-        <li class="li">   
-          <label for="btn-1" class="fuente_nav label">Sobre Nosotros <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="fuente_nav a" href="src/sobre_nosotros.php">Sobre Nosotros</a>
-          <input class="input" type="checkbox" id="btn-1">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a"  href="#">Nuestra Historia</a></li>
-            <li class="li"><a class="fuente_nav a"  href="#">Misión</a></li>
-            <li class="li"><a class="fuente_nav a"  href="#">Visión</a></li>
-          </ul>
-      </li>
-        <li class="li">
-          <label for="btn-2" class=" fuente_nav label">Servicios <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="a fuente_nav" href="src/servicios.php">Servicios</a>
-          <input class="input" type="checkbox" id="btn-2">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a" href="#">Finca Tour</a></li>
-            <li class="li"><a class="fuente_nav a" href="#">Ubicación</a></li>
-            <li class="li"><a class="fuente_nav a"  href="#">Recepción de Información</a></li>
-          </ul>
-        </li>
-        <li class="li">
-          <label  for="btn-3" class="fuente_nav label">Coffee Shop <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="fuente_nav a "href="src/carta.php">Coffee Shop</a>
-          <input class="input" type="checkbox" id="btn-3">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a" href="#">Bebidas Calientes</a></li>
-            <li class="li"><a class="fuente_nav a" href="#">Bebidas Frias</a></li>
-            <li class="li"><a class="fuente_nav a" href="#">Desayunos y almuerzos</a></li>
-          </ul>
-        </li>
-        <li class="li">
-          <label for="btn-5" class=" fuente_nav label">Finca <i class="fas fa-chevron-circle-down"></i></label>
-          <a class="a fuente_nav" href="src/finca.php">Finca</a>
-          <input class="input" type="checkbox" id="btn-5">
-          <ul  class="ul">
-            <li class="li"><a class="fuente_nav a" href="#">Finca Tour</a></li>
-            <li class="li"><a class="fuente_nav a" href="#">Ubicación</a></li>
-            <li class="li"><a class="fuente_nav a"  href="#">Recepción de Información</a></li>
-          </ul>
-        </li>
-        <li class="li">
-        <label for="btn-4" class="fuente_nav label">Aprende Con Nosotros<i class="fas fa-chevron-circle-down"></i></label>
-          <a class="fuente_nav a"href="#">Aprende Con Nosotros</a>
-          <input class="input" type="checkbox" id="btn-4">
-          <ul  class="ul">
-            <li class="li" ><a class="fuente_nav a" href="src/recetas.php">Recetas</a></li>
-            <li class="li"><a class="fuente_nav a" href="src/videotutoriales.php">VideoTutoriales</a></li>
-          </ul>
-        </li>
-        <li class="li"><a class="fuente_nav a" href="src/contactos.php">Contactos</a></li>
-        <li class="li"><a class="fuente_nav a" href="src/galeria.php">Galería</a></li>
-        <li class="li"><a class="fuente_nav a" href="src/blog.php">Blog</a></li>
-        <li class="li"><a class="fuente_nav a" href="app/Formularios/login.php">CoffeApp</a></li>
-      </ul>
-      
-    </nav>
-    
-    
+<!-- GetButton.io widget -->
 
-    </header>
+<!-- /GetButton.io widget -->
+<body>
+
+    <header>
+        <nav class=" mb-1 navbar navbar-expand-lg navbar-dark peach-gradient" id="top-section">
+        
+          <a class="fuente_nav text-dark  navbar-brand" href="#"><img class="image" src="Media/img/Logo.png"  alt="La Ruta Del Café"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-330"
+            aria-controls="navbarSupportedContent-330" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-330">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a class="sombra fuente_nav text-dark nav-link dropdown-toggle" id="navbarDropdownMenuLink-332" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Sobre Nosotros
+                </a>
+                <div class="dropdown-menu peach-gradient  border-0" aria-labelledby="navbarDropdownMenuLink-332">
+                  <a class="fuente_nav text-dark dropdown-item" href="form/sobre_nosotros">¿Quienes Somos?</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/sobre_nosotros#heading97">Historia</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/sobre_nosotros#mision">Misión y Visión</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="sombra fuente_nav text-dark nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Servicios
+                </a>
+                <div class="dropdown-menu peach-gradient  border-0" aria-labelledby="navbarDropdownMenuLink-333">
+                  <a class="fuente_nav text-dark dropdown-item" href="form/servicios">Cafetería</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/servicios#direccion">Ubicación</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="#">Finca Tour</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="sombra fuente_nav text-dark nav-link dropdown-toggle" id="navbarDropdownMenuLink-334" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Coffe Shop
+                </a>
+                <div class=" fuente_nav dropdown-menu peach-gradient  border-0" aria-labelledby="navbarDropdownMenuLink-334">
+                  <a class="fuente_nav text-dark dropdown-item" href="form/construccion">Menú</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/construccion">Bebidas Calientes</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/construccion">Bebidas Frias</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/construccion">Comidas</a>
+                </div>
+              </li>
+              <li class="sombra nav-item dropdown">
+                <a class="fuente_nav text-dark nav-link dropdown-toggle" id="navbarDropdownMenuLink-335" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Finca
+                </a>
+                <div class="dropdown-menu peach-gradient  border-0" aria-labelledby="navbarDropdownMenuLink-335">
+                  <a class="fuente_nav text-dark dropdown-item" href="form/finca">Finca la Ruta</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/finca#nuestro_cafe">Nuestro Café</a>
+                  
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="sombra fuente_nav text-dark nav-link dropdown-toggle" id="navbarDropdownMenuLink-334" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Aprende Con Nosotros
+                </a>
+                <div class="dropdown-menu peach-gradient  border-0" aria-labelledby="navbarDropdownMenuLink-334">
+                  <a class="fuente_nav text-dark dropdown-item" href="form/construccion">Recetas y Tips</a>
+                  <a class="fuente_nav text-dark dropdown-item" href="form/videotutorial">Videos</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="sombra fuente_nav text-dark nav-link" href="form/contactos">Contactos
+                  
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="sombra fuente_nav text-dark nav-link" href="form/galeria">Galería
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="sombra fuente_nav text-dark nav-link" href="form/construccion">Blog
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="sombra fuente_nav text-dark nav-link" href="app/Formularios/login">Ruta App
+                </a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+              <li class="nav-item">
+                <a class="sombra nav-link waves-effect waves-light" href="https://www.facebook.com/628851103865100/">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="sombra nav-link waves-effect waves-light" >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="sombra nav-link waves-effect waves-light" href="mailto:infoazhn@gmail.com;">
+                  <i class="fab fa-google-plus-g fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          </div>
+         
+        </nav>
+       
   
+    </header>
+
+   
+    
   <div class="Slider">
       <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -173,7 +206,7 @@
         <p class="fuente">La ruta del café ofrece platillos exquisitos en desayunos y almuerzos, una combinación especial que la puedes hacer con un aromático café.</p>
         <!-- Post data -->
         <!-- Read more button -->
-        <a class="btn btn-success btn-md">Ver Mas</a>
+        <a class="btn btn-success btn-md" href="form/carta">Ver Mas</a>
 
     </div>
     <!-- Grid column -->
@@ -200,7 +233,7 @@
         <!-- Post data -->
        
         <!-- Read more button -->
-        <a class="btn btn-pink btn-md mb-lg-0 mb-4">Ver Mas</a>
+        <a class="btn btn-pink btn-md mb-lg-0 mb-4"  href="form/carta">Ver Mas</a>
 
     </div>
     <!-- Grid column -->
@@ -255,7 +288,7 @@
         <!-- Post data -->
         
         <!-- Read more button -->
-        <a class="btn btn-indigo btn-md">Ver más</a>
+        <a class="btn btn-indigo btn-md"  href="form/carta">Ver más</a>
 
     </div>
     <!-- Grid column -->
@@ -275,64 +308,64 @@
 <!-- Load Facebook SDK for JavaScript -->
 
 
-<footer class="page-footer font-small special-color-dark pt-4">
+<footer class="page-footer font-small bg-dark pt-4">   
 
-  <div class="fixed-action-btn smooth-scroll" style="bottom: 45px; right: 24px;">
-    <a href="#top-section" class="btn-floating btn-large warning-color-dark">
-    <i class="fas fa-angle-up"></i>
-    </a>
-  </div>
-
-
-  <!-- Footer Elements -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 py-5">
-        <div class="mb-5 flex-center">
-          
-       
-      
-        <!-- Social buttons -->
-        <ul class="list-unstyled list-inline text-center  ">
-          <li class="list-inline-item">
-            <a class="btn-floating btn-fb mx-1 fb-ic" href="https://www.facebook.com/628851103865100/">
-              <i class="fab fa-facebook-f"> </i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-tw mx-1">
-              <i class="fab fa-instagram"> </i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-gplus mx-1" href="mailto:infoazhn@gmail.com">
-              <i class="fab fa-google-plus-g"> </i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-li mx-1">
-              <i class="fab fa-linkedin-in"> </i>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-  </div>
-  </div>
-    <!-- Social buttons -->
-
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="mailto:darwing01000100@gmail.com">Darwing Hernandez</a>
-  </div>
-  <!-- Copyright -->
-</footer>
- 
+<div class="pt-0 py-2 my-5 z-depth-1">
+  <section class="p-md-3 mx-md-5 text-lg-left">
+    <h2 class="font-weight-bold text-center mb-5 pb-3">Vamos a ponernos en contacto!</h2>
+    <div class="row text-center d-flex justify-content-center">
     
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <div class="col-lg-2 col-md-6 mb-lg-0 mb-5">
+        <i class="fas fa-map-marker-alt fa-3x indigo-text mb-4"></i>
+        <h4 class="font-weight-bold mb-4">Dirección</h4>
+        <p class="text-white px-2 mb-lg-0">
+        Bo. El Centro, Calle "La Justicia", Edificio "El Mediplaza", 3er Nivel.
+        </p>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-lg-0 mb-5">
+        <i class="fab fa-facebook-f indigo-text fa-3x mb-4"></i>
+        <h4 class="font-weight-bold mb-4">Facebook</h4>
+        <p class="text-muted px-2 mb-lg-0">
+        <a class="d-block" href="https://www.facebook.com/628851103865100/">La Ruta del café</a>
+        </p>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-lg-0 mb-5">
+        <i class="fab fa-instagram pink-text fa-3x mb-4"></i>
+        <h4 class="font-weight-bold mb-4">Instagram</h4>
+        <p class="text-muted px-2 mb-lg-0">
+        <a href="https://www.instagram.com/p/B9CY8hih8wL/">larutadelcafehn
+</a>
+        </p>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-md-0 mb-5">
+        <i class="fas fa-envelope fa-3x amber-text mb-4"></i>
+        <h4 class="font-weight-bold mb-4">Correo</h4>
+        <p class="text-muted px-2 mb-md-0">
+        <a class="d-block" href="mailto:infoazhn@gmail.com"> infoazhn@gmail.com</a>
+        </p>
+      </div>
+      <div class="col-lg-2 col-md-6 mb-md-0 mb-5">
+        <i class="fas fa-phone fa-3x green-text mb-4"></i>
+        <h4 class="font-weight-bold mb-4">Tel</h4>
+        <p class="text-muted px-2 mb-md-0">
+        <div>+504 3308-7022</div>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+
+      <div class="footer-copyright text-center bg-dark py-3">© 2020 Copyright:
+        <a href="mailto:darwing01000100@gmail.com">Darwing Hernandez</a>
+      </div>
+      <!-- Copyright -->
+
+</footer>
+
+ 
+  
+    
+   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="Styles/js/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

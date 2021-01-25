@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
     <link rel="stylesheet" href="../../Styles/form.css">
-    
+    <link rel="stylesheet" href="../Styles/fuente.css">
 
 </head>
 <body>
@@ -19,7 +19,7 @@
 ?>
 </header>
 <br>
-<div " class="margenes card-deck">
+<div  class="margenes card-deck">
 
         <!-- Card -->
         <div class=" col-sm-0">
@@ -61,7 +61,7 @@
                       <select class="form-control" id="_categoria" name="categoria">
                                   <option value="0" disabled selected>Categoria</option>
                                   <?php
-                                  include('../BD/conexion.php');
+                                  
                                   $sql="select*from rcategorias";
                                   $result=mysqli_query($conn,$sql);
                                   while($mostrar=mysqli_fetch_array($result)){?>
@@ -78,7 +78,7 @@
                 <select class="form-control" id="_codigo" name="codigo">
                                   <option value="0" disabled selected>Producto</option>
                                   <?php
-                                  include('../BD/conexion.php');
+                               
                                   $sql="select*from rinsumos";
                                   $result=mysqli_query($conn,$sql);
                                   while($mostrar=mysqli_fetch_array($result)){?>
@@ -185,14 +185,18 @@
    <?php
     include("../mint/footer.php");
     ?>
-</footer>   
-    <script src="../../Scripts/Funciones.js"></script>
-    <script src="../../Scripts/productos.js"></script>
+</footer>  
+<script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset = " utf-8 "></script>
     <script src="../../Scripts/validaciones.js"></script>
+    <script src="../../Scripts/FuncionesApp.js"></script>
+     
+   
+    <script src="../../Scripts/productos.js"></script>
   
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="../../Scripts/Funciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>

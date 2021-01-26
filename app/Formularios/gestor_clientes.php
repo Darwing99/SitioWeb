@@ -24,7 +24,7 @@
         <div  class="col-sm-12  mb-4">
         <br>
         <div class="modal-header text-rigth  white darken-2">
-                <h4 class="modal-title black-text w-90 font-weight-bold py-0">Lista de Clientes</h4>
+                <h4 class="modal-title black-text w-50 font-weight-bold py-0">Lista de Clientes</h4>
                 <a id="ver"type="button" href="cliente" class="btn btn-elegant"><i class="far fa-plus-square"></i> Nuevo</a>
             </div>
             <br>

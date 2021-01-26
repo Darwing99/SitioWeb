@@ -23,7 +23,7 @@
         <div  class="col-sm-12  mb-4">
         <br>
         <div class="modal-header text-rigth  white darken-2">
-                <h4 class="modal-title black-text w-100 font-weight-bold py-0">Registro de proveedores</h4>
+                <h4 class="modal-title black-text w-50 font-weight-bold py-0">Registro de proveedores</h4>
                 <a id="ver"type="button" href="gestor_proveedores" class="btn btn-elegant"><i class="fas fa-list-ol"></i> Lista</a>
             </div>
             <br>

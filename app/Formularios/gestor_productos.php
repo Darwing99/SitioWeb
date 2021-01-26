@@ -3,204 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
-    <link rel="stylesheet" href="../../Styles/form.css">
-    
-
+    <title>Catálago de Productos</title>
+ 
+   
+    <?php
+     include('../mint/datatables.php');
+    ?>
+     <link rel="stylesheet" href="../../Styles/form.css">
+     
 </head>
 <body>
 <header>
 <?php
   include('../mint/header.php');
+
 ?>
 </header>
 <br>
-<div " class="margenes card-deck">
-
-        <!-- Card -->
-        <div class=" col-sm-1">
-          
-        </div>
-     
-
-        <div  class="col-sm-10 card mb-4">
+<div class="pt-5">    
+        <div  class="col-sm-12  mb-4">
         <br>
-        <div class="modal-header text-center  yellow darken-2">
-                <h4 class="modal-title black-text w-100 font-weight-bold py-2">Registro de Productos</h4>
+        <div class="modal-header text-rigth  white darken-2">
+                <h4 class="modal-title black-text w-50 font-weight-bold py-0">Productos</h4>
+                <a id="ver"type="button" href="Productos" class="btn btn-elegant"><i class="far fa-plus-square"></i> Nuevo</a>
             </div>
-
             <br>
-         
-            <br>
-
-            <div>
-            
-
-            <form  class="tabla_hide centrar_form" method="POST">
-            <div class="md-form mb-5">
-                <i class="fa fa-search prefix grey-text"></i>
-                <input name="producto" type="text" class="form-control validate" id="caja_busqueda" placeholder="codigo/nombre de producto">
+           
             </div>
-                <div id="tabla" class="table-editable">
-                   
+          
+           
+    
+ </div>
 
-              
-                  
-                   <table class="table table-bordered table-responsive-md table-striped text-center">
-                   <thead>
-                   <tr>
-                      <th class="text-center">Codigo</th>
-                       <th class="text-center">Descripcion</th>
-                       <th class="text-center">Precio</th>
-                       <th class="text-center">Cantidad</th>
-                       <th class="text-center">Estado</th>
-                       <th class="text-center">Foto</th>
-                       <th class="text-center">Acción</th>
-                   </tr>
-                   </thead>
-                   <tbody>
-                   <?php 
-                
-                    $sql="SELECT*, if(estado=1,'activo','inactivo') as estad FROM rproductos";
-                    $result=mysqli_query($conn,$sql);
-
-                    while($mostrar=mysqli_fetch_array($result)){ $i=0;
-                    ?>
-
-                    <tr>
-                      <td><?php echo $mostrar['codigo'] ?></td>
-                      <td><?php echo $mostrar['descripcion'] ?></td>
-                      <td><?php echo $mostrar['precio'] ?></td>
-                      <td><?php echo $mostrar['cantidad']?></td>
-                      <td><?php echo $mostrar['estad'] ?></td>
-                      <td><img src="data:image/jpg; base64,<?php echo base64_encode($mostrar['foto']); ?>" height="100px" width="100px" alt=""></td>
-                      <td>
-                          <?php $i++; ?>
-                      <button type="button" class="btn btn-primary px-3" data-toggle="modal" data-target="#myModalUpdate<?php echo $mostrar[0];?>"><i class="far fa-edit"></i></button>
-                      <button id="eliminar" type="button" class="btn btn-primary px-3" data-toggle="modal" data-target="#myModalDelete<?php echo $mostrar[0];?>"><i class="fas fa-trash-alt"></i></button>    
-                      <button id="eliminar" type="button" class="btn btn-primary px-3" data-toggle="modal" data-target="#myModalDelete<?php echo $mostrar[0];?>"><i class="fas fa-info-circle"></i></button>    
-                      </td>
-                    </tr>
-
-                                    
-                    <div class="modal fade" id="myModalDelete<?php echo $mostrar[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                           aria-hidden="true">
-                           <form action="../CRUD/Deleteproducto.php" method="POST">
-                               <div class="modal-dialog" role="document">
-                                   <div class="modal-content">
-                                   <div class="modal-header text-center">
-                                       <h4 class="modal-title w-100 font-weight-bold">¿Desea Eliminar Este Producto?</h4>
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                       <span aria-hidden="true">&times;</span>
-                                       </button>
-                                   </div>
-                                   <div class="modal-body mx-3">
-                                           <div class="form-group col-md-12">
-                                               <label for="inputEmail4">Id</label>
-                                               <input name="codigoD" type="text" class="form-control"  readonly value="<?php echo $mostrar['codigo'] ?>">
-                                           </div>
-                                           <div class="form-group col-md-12">
-                                               <label for="inputEmail4">Descripcion</label>
-                                               <input name="descripcionD" type="text" class="form-control"  readonly value="<?php echo $mostrar['descripcion'] ?>">
-                                           </div>
-        
-                                   </div>
-                                   <div class="modal-footer d-flex justify-content-center">
-                                       <button id="_agregar" type="submit" class="btn btn-deep-orange">Eliminar</button>
-                                   </div>
-                                  
-                                   </div>
-                               </div> 
-                              
-                           </form>
-                           </div>
-
-
-
-                           
-                    <!-- ########### ACTUALIZAR INFORMACION DEL CLIENTE######### -->
-                    <div class="modal fade" id="myModalUpdate<?php echo $mostrar[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                           aria-hidden="true">
-                           <form action="../CRUD/updateCliente.php" method="POST" >
-                               <div class="modal-dialog" role="document">
-                                   <div class="modal-content">
-                                   <div class="modal-header text-center">
-                                       <h4 class="modal-title w-100 font-weight-bold">Actualizar Datos De Producto</h4>
-                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                       <span aria-hidden="true">&times;</span>
-                                       </button>
-                                   </div>
-                                   <div class="modal-body mx-3">
-                                           <div class="form-group col-md-12">
-                                               <label for="inputEmail4">Codigo</label>
-                                               <input type="text" class="form-control"name="codigoU" id="numero" readonly value="<?php echo $mostrar['codigo'] ?>">
-                                           </div>
-                                           <div class="form-group col-md-12">
-                                               <label for="inputEmail4">descripcion</label>
-                                               <input  type="text" class="form-control" name="descripcionU" id="rtn"  value="<?php echo $mostrar['descripcion'] ?>">
-                                           </div>
-                                           <div class="form-group col-md-12">
-                                               <label for="inputEmail4">Precio</label>
-                                               <input type="text" class="form-control" name="precioU" id="empresa"  value="<?php echo $mostrar['precio'] ?>">
-                                           </div>
-                                           <div class="form-group col-md-12">
-                                               <label for="inputEmail4">Cantidad</label>
-                                               <input  type="text" class="form-control" name="cantidadU" id="direccion" value="<?php echo $mostrar['cantidad'] ?>">
-                                           </div>
-                                           <div class="form-group col-md-12">
-                                               <label for="inputEmail4">Foto</label>
-                                               <input type="text" class="form-control" name="_telefono" id="telefono" value="">
-                                           </div>
-                                           
-                                           
-                                             
-                                           <div class="modal-footer d-flex justify-content-center">
-                                               <button id="_agregar" type="submit" class="btn btn-deep-orange">Actualizar</button>
-                                           </div>
-                                       
-                                   </div>
-                               </div> 
-                              
-                           </form>
-                           </div>
-
-
-                  <?php 
-                  }
-                  ?>
-                   </tbody>
-               </table>
+ <div class="container table-responsive-sm">
+                        
+    <table id="table_productos" class="table">
+        <thead>
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descuento</th>
+            <th scope="col">ISV</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Foto</th>
+            <th scope="col">Acción</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+ 
+<div class="modal fade modal-responsive" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <form method="POST">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Eliminar Producto?</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+               
+                <input type="text" id="idCliente" class="form-control " readonly>
+               
                 </div>
-            </form>
+
+                <div class="md-form mb-4">
+                
+                <input type="text" id="nombre" class="form-control validate" readonly>
+               
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button id="borrar_cliente" type="submit" class="borrar_cliente btn btn-elegant">Eliminar</button>
+            </div>
             </div>
         </div>
-      
-        
- </div>
-      
+        </form>
+        </div>  
 
+       <!-- ########### ACTUALIZAR INFORMACION DEL CLIENTE######### -->
+<div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <form action="../CRUD/updateCliente.php" method="POST" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Actualizar Datos De Cliente</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Id</label>
+                        <input type="text" class="form-control"name="_idcliente" id="numero" readonly value="<?php echo $mostrar['id'] ?>">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">RTN</label>
+                        <input  type="text" class="form-control" name="_identidad" id="rtn"  value="<?php echo $mostrar['identidad'] ?>">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Empresa</label>
+                        <input type="text" class="form-control" name="_cliente" id="empresa"  value="<?php echo $mostrar['cliente'] ?>">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Dirección</label>
+                        <input  type="text" class="form-control" name="_direccion" id="direccion" value="<?php echo $mostrar['direccion'] ?>">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Teléfono</label>
+                        <input type="text" class="form-control" name="_telefono" id="telefono" value="<?php echo $mostrar['telefono'] ?>">
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" name="_email" id="email" value="<?php echo $mostrar['email'] ?>">
+                    </div>
+                    
+                        
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button  type="submit" class="btn btn-deep-orange">Actualizar</button>
+                    </div>
+                
+            </div>
+        </div> 
+        
+    </form>
+    </div>
+     
 <footer>
     <?php
     include("../mint/footer.php");
     ?>
-
 </footer>   
-
-
     
-    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
-    <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script>
-    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script> 
     <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset = " utf-8 "></script>
     <script src="../../Scripts/validaciones.js"></script>
     <script src="../../Scripts/FuncionesApp.js"></script>
-    
-    <script src="../../Scripts/ajaxProductos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="../../Scripts/datatables.js"></script>
 </body>
 </html>

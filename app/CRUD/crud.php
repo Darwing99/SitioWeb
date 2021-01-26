@@ -63,7 +63,14 @@ switch($opcion){
        
       break; 
 
-
+      case 7:
+        $consulta = "SELECT*FROM rproductos";
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();        
+        $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+       
+       
+      break; 
       case 9:
         $consulta = "SELECT rpost.id as id_post, m.nombre as creador, `titulo`, 
                      `subtitulo`,
@@ -81,11 +88,10 @@ switch($opcion){
         $resultado->execute();        
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
       break;   
-   
-   
-   
+    
 }
-
 print json_encode($data, JSON_UNESCAPED_UNICODE);//envio el array final el formato json a AJAX
 
 $conexion=null;
+
+?>

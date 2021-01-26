@@ -1013,5 +1013,239 @@ $(document).ready(function(){
     });
     
      });
- 
+
+
+//  Productos
+
+
+$(document).ready(function() {
+    
+    var opcion;
+    opcion = 7;
+    // Función para cambiar el idioma de la datatable
+    var idioma=
+
+            {
+                "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningun dato disponible en esta tabla",
+                "sInfo":           "_START_ - _END_  De _TOTAL_ Registros",
+                "sInfoEmpty":      "0 de 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "<i class='fas fa-fast-forward'></i>",
+                    "sLast":     "<i class='fas fa-fast-backward'></i>",
+                    "sNext":     "<i class='fas fa-forward'></i>",
+                    "sPrevious": "<i class='fas fa-backward'></i>"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                },
+                "buttons": {
+                    "copyTitle": 'Informacion copiada',
+                    "copyKeys": 'Use your keyboard or menu to select the copy command',
+                    "copySuccess": {
+                        "_": '%d filas copiadas al portapapeles',
+                        "1": '1 fila copiada al portapapeles'
+                    },
+
+                    "pageLength": {
+                    "_": "Mostrar %d filas",
+                    "-1": "Mostrar Todo"
+                    }
+                }
+            }
+    
+    
+                
+    tablaProductos = $('#table_productos').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+        "language": idioma,
+        "lengthMenu": [[2,20,30, -1],[2,20,30,"Mostrar Todo"]],
+        dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+
+    //AJAX//
+        "ajax":{            
+            "url": "../CRUD/crud.php", 
+            "method": 'POST', //usamos el metodo POST
+            "data":{opcion:opcion}, //enviamos opcion 1 para que haga un SELECT
+            "dataSrc":""
+        },
+        "columns":[
+        
+            {"data": "Idproducto"},
+            {"data": "descripcion"},
+            {"data": "precio"},
+            {"data": "descuento"},
+            {"data": "impuesto"},
+            {"data": "existencia"},
+            {"data": "foto"},
+          
+            {"defaultContent": "<div class='text-center'><div class=''> <button type='button' class='btn btn-floating btn-elegant px-0 btnHabilitar' data-toggle='modal' ><i class='fas fa-unlock'></i></button></div></div>"}
+         ],
+        "columnDefs": [
+             {
+                "targets": [ 0 ],
+                "visible": true,
+                "searchable": true,
+                "width": "150px"
+            },
+        ],
+        buttons: {
+            dom: {
+              container:{
+                tag:'div',
+                className:'flexcontent'
+              },
+              buttonLiner: {
+                tag: null
+              }
+            },
+            
+            buttons: [
+                      {
+                          extend:    'copyHtml5',
+                          text:      '<i class="fa fa-clipboard fa-2x"></i>',
+                          title:'Registro de Productos',
+                          titleAttr: 'Copiar',
+                          
+                          className: 'botones botones-app export barras',
+                          exportOptions: {
+                              columns: [ 0, 1, 2, 3, 4,5 ]
+                          }
+                      },
+                      
+                      {
+                          extend:    'pdfHtml5',
+                          text:      '<i class="fa fa-file-pdf fa-2x"></i>',
+                          title:'Registro de Productos',
+                          titleAttr: 'PDF',
+                          className: 'botones botones-app export pdf',
+                          exportOptions: {
+                            columns: [ 0, 1, 2, 3, 4,5 ]
+                          },
+                          customize:function(doc) {
+                              doc.styles.title = {
+                                  color: '#4c8aa0',
+                                  fontSize: '20',
+                                  alignment: 'center'
+                              }
+                              doc.styles['td:nth-child(2)'] = { 
+                                  width: '100px',
+                                  'max-width': '100px'
+                              },
+                              doc.styles.tableHeader = {
+                                  fillColor:'#4c8aa0',
+                                  color:'white',
+                                  alignment:'center'
+                              },
+                              doc.content[1].margin = [ 20, 20, 20, 20 ]
+  
+                          }
+  
+                      },
+  
+                      {
+                          extend:    'excelHtml5',
+                          text:      '<i class="fa fa-file-excel fa-2x"></i>',
+                          title:'Registro de Productos',
+                          titleAttr: 'Excel',
+                          className: 'botones botones-app export excel',
+                          exportOptions: {
+                            columns: [ 0, 1, 2, 3, 4,5 ]
+                          },
+                      },
+                    
+                    
+                      {
+                          extend:    'csvHtml5',
+                          text:      '<i class="fa fa-file-csv fa-2x"></i>',
+                          title:'Registro de Productos',
+                          titleAttr: 'CSV',
+                          className: 'botones botones-app export csv',
+                          exportOptions: {
+                            columns: [ 0, 1, 2, 3, 4,5 ]
+                          }
+                      },
+                      {
+                          extend:    'print',
+                          text:      '<i class="fa fa-print fa-2x"></i>',
+                          title:'Registro de Productos',
+                          titleAttr: 'Imprimir',
+                          className: 'botones botones-app export imprimir',
+                          exportOptions: {
+                            columns: [ 0, 1, 2, 3, 4,5 ]
+                          }
+                      },
+                      {
+                          extend:    'pageLength',
+                          titleAttr: 'Registros a mostrar',
+                          className: 'selectTable'
+                      }
+                  ]
+            
+            
+          }
+    }); 
+    $(document).on("click",".btnHabilitar",function(){
+        opcion = 2; //guardaar           
+        id_usuario=null;
+        fila = $(this).closest("tr");	
+        id_usuario = parseInt(fila.find('td:eq(0)').text()); //capturo el ID
+        nombre = fila.find('td:eq(1)').text();		
+        usuario = fila.find('td:eq(2)').text();
+        estado = fila.find('td:eq(3)').text();
+        tipo = fila.find('td:eq(4)').text();
+        if(estado=="Activo"){
+                document.getElementById("estado").selectedIndex=1;
+        }else{
+            document.getElementById("estado").selectedIndex=0;
+        }
+
+        $("#id_usuario").val(id_usuario);
+        $("#nombre").val(nombre);
+        $("#usuario").val(usuario);
+        $("#tipo_usuario").val(tipo);
+       
+        $('#modalUsuarios').modal('show');	    
+    });  
+    // Habilitando y deshabilitando usuarios
+    $(".agregar").click(function(e){
+        e.preventDefault();
+       opcion = 5; //actualizar estado de post      
+      
+       var id_usuario=document.getElementById("id_usuario").value;
+       var estado =  document.getElementById("estado").value;
+      
+       $.ajax({
+           type: 'POST',
+           url: '../CRUD/crud.php',
+           datatype:'json',
+           data: {id_usuario:id_usuario,
+               estado:estado,
+               opcion:opcion},
+               success: function(r) {
+                   if (r) {
+                    tablaProductos.ajax.reload(null, true);
+                   }else{
+                    
+                   }
+                                     
+                }
+       });
+       $('#modalUsuarios').modal('hide');	    
+   });   
+}); 
  

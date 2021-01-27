@@ -35,9 +35,9 @@
     
  </div>
 
- <div class="container table-responsive-sm">
+ <div class="p-5 table-responsive-sm">
                         
-    <table id="table_productos" class="table">
+    <table id="productos" class="table">
         <thead>
         <tr>
             <th scope="col">Código</th>
@@ -46,7 +46,7 @@
             <th scope="col">Descuento</th>
             <th scope="col">ISV</th>
             <th scope="col">Stock</th>
-            <th scope="col">Foto</th>
+            <!-- <th scope="col">Foto</th> -->
             <th scope="col">Acción</th>
         </tr>
         </thead>
@@ -55,7 +55,7 @@
     </table>
 </div>
  
-<div class="modal fade modal-responsive" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade modal-responsive" id="modalProducto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <form method="POST">
         <div class="modal-dialog" role="document">
@@ -69,7 +69,7 @@
             <div class="modal-body mx-3">
                 <div class="md-form mb-5">
                
-                <input type="text" id="idCliente" class="form-control " readonly>
+                <input type="text" id="id_producto" class="form-control " readonly>
                
                 </div>
 
@@ -81,61 +81,14 @@
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
-                <button id="borrar_cliente" type="submit" class="borrar_cliente btn btn-elegant">Eliminar</button>
+                <button id="borrar_producto" type="submit" class="borrar_producto btn btn-elegant">Eliminar</button>
             </div>
             </div>
         </div>
         </form>
         </div>  
 
-       <!-- ########### ACTUALIZAR INFORMACION DEL CLIENTE######### -->
-<div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <form action="../CRUD/updateCliente.php" method="POST" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Actualizar Datos De Cliente</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-3">
-                    <div class="form-group col-md-12">
-                        <label for="inputEmail4">Id</label>
-                        <input type="text" class="form-control"name="_idcliente" id="numero" readonly value="<?php echo $mostrar['id'] ?>">
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="inputEmail4">RTN</label>
-                        <input  type="text" class="form-control" name="_identidad" id="rtn"  value="<?php echo $mostrar['identidad'] ?>">
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="inputEmail4">Empresa</label>
-                        <input type="text" class="form-control" name="_cliente" id="empresa"  value="<?php echo $mostrar['cliente'] ?>">
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="inputEmail4">Dirección</label>
-                        <input  type="text" class="form-control" name="_direccion" id="direccion" value="<?php echo $mostrar['direccion'] ?>">
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="inputEmail4">Teléfono</label>
-                        <input type="text" class="form-control" name="_telefono" id="telefono" value="<?php echo $mostrar['telefono'] ?>">
-                    </div>
-                    <div class="form-group col-md-12">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" name="_email" id="email" value="<?php echo $mostrar['email'] ?>">
-                    </div>
-                    
-                        
-                    <div class="modal-footer d-flex justify-content-center">
-                        <button  type="submit" class="btn btn-deep-orange">Actualizar</button>
-                    </div>
-                
-            </div>
-        </div> 
-        
-    </form>
-    </div>
+
      
 <footer>
     <?php

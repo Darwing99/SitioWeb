@@ -1,48 +1,48 @@
-$('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
+// $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+//   var next = $(this).next();
+//   if (!next.length) {
+//     next = $(this).siblings(':first');
+//   }
+//   next.children(':first-child').clone().appendTo($(this));
 
-  for (var i=0;i<4;i++) {
-    next=next.next();
-    if (!next.length) {
-      next=$(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-  }
-});  
+//   for (var i=0;i<4;i++) {
+//     next=next.next();
+//     if (!next.length) {
+//       next=$(this).siblings(':first');
+//     }
+//     next.children(':first-child').clone().appendTo($(this));
+//   }
+// });  
   
   
-  (function () {
+//   (function () {
 
-    var options = {
+//     var options = {
 
-        facebook: "628851103865100", // Facebook page ID
+//         facebook: "628851103865100", // Facebook page ID
 
-        whatsapp: "+504 3308-70122", // WhatsApp number
+//         whatsapp: "+504 3308-70122", // WhatsApp number
 
-        call_to_action: "Has tus pedidos", // Call to action
+//         call_to_action: "Has tus pedidos", // Call to action
 
-        button_color: "#129BF4", // Color of button
+//         button_color: "#129BF4", // Color of button
 
-        position: "right", // Position may be ‘right’ or ‘left’
+//         position: "right", // Position may be ‘right’ or ‘left’
 
-        order: "facebook,whatsapp", // Order of buttons
+//         order: "facebook,whatsapp", // Order of buttons
 
-    };
+//     };
 
-    var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static."+ host;
+//     var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static."+ host;
 
-    var s = document.createElement('script'); s.type = 'text/javascript'; 
-    s.async = true; s.src = url + '/widget-send-button/js/init.js';
+//     var s = document.createElement('script'); s.type = 'text/javascript'; 
+//     s.async = true; s.src = url + '/widget-send-button/js/init.js';
 
-    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+//     s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
 
-    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+//     var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
 
-})();
+// })();
 
 
 

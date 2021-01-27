@@ -29,51 +29,6 @@
     
      
 
-        <div  class="col-sm-12 card mb-4">
-        <br>
-    
-        <div class="modal-header text-rigth  white darken-2">
-                <h4 class="modal-title black-text w-100 font-weight-bold py-0">Registro de Compras</h4>
-            </div>
-            <br>
-          
-            <div class="form-inline">
-                <a  href="../Reportes/Reportecompra.php" class="btn btn-primary px-3"><i class="far fa-file-pdf fa-3x"></i></a>   
-            </div>
-            
-        
-            <!-- ################################################################################################### -->
-            <!-- tabla -->
-            <div class="tabla_hide">
-
-            <form  class="tabla_hide centrar_form">
-                        <div id="table" class="table-editable">
-                   
-                    <table id="tabla_compras" class="table table-bordered table-responsive-md table-striped text-center">
-                        <thead>
-                        <tr>
-                            <th class="text-center">Codigo</th>
-                            <th class="text-center">Descripción</th>
-                            <th class="text-center">Proveedor</th>
-                            <th class="text-center">isv</th>
-                            <th class="text-center">descuento</th>
-                            <th class="text-center">Subtotal</th>
-                            <th class="text-center">total</th>
-                            <th class="text-center">fecha</th>
-                            <th class="text-center">Accion</th>
-                           
-                        </tr>
-                        </thead>
-                        <tbody>
-                          
-                       
-                        </tbody>
-                    </table>
-                </div>
-            </form>
-            </div>
-        </div>
-      
         
  </div>
       

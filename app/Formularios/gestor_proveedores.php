@@ -35,7 +35,7 @@
     
  </div>
 
- <div class="container table-responsive-sm">
+ <div class="p-5 table-responsive-sm">
                         
     <table id="proveedores" class="table">
         <thead>
@@ -47,7 +47,6 @@
             <th class="text-center">Razón Social</th>
             <th class="text-center">Dirección</th>
             <th class="text-center">Teléfono</th>
-          
             <th class="text-center">Email</th>
             <th class="text-center">Celular</th>
             <th class="text-center">Accion</th>

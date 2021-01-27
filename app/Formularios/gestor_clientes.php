@@ -35,7 +35,7 @@
     
  </div>
 
- <div class="container table-responsive-sm">
+ <div class="p-5 table-responsive-sm">
                         
     <table id="clientes" class="table">
         <thead>

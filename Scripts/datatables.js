@@ -422,6 +422,7 @@ $(document).ready(function() {
             
           }
     }); 
+
     $(document).on("click",".Delete",function(){     
         fila = $(this).closest("tr");	
         id_cliente = parseInt(fila.find('td:eq(0)').text()); //capturo el ID	
@@ -447,7 +448,7 @@ $(document).ready(function() {
                    if (r) {
                     tablaclientes.ajax.reload(null, true);
                    }else{
-                       console.log("Hola");
+                      
                     
                    }
                                      
@@ -656,9 +657,9 @@ $(document).ready(function() {
        
         $('#DeleteModal').modal('show');	    
     }); 
-    $(".borrarproveedor").click(function(e){
+    $(".borrar_proveedor").click(function(e){
         e.preventDefault();
-       opcion = 6; //borrar cliente   
+       opcion = 11; //borrar proveedor   
        var id_proveedor=document.getElementById("idProveedor").value;
        
        $.ajax({
@@ -1017,7 +1018,6 @@ $(document).ready(function(){
 
 //  Productos
 
-
 $(document).ready(function() {
     
     var opcion;
@@ -1065,7 +1065,7 @@ $(document).ready(function() {
     
     
                 
-    tablaProductos = $('#table_productos').DataTable({
+    tablaProductos = $('#productos').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
@@ -1085,24 +1085,24 @@ $(document).ready(function() {
         },
         "columns":[
         
-            {"data": "Idproducto"},
+            {"data": "idproducto"},
             {"data": "descripcion"},
             {"data": "precio"},
             {"data": "descuento"},
             {"data": "impuesto"},
             {"data": "existencia"},
-            {"data": "foto"},
+            // {"data": "foto","render":'<img class="card-img-top" src="data:image/jpg; base64,<?php echo base64_encode("foto"]);?>">'},
           
-            {"defaultContent": "<div class='text-center'><div class=''> <button type='button' class='btn btn-floating btn-elegant px-0 btnHabilitar' data-toggle='modal' ><i class='fas fa-unlock'></i></button></div></div>"}
+            {"defaultContent": "<div class='text-center'><div class=''> <button type='button' class='btn btn-floating btn-danger px-0 btnEliminar' data-toggle='modal' ><i class='fas fa-trash '></i></button></div></div>"}
          ],
-        "columnDefs": [
-             {
-                "targets": [ 0 ],
-                "visible": true,
-                "searchable": true,
-                "width": "150px"
-            },
-        ],
+        // "columnDefs": [
+        //      {
+        //         "targets": [ 5 ],
+        //         "visible": false,
+        //         "searchable": true,
+        //         "width": "150px"
+        //     },
+        // ],
         buttons: {
             dom: {
               container:{
@@ -1199,42 +1199,32 @@ $(document).ready(function() {
             
           }
     }); 
-    $(document).on("click",".btnHabilitar",function(){
-        opcion = 2; //guardaar           
-        id_usuario=null;
+    $(document).on("click",".btnEliminar",function(){
+               
+        id_producto=null;
         fila = $(this).closest("tr");	
-        id_usuario = parseInt(fila.find('td:eq(0)').text()); //capturo el ID
+        id_producto = parseInt(fila.find('td:eq(0)').text()); //capturo el ID
         nombre = fila.find('td:eq(1)').text();		
-        usuario = fila.find('td:eq(2)').text();
-        estado = fila.find('td:eq(3)').text();
-        tipo = fila.find('td:eq(4)').text();
-        if(estado=="Activo"){
-                document.getElementById("estado").selectedIndex=1;
-        }else{
-            document.getElementById("estado").selectedIndex=0;
-        }
-
-        $("#id_usuario").val(id_usuario);
-        $("#nombre").val(nombre);
-        $("#usuario").val(usuario);
-        $("#tipo_usuario").val(tipo);
-       
-        $('#modalUsuarios').modal('show');	    
-    });  
-    // Habilitando y deshabilitando usuarios
-    $(".agregar").click(function(e){
-        e.preventDefault();
-       opcion = 5; //actualizar estado de post      
       
-       var id_usuario=document.getElementById("id_usuario").value;
-       var estado =  document.getElementById("estado").value;
+
+        $("#id_producto").val(id_producto);
+        $("#nombre").val(nombre);
+      
+        $('#modalProducto').modal('show');	    
+    });  
+    // Eliminando producto
+    $(".borrar_producto").click(function(e){
+        e.preventDefault();
+       opcion = 12; //Borrar     
+      
+       var id_producto=document.getElementById("id_producto").value;
+     
       
        $.ajax({
            type: 'POST',
            url: '../CRUD/crud.php',
            datatype:'json',
-           data: {id_usuario:id_usuario,
-               estado:estado,
+           data: {id_producto:id_producto,
                opcion:opcion},
                success: function(r) {
                    if (r) {
@@ -1245,7 +1235,7 @@ $(document).ready(function() {
                                      
                 }
        });
-       $('#modalUsuarios').modal('hide');	    
+       $('#modalProducto').modal('hide');	    
    });   
 }); 
  

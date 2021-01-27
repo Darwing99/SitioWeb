@@ -4,6 +4,8 @@ $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 $id_cliente = (isset($_POST['id_cliente'])) ? $_POST['id_cliente'] : '';
+$id_producto = (isset($_POST['id_producto'])) ? $_POST['id_producto'] : '';
+$id_proveedor=(isset($_POST['id_proveedor'])) ? $_POST['id_proveedor'] : '';
 $id_usuario = (isset($_POST['id_usuario'])) ? $_POST['id_usuario'] : '';
 $id_post = (isset($_POST['id_post'])) ? $_POST['id_post'] : '';
 $estado = (isset($_POST['estado'])) ? $_POST['estado'] : '';
@@ -64,13 +66,15 @@ switch($opcion){
       break; 
 
       case 7:
-        $consulta = "SELECT*FROM rproductos";
+        $consulta = "SELECT `idproducto`, `descripcion`, `precio`, `descuento`, `impuesto`, `existencia`  FROM `rproductos`";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
-       
-       
+      
       break; 
+      case 8:
+        
+      break;
       case 9:
         $consulta = "SELECT rpost.id as id_post, m.nombre as creador, `titulo`, 
                      `subtitulo`,
@@ -81,13 +85,25 @@ switch($opcion){
         $resultado->execute();        
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
       break;   
-
       case 10:
-        $consulta = "SELECT*FROM rproveedores";
+              $consulta = "SELECT*FROM rproveedores";
+              $resultado = $conexion->prepare($consulta);
+              $resultado->execute();        
+              $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+          break;
+      case 11:
+        $consulta = "DELETE FROM rproveedores where id='$id_proveedor'";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
-      break;   
+      break; 
+      case 12:
+        $consulta = "DELETE FROM rproductos where idproducto='$id_producto'";
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();        
+        $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+      break;     
+     
     
 }
 print json_encode($data, JSON_UNESCAPED_UNICODE);//envio el array final el formato json a AJAX

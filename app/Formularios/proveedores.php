@@ -54,13 +54,13 @@
                 </div>
                 <div class="form-group col-md-4">
                 <label for="inputPassword4">Teléfono</label>
-                <input type="tel" pattern="[+]{1}[0-9]{3} [0-9]{4}-[0-9]{4}" required class="form-control" id="_telefono" name="_telefono">
+                <input type="tel"  required class="form-control" id="_telefono" name="_telefono">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                 <label for="inputCity">Celular</label>
-                <input type="tel"  pattern="[+]{1}[0-9]{3} [0-9]{4}-[0-9]{4}" class="form-control" id="_celular" name="_celular">
+                <input type="tel"  class="form-control" id="_celular" name="_celular">
                 </div>
                 <div class="form-group col-md-6">
                 <label for="inputZip">Email</label>

@@ -4,7 +4,7 @@ session_start();
 include_once '../BD/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
-
+$data="0";
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 $action=(isset($_POST['option'])) ? $_POST['option'] : '';
 $id_cliente = (isset($_POST['id_cliente'])) ? $_POST['id_cliente'] : '';
@@ -171,28 +171,62 @@ switch($action){
              values('$categoriapost')";
              
         $insert=mysqli_query($conn,$sql);
-        if($insert){
-            print "<script>
-            alert('Registro Correcto');
-            </script>";
-
-        }
+        
 
     }     
     break;  
-  // Habilitando y deshabilitando usuarios
-    case 5:
-      $consulta = "UPDATE rusuario SET estado='$estado' WHERE id='$id_usuario'";
-      $resultado = $conexion->prepare($consulta);
-      $resultado->execute(); 
-      $data=$resultado->fetchAll(PDO::FETCH_ASSOC);       
+  // Insertando proveedores
+    case 4:
+          if(isset($_POST['_identidad'],$_POST['_rtn'],$_POST['_nombre'],$_POST['_razon'],$_POST['_direccion'],$_POST['_telefono'],$_POST['_celular'],$_POST['_email'])){
+            if ($_POST['_identidad']!=="" || $_POST['_rtn']!==""|| $_POST['_nombre']!=="" || $_POST['_razon']!==""|| $_POST['_direccion']!=="" || $_POST['_telefono']!==""|| $_POST['_celular']!==""||$_POST['_email']!=="") {
+                $identidad=$_POST['_identidad'];
+                $rtn=$_POST['_rtn'];
+                $nombre=$_POST['_nombre'];
+                $razon=$_POST['_razon'];
+                $direccion=$_POST['_direccion'];
+                $telefono=$_POST['_telefono'];
+                $celular=$_POST['_celular'];
+                $email=$_POST['_email'];
+             
+                $sql="INSERT INTO rproveedores(id,identidad,rtn,proveedor,razon_social,direccion,telefono,email,celular) VALUES(null,'$identidad',$rtn,'$nombre','$razon','$direccion','$telefono','$email','$celular')";
+                                
+                                $resultado = $conexion->prepare($sql);
+                                $resultado->execute(); 
+                                print_r($result);
+        
+               
+               
+            }
+            
+          
+        }
+       
     break;   
-    // Borrar clientes
-    case 6:
-      $consulta = "DELETE FROM rclientes WHERE id='$id_cliente'";
-      $resultado = $conexion->prepare($consulta);
-      $resultado->execute(); 
-      $data=$resultado->fetchAll(PDO::FETCH_ASSOC); 
+    // agregar usuario
+    case 5:
+          if(isset($_POST['_name'],$_POST['_empleado'],$_POST['_estado'],$_POST['_tipoUser'],$_POST['_pass'])){
+            if($_POST['_name']!=""||$_POST['_empleado']!="" || $_POST['_estado']!="" || $_POST['_tipoUser']!=""||$_POST['_pass']!=""){
+              
+                $name=$_POST['_name'];
+                $empleado=$_POST['_empleado'];
+                $estado=$_POST['_estado'];
+                $tipouser=$_POST['_tipoUser'];
+                $passa=$_POST['_pass'];
+              
+                $sql="INSERT INTO rusuario(id,nombre,usuario,pass,estado,_idtipo) VALUES(null,'$name','$empleado',sha1('$passa'),'$estado','$tipouser')";
+    
+                mysqli_query($conn,$sql) or  die(''.mysqli_error($conn).'');
+                
+                print "<script>
+                alert('Registro creado satisfactoriamente');
+                window.location='../Formularios/empleado.php';
+                </script>";
+                
+            
+            }
+            
+          
+        }
      
      
     break; 

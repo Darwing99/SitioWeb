@@ -135,9 +135,10 @@ $('#formcategoria').on('submit', function(e){
         async:true,
         data: $("#formcategoria").serialize(),
         success: function(response){
-           if(response=='error'){
+          
+               $('#_categoria').html(data);
              
-           }
+           
         },
         error: function(error){
             console.log(error);
@@ -146,6 +147,66 @@ $('#formcategoria').on('submit', function(e){
     });
    	$('#categoria').modal('hide');
 });
+
+// Agregando proveedores
+$('#proveedores').on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: '../CRUD/crud.php',
+        datatype:"html",
+        data: new FormData(this),
+        contentType: false,
+        cache: false,
+        processData:false,
+        beforeSend: function(){
+            $('#guardar').attr("disabled","disabled");
+            $('#proveedores').css("opacity",".5");
+        },
+        success: function(msg){
+            $('.statusMsg').html('');
+            if(msg==0){
+                $('.statusMsg').html('<span style="font-size:18px;color:#34A853">Datos enviados satisfactoriamente.</span>');
+            }else{
+               
+                $('.statusMsg').html('<span style="font-size:18px;color:#EA4335">Ocurrió un problema al momento de enviar.</span>');
+            }
+            $('#proveedores').css("opacity","");
+            $("#guardar").removeAttr("disabled");
+        }
+    });
+});
+
+// agregando usuarios
+
+$('#addusuario').on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: '../CRUD/crud.php',
+        datatype:"html",
+        data: new FormData(this),
+        contentType: false,
+        cache: false,
+        processData:false,
+        beforeSend: function(){
+            $('#guardar').attr("disabled","disabled");
+            $('#addusuario').css("opacity",".5");
+        },
+        success: function(msg){
+            $('.statusMsg').html('');
+            if(msg==0){
+                $('.statusMsg').html('<span style="font-size:18px;color:#34A853">Datos enviados satisfactoriamente.</span>');
+            }else{
+               
+                $('.statusMsg').html('<span style="font-size:18px;color:#EA4335">Ocurrió un problema al momento de enviar.</span>');
+            }
+            $('#addusuario').css("opacity","");
+            $("#guardar").removeAttr("disabled");
+        }
+    });
+});
+
 
 
 // animacion login

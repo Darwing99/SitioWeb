@@ -290,8 +290,8 @@
 
 
     <div class="modal-content">
-      <div class="yellow darken-2 modal-header">
-        <h4 Style="text-align:center;" class="modal-title w-100" id="myModalLabel">Información de Usuario</h4>
+      <div class="black darken-2 modal-header">
+        <h4 Style="text-align:center; color:white;" class="modal-title w-100" id="myModalLabel">Información de Usuario</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -300,7 +300,7 @@
         <form action="../CRUD/UpdateUsuario.php" method="POST">
               <div class="md-form form-group col-md-12">
               <i class="fas fa-fingerprint prefix"></i>
-              <input style="text-align: center; color: black;" type="text" class="form-control" readonly  name="_identidad" value="   <?php echo utf8_decode($row['id']);?>">
+              <input Style="text-align: center; color: black;" type="text" class="form-control" readonly  name="_identidad" value="   <?php echo utf8_decode($row['id']);?>">
               </div>
              <div class="md-form form-group col-md-12">
               <i class="fas fa-user-cog prefix"></i>

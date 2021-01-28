@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proveedores</title>
+    <script type="text/javascript" src="../datatables/Datatables/jQuery/jquery-3.3.1.min.js"></script>	
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
@@ -23,24 +24,26 @@
         <div  class="col-sm-12  mb-4">
         <br>
         <div class="modal-header text-rigth  white darken-2">
-                <h4 class="modal-title black-text w-50 font-weight-bold py-0">Registro de proveedores</h4>
+                <h4 class="modal-title black-text w-40 font-weight-bold py-0">Registro de proveedores</h4>
                 <a id="ver"type="button" href="gestor_proveedores" class="btn btn-elegant"><i class="fas fa-list-ol"></i> Lista</a>
             </div>
             <br>
          
-            <form class="pt-5 centrar_form" action="../CRUD/insertProveedor.php" method="POST">
+            <form class="p-5 centrar_form" id="proveedores"  method="POST">
+            <p class="statusMsg"></p>
             <div class="form-row">
+                <input type="hidden" name="option" value="4" required>
                 <div class="form-group col-md-4">
                 <label for="inputEmail4">Identidad</label>
-                <input type="text" class="form-control" name="_identidad"id="_identidad">
+                <input type="text" class="form-control" name="_identidad"id="_identidad" required>
                 </div>
                 <div class="form-group col-md-4">
                 <label for="inputPassword4">RTN</label>
-                <input type="text" class="form-control" id="_rtn" name="_rtn">
+                <input type="text" class="form-control" id="_rtn" name="_rtn" required>
                 </div>
                 <div class="form-group col-md-4">
                 <label for="inputPassword4">Nombre</label>
-                <input type="text" class="form-control" id="_nombre" name="_nombre">
+                <input type="text" class="form-control" id="_nombre" name="_nombre" required>
                 </div>
             </div>
             <div class="form-row">
@@ -67,7 +70,7 @@
                 <input type="email" class="form-control" id="_email" name="_email">
                 </div>
             </div>
-            <button id="_agregar" type="submit" class="btn btn-elegant"><i class="fas fa-plus-square"></i>Agregar</button>
+            <button id="guardar" type="submit" class="btn btn-elegant"><i class="fas fa-plus-square"></i>Agregar</button>
             <button type="reset" class="btn btn-elegant"><i class="far fa-save pr-2" aria-hidden="true"></i>Limpiar</button>
             </form>
             <br>

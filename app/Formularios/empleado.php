@@ -37,12 +37,13 @@
             </div>
             
          
-            <form method="POST" action="../CRUD/insertEmpleado.php" class="centrar_form">
+            <form method="POST" id="addusuario"class="centrar_form">
             <div class="pt-5 form-row">
             <div class="form-group col-md-4">
                 <label for="inputEmail4">Nombre</label>
                 <input type="text" name="_name" class="form-control" id="_name">
                 </div>
+                <input type="hidden" name="option" value="5" required>
                 <div class="form-group col-md-4">
                 <label for="inputEmail4">Usuario de Empleado</label>
                 <input type="email" name="_empleado" class="form-control" id="_empleado">
@@ -85,7 +86,7 @@
                 
             </div>
             
-            <button id="_agregarE" type="submit" class="btn btn-elegant"><i class="fas fa-plus-square  pr-2"></i>Agregar</button>
+            <button id="guardar" type="submit" class="btn btn-elegant"><i class="fas fa-plus-square  pr-2"></i>Agregar</button>
             
             <button type="reset" class="btn btn-elegant"><i class="far fa-save pr-2" aria-hidden="true"></i>Limpiar</button>
             </form>
@@ -101,6 +102,7 @@
 
 <div class="modal fade" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel aria-hidden="true">
   <form action="../CRUD/insertTipoUser.php" method="POST">
+ 
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header text-center">
@@ -111,7 +113,8 @@
         </div>
         <div class="modal-body mx-3">
             
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-12"> 
+            <p class="statusMsg"></p>
             <?php 
                     $sql="select Max(idtipo+1) as num from rtipouser";
                     $result=mysqli_query($conn,$sql);

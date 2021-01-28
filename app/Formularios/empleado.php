@@ -31,6 +31,7 @@
 
         <div  class="col-sm-12  mb-4">
         <br>
+
         <div class="modal-header text-rigth  white darken-2">
                 <h4 class="modal-title black-text w-90 font-weight-bold py-0">Registro de Empleado</h4>
                 <a id="ver"type="button" href="gestor_usuarios" class="btn btn-elegant"><i class="fas fa-list-ol"></i> Lista</a>
@@ -102,7 +103,7 @@
 
 <div class="modal fade" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel aria-hidden="true">
   <form action="../CRUD/insertTipoUser.php" method="POST">
- 
+   <input type="hidden" name="option" value="6" required>
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header text-center">

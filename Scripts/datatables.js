@@ -346,7 +346,7 @@ $(document).ready(function() {
                           
                           className: 'botones botones-app export barras',
                           exportOptions: {
-                              columns: [ 0, 1, 2, 4,5 ]
+                            columns: [ 0, 1, 2, 3,4,5]
                           }
                       },
                       
@@ -357,7 +357,7 @@ $(document).ready(function() {
                           titleAttr: 'PDF',
                           className: 'botones botones-app export pdf',
                           exportOptions: {
-                              columns: [ 0, 1, 2, 4,5]
+                            columns: [ 0, 1, 2, 3,4,5]
                           },
                           customize:function(doc) {
                               doc.styles.title = {
@@ -387,7 +387,7 @@ $(document).ready(function() {
                           titleAttr: 'Excel',
                           className: 'botones botones-app export excel',
                           exportOptions: {
-                              columns: [ 0, 1, 2, 4,5]
+                            columns: [ 0, 1, 2, 3,4,5]
                           },
                       },
                     
@@ -399,7 +399,7 @@ $(document).ready(function() {
                           titleAttr: 'CSV',
                           className: 'botones botones-app export csv',
                           exportOptions: {
-                              columns: [ 0, 1, 2, 4,5]
+                            columns: [ 0, 1, 2, 3,4,5]
                           }
                       },
                       {
@@ -409,7 +409,7 @@ $(document).ready(function() {
                           titleAttr: 'Imprimir',
                           className: 'botones botones-app export imprimir',
                           exportOptions: {
-                              columns: [ 0, 1, 2, 4,5]
+                              columns: [ 0, 1, 2, 3,4,5]
                           }
                       },
                       {
@@ -426,7 +426,7 @@ $(document).ready(function() {
     $(document).on("click",".Delete",function(){     
         fila = $(this).closest("tr");	
         id_cliente = parseInt(fila.find('td:eq(0)').text()); //capturo el ID	
-        nombre = fila.find('td:eq(2)').text();
+        nombre = fila.find('td:eq(1)').text();
        
         $("#idCliente").val(id_cliente);
         $("#nombre").val(nombre);

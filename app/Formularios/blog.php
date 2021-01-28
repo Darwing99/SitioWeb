@@ -98,7 +98,7 @@
                
             </div>
             <div class="form-row">
-                <input type="hidden" name="action" value="addblog" required>
+                <input type="hidden" name="option" value="2" required>
                 <div class="form-group col-md-3 pt-3 px-4">
                     <button type="submit" id="publicar" class="btn btn-elegant"><i class="fas fa-upload pr-2"></i>Publicar</button>
                 </div>
@@ -133,7 +133,7 @@
                         <div class="form-group col-md-12">
                             <label for="inputEmail4">Categoria</label>
                             <input name="categoriapost" id="categoriapost" type="text" class="form-control" required>
-                            <input type="hidden" name="action" value="addcategoria">
+                            <input type="hidden" name="option" value="3">
                         </div>
                         
                 </div>

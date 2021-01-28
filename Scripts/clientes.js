@@ -9,6 +9,7 @@ if(identidad.length=="" || nombre.length=="" || direccion.length==""
     alert("Campos necesarios");
 return false;
 }else{
+	
 
 
 }
@@ -29,7 +30,7 @@ $(buscar_datos());
 
 function buscar_datos(consulta){
 	$.ajax({
-		url: 'Formularios/Clientes2.php' ,
+		url: '../CRUD/crud.php' ,
 		type: 'POST' ,
 		dataType: 'html',
 		data: {consulta: consulta},

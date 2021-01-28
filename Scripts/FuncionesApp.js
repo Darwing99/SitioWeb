@@ -70,7 +70,7 @@ $(document).ready(function(){
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: '../CRUD/insertarblog.php',
+            url: '../CRUD/crud.php',
             datatype:"html",
             data: new FormData(this),
             contentType: false,
@@ -93,16 +93,44 @@ $(document).ready(function(){
             }
         });
     });
+
+    // INSERTAR CLIENTES
+    $("#_agregar").on('submit', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '../CRUD/crud.php',
+            datatype:"html",
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData:false,
+            beforeSend: function(){
+                $('#guardar').attr("disabled","disabled");
+                $('#_agregar').css("opacity",".5");
+            },
+            success: function(msg){
+                $('.statusMsg').html('');
+                if(msg==0){
+                    $('.statusMsg').html('<span style="font-size:18px;color:#34A853">Datos enviados satisfactoriamente.</span>');
+                }else{
+                   
+                    $('.statusMsg').html('<span style="font-size:18px;color:#EA4335">Ocurrió un problema al momento de enviar.</span>');
+                }
+                $('#_agregar').css("opacity","");
+                $("#guardar").removeAttr("disabled");
+            }
+        });
+      
+    });
   
 });
 
-// Agregando categoria de 
-$('#addregistro').click(function(){
-sendDatacategoria();
-});
-function sendDatacategoria(){
+// Agregando categoria de post
+$('#formcategoria').on('submit', function(e){
+    e.preventDefault();
     $.ajax({
-        url: '../CRUD/insertarblog.php',
+        url: '../CRUD/crud.php',
         type: 'POST',
         async:true,
         data: $("#formcategoria").serialize(),
@@ -114,9 +142,11 @@ function sendDatacategoria(){
         error: function(error){
             console.log(error);
         }
-
+      
     });
-}
+   	$('#categoria').modal('hide');
+});
+
 
 // animacion login
 const sign_in_btn = document.querySelector("#sign-in-btn");

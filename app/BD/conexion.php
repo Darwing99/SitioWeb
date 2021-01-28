@@ -10,7 +10,8 @@ class Conexion{
         				        
         $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');			
         try{
-            $conexion = new PDO("mysql:host=".servidor."; dbname=".nombre_bd, usuario, password, $opciones);		
+            $conexion = new PDO("mysql:host=".servidor."; dbname=".nombre_bd, usuario, password, $opciones);	
+            $conexion->setAttribute(PDO::ATTR_TIMEOUT,ini_get('max_execution_time'));	
             return $conexion;
         }catch (Exception $e){
             die("El error de Conexión es: ". $e->getMessage());
@@ -24,6 +25,9 @@ $password="";
 $database="dbproyecto";
 $mjserror="";
 $conn=mysqli_connect($servername,$username,$password,$database);
+
+
+
 if(!$conn){
     $msjerror="Conexion fallida";
 }else{

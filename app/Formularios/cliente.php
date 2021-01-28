@@ -30,11 +30,14 @@
                 <h4 class="modal-title black-text w-50 font-weight-bold py-0">Registro de Clientes</h4>
                 <a id="ver"type="button" href="gestor_clientes" class="btn btn-elegant"><i class="fas fa-list-ol"></i> Lista</a>
             </div>
+            <p class="statusMsg"></p>
             <br>
          
-            <form class="pt-5 centrar_form" method="POST" action="../CRUD/insertCliente.php">
+            <form class="p-5 centrar_form" method="POST" id="_agregar" >
             <div class="form-row">
+          
                 <div class="form-group col-md-4">
+                <input type="hidden" id="option" name="option" value="1">
                 <label for="inputEmail4">Identidad</label>
                 <input type="text" class="form-control" name="_identidad" id="_identidad">
                 </div>
@@ -61,7 +64,7 @@
             </div>
            
            
-            <button type="submit" id="_agregar" class="btn btn-elegant"><i class="fas fa-plus-square"></i> Agregar</button>
+            <button type="submit" id="guardar" class="btn btn-elegant"><i class="fas fa-plus-square"></i> Agregar</button>
            
             <button type="reset" class="btn btn-elegant"><i class="far fa-save pr-2" aria-hidden="true"></i> Limpiar</button>
             </form>

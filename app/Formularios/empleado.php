@@ -7,10 +7,7 @@
     <?php
      include('../mint/datatables.php');
     ?>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
-    <link rel="stylesheet" href="../../Styles/form.css">
+     <link rel="stylesheet" href="../../Styles/form.css">
 
   
 </head>
@@ -33,58 +30,91 @@
         <br>
 
         <div class="modal-header text-rigth  white darken-2">
-                <h4 class="modal-title black-text w-90 font-weight-bold py-0">Registro de Empleado</h4>
+                <h4 class="modal-title black-text w-20 font-weight-bold py-0">Registro de Empleado</h4>
+                <button type="button" id="_tipo" class="btn btn-elegant " data-toggle="modal" data-target="#myModal">Nuevo Rol <i class="far fa-plus-square"></i></button>
                 <a id="ver"type="button" href="gestor_usuarios" class="btn btn-elegant"><i class="fas fa-list-ol"></i> Lista</a>
             </div>
             
          
-            <form method="POST" id="addusuario"class="centrar_form">
-            <div class="pt-5 form-row">
-            <div class="form-group col-md-4">
-                <label for="inputEmail4">Nombre</label>
-                <input type="text" name="_name" class="form-control" id="_name">
-                </div>
-                <input type="hidden" name="option" value="5" required>
-                <div class="form-group col-md-4">
-                <label for="inputEmail4">Usuario de Empleado</label>
-                <input type="email" name="_empleado" class="form-control" id="_empleado">
-                </div>
-                <div class="form-group col-md-4">
-                <label for="inputPassword4">Estado</label>
-                <select class="form-control" id="_estado" name="_estado">
-                    <option disabled selected></option>
-                    <option value="0">Inactivo</option>
-                    <option value="1">Activo</option>
-                </select>
-                </div>
-             
-                <div class="form-group col-md-4">
-                <label for="inputEmail4">Tipo de usuario</label>
-                <select class="form-control" id="_tipoUser" name="_tipoUser">
-                            <option value="0" disabled selected></option>
-                            <?php
-                          
-                            $sql="select*from rtipouser";
-                            $result=mysqli_query($conn,$sql);
-                            while($mostrar=mysqli_fetch_array($result)){?>
-                           
-                            <option value="<?php echo  $mostrar['idtipo']?>"> <?php echo  $mostrar['tipo'] ?></option>
-                            <?php } ?>
-                </select>
-        
-                </div>
-                
-                <div class="pt-3 form-group col-md-4">
-                <button type="button" id="_tipo" class="btn btn-primary px-3" data-toggle="modal" data-target="#myModal"><i class="far fa-plus-square"></i></button>
-                </div>
+            <form method="POST" id="addusuario"class="p-5 centrar_form">
+            <p class="statusMsg"></p>
+            <input type="hidden" name="option" value="5" required>
+            <div class="row">
+            <div class="col-lg-12 mb-4 p-4">
+                <div class="text-left">
               
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                <label for="inputPassword4">Contraseña</label>
-                <input type="password" class="form-control" id="_pass" name="_pass">
-                </div>
+                <div class="form-row">
+                    <div class="col-md-6 col-5">
+                        
+                        <h5 class="font-weight-bold mb-3">Nombre</h5>
+                        <div class="md-form">
+                        
+                        <input type="text" name="_name" class="form-control" id="_name" required>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-5">
+                        
+                        <h5 class="font-weight-bold mb-3">Usuario</h5>
+                        <div class="md-form">
+                        
+                        <input type="email" name="_empleado" class="form-control" id="_empleado" required>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        
+                    
+                    <div class="col-md-6 col-5">
+                        
+                        <h5 class="font-weight-bold mb-3">Estado</h5>
+                        <div class="md-form col-md-12">
+                        
+                        <select class="mdb-select md-form" id="_estado" name="_estado" required>
+                            <option disabled selected></option>
+                            <option value="0">Inactivo</option>
+                            <option value="1">Activo</option>
+                        </select>
+                            
+                        </div>
+                    </div> 
+                    <div class="col-md-6 col-5">
+                        
+                        <h5 class="font-weight-bold mb-3">Tipo de Usuario</h5>
+                        <div class="md-form col-md-12">
+                        
+                          <select class="mdb-select md-form" id="_tipoUser" name="_tipoUser" required>
+                                <option value="0" disabled selected></option>
+                                <?php
+                            
+                                $sql="select*from rtipouser";
+                                $result=mysqli_query($conn,$sql);
+                                while($mostrar=mysqli_fetch_array($result)){?>
+                            
+                                <option value="<?php echo  $mostrar['idtipo']?>"> <?php echo  $mostrar['tipo'] ?></option>
+                                <?php } ?>
+                           </select>
+                            
+                        </div>
+                    </div> 
+                    <div class="col-md-6 col-5">
+                        
+                        <h5 class="font-weight-bold mb-3">Contraseña</h5>
+                        <div class="md-form">
+                        
+                        <input minlength="8" maxlength="40" type="password" class="form-control" id="_pass" name="_pass">
+                            
+                        </div>
+                    </div> 
                 
+                </div>
+               
+               
+                </div>
+            </div>
+           
             </div>
             
             <button id="guardar" type="submit" class="btn btn-elegant"><i class="fas fa-plus-square  pr-2"></i>Agregar</button>
@@ -102,7 +132,7 @@
 
 
 <div class="modal fade" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel aria-hidden="true">
-  <form action="../CRUD/insertTipoUser.php" method="POST">
+  <form id="categoria_usuario" method="POST">
    <input type="hidden" name="option" value="6" required>
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -115,7 +145,7 @@
         <div class="modal-body mx-3">
             
             <div class="form-group col-md-12"> 
-            <p class="statusMsg"></p>
+            
             <?php 
                     $sql="select Max(idtipo+1) as num from rtipouser";
                     $result=mysqli_query($conn,$sql);
@@ -132,7 +162,7 @@
             </div>
             </div>  
             <div class="modal-footer d-flex justify-content-center">
-            <button id="_agregarUser" class="btn btn-elegant">Agregar</button>
+            <button id="_agregarUser" type="submit" class="btn btn-elegant">Agregar</button>
         </div>
         </div>
       
@@ -149,15 +179,16 @@
 
 </footer>   
 
-    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
-    <!-- <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script> -->
-    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
-    <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
+  
     <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset = " utf-8 "></script>
     <script src="../../Scripts/validaciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="../../Scripts/FuncionesApp.js"></script>
+     <script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
+   
+    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
     <script src="../../Scripts/datatables.js"></script>
+     <script src="../../Scripts/FuncionesApp.js"></script>
 </body>
 </html>

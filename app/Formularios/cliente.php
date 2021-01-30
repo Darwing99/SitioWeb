@@ -34,36 +34,84 @@
             <br>
          
             <form class="p-5 centrar_form" method="POST" id="_agregar" >
-            <div class="form-row">
-          
-                <div class="form-group col-md-4">
-                <input type="hidden" id="option" name="option" value="1">
-                <label for="inputEmail4">Identidad</label>
-                <input type="text" class="form-control" name="_identidad" id="_identidad">
-                </div>
-                <div class="form-group col-md-4">
-                <label for="inputPassword4">Nombre</label>
-                <input type="text" class="form-control" name="_nombre" id="_nombre">
-                </div> 
-                <div class="form-group col-md-4">
-                <label for="inputPassword4">Dirección</label>
-                <input type="text" class="form-control" name="_direccion" id="_direccion">
-                </div>
-            </div>
-            <div class="form-row">
+            <input type="hidden" name="option" value="1" id="option">
+            <div class="row">
+            <div class="col-lg-6 ">
+            <div class="col-lg-12 row mb-3">
+            <div class="col-md-12 col-10">
                 
-               
-                <div class="form-group col-md-4">
-                <label for="inputPassword4">Teléfono</label>
-                <input type="Telephone" class="form-control" name="_telefono" id="_telefono">
-                </div>  
-                <div class="form-group col-md-4">
-                <label for="inputZip">Email</label>
-                <input type="email" class="form-control" name="_email" id="_email">
+                <h5 class="font-weight-bold mb-2">Identidad</h5>
+                <div class="md-form">
+                    
+                <input type="text" class="form-control" name="_identidad" id="_identidad" required>
+                    
                 </div>
+            </div>
+
+            </div>
+            <div class="col-md-12 row mb-3">
+            <div class="col-md-12 col-10">
+                
+                <h5 class="font-weight-bold mb-3">Nombre</h5>
+                <div class="md-form">
+                <input type="text" class="form-control" name="_nombre" id="_nombre" required>
+                </div>
+            </div>
+
+            </div>
+          
+            <div class="col-md-12 row mb-3">
+            <div class="col-md-12 col-10">
+                
+                <h5 class="font-weight-bold mb-3">Dirección</h5>
+                <div class="md-form">
+                    
+                    <input required maxlength="200" type="text" name="_direccion" id="_direccion" class="form-control">
+                    
+                </div>
+            </div>
+
             </div>
            
            
+        </div>
+        <div class="col-lg-6 ">
+          
+        
+          
+           
+            <div class="col-md-12 row mb-3">
+          
+            <div class="col-md-12 col-10">
+                
+                <h5 class="font-weight-bold mb-3">Correo Electrónico</h5>
+                <div class="md-form">
+                  
+                <input type="email" class="form-control" name="_email" id="_email">
+                    
+                </div>
+            </div>
+            
+           
+            
+            </div>
+            <div class="col-md-12  row mb-3">
+            <div class="col-md-12 col-10">
+                
+                <h5 class="font-weight-bold mb-3">Teléfono</h5>
+                <div class="md-form">
+                    
+                <input type="Tel" class="form-control" name="_telefono" id="_telefono" >
+                    
+                </div>
+            </div>
+
+            </div>
+           
+        </div>
+        </div>
+
+        
             <button type="submit" id="guardar" class="btn btn-elegant"><i class="fas fa-plus-square"></i> Agregar</button>
            
             <button type="reset" class="btn btn-elegant"><i class="far fa-save pr-2" aria-hidden="true"></i> Limpiar</button>

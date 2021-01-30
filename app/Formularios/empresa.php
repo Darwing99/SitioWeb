@@ -28,10 +28,11 @@
                          ?>
 <div class ="d-flex justify-content-center  mb-4">
 <div  class="col-md-12 "> 
-      
+
         <br>
         <div class="px-5 modal-header text-rigth  white darken-2 ">
-         <h4 class="modal-title black-text w-70 font-weight-bold py-0">Información de Empresa</h4>
+      
+         <h4 class="modal-title black-text w-90 font-weight-bold py-0">  <img style="width: 60px;" class="card-img-top" src="data:image/jpg; base64,<?php echo base64_encode($mostrar['logo']);?>">Información de Empresa</h4>
                 <p class="font-weight-bold gray-text mb-12" >Codigo de Empresa: #<?php echo $mostrar[0]?></p>
         </div>
          
@@ -45,8 +46,8 @@
     
     <form id="form_empresa" name="form_empresa" enctype="multipart/form-data">
     <h3 class="statusMsg"></h3>
-   <input type="hidden" value="<?php echo $mostrar[0]?>">
-        
+   <input type="hidden" name="id" value="<?php echo $mostrar[0]?>">
+   <input type="hidden" name="option" value="8" required>
         <div class="row">
 
         <div class="col-lg-8 ">
@@ -67,7 +68,7 @@
                 
                 <h5 class="font-weight-bold mb-3">Dirección</h5>
                 <div class="md-form">
-                <input required class="font-weight-bold mb-12 form-control" name="descripcion" id="descripcion" value="<?php echo $mostrar['direccion'] ?>">
+                <input required class="font-weight-bold mb-12 form-control" name="direccion" id="direccion" value="<?php echo $mostrar['direccion'] ?>">
                 </div>
             </div>
 
@@ -116,16 +117,16 @@
         </div>
         <div class="col-lg-3 ">
         <div class="pt-4 form-group col-md-12 px-0">
-                <div class="card" style="width: auto;">
-                <div  id="imagePreview"  class="col-md-12 imagePreview card-img-top"></div>
-                <img class="card-img-top" src="data:image/jpg; base64,<?php echo base64_encode($mostrar['logo']);?>">
+                <div class="" style="width: 340px;">
+                <div  id="imagePreview"  class="px-2 col-md-12 imagePreview card-img-top"></div>
+              
 				
 					<div class="card-body">
 						
 						
 						<div class="file-field">
-                            <button type="button" id="subir" class="col-md-12 btn btn-elegant"><i class="fas fa-cloud-upload-alt fa-1.5x pr-2"></i>Image</button>
-                            <input type="file" id="image" hidden class=" " data-max-file-size="2M" name="image" accept="image/*" >
+                            <button type="button" id="subir" class="col-md-12 btn btn-elegant"><i class="fas fa-cloud-upload-alt fa-1.5x pr-2"></i>Nuevo Logo</button>
+                            <input type="file" id="image" class=" " data-max-file-size="2M" name="image" accept="image/*" required>
                         
                         </div>
 					</div>

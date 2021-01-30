@@ -7,6 +7,8 @@ $conexion = $objeto->Conectar();
 $data="0";
 $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
 $action=(isset($_POST['option'])) ? $_POST['option'] : '';
+$id_tipo_usuario=(isset($_POST['id_tipo'])) ? $_POST['id_tipo'] : '';
+$rol=(isset($_POST['rol'])) ? $_POST['rol'] : '';
 $id_cliente = (isset($_POST['id_cliente'])) ? $_POST['id_cliente'] : '';
 $id_producto = (isset($_POST['id_producto'])) ? $_POST['id_producto'] : '';
 $id_proveedor=(isset($_POST['id_proveedor'])) ? $_POST['id_proveedor'] : '';
@@ -70,7 +72,7 @@ switch($opcion){
       break; 
 
       case 7:
-        $consulta = "SELECT `idproducto`, `descripcion`, `precio`, `descuento`, `impuesto`, `existencia`  FROM `rproductos`";
+        $consulta = "SELECT * FROM `rproductos`";
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -106,9 +108,28 @@ switch($opcion){
         $resultado = $conexion->prepare($consulta);
         $resultado->execute();        
         $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
-      break;     
-     
-    
+      break;  
+      case 13:
+        $consulta = "SELECT*FROM rtipouser";
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();        
+        $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+      break;   
+      case 14:
+        $consulta = "DELETE FROM rtipouser WHERE idtipo='$id_tipo_usuario'";
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();        
+        $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+        print_r($_POST);
+      break;   
+      case 15:
+        $consulta =  "UPDATE rtipouser SET tipo='$rol' WHERE idtipo='$id_tipo_usuario'";
+        $resultado = $conexion->prepare($consulta);
+        $resultado->execute();        
+        $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+      print_r($_POST);
+      break; 
+        
 }
 
 // Insertando query
@@ -132,14 +153,8 @@ switch($action){
             }
             
           
-        }else{
-          
-            print "<script>
-                    alert('Datos no validados');
-                    window.location='../Formularios/cliente.php?sms=1';
-                    </script>";
         }
-
+        print_r($_POST);
     break; 
     //  Insertando Post
 
@@ -231,15 +246,56 @@ switch($action){
      
     break; 
 
-    case 7:
-      $consulta = "SELECT `idproducto`, `descripcion`, `precio`, `descuento`, `impuesto`, `existencia`  FROM `rproductos`";
-      $resultado = $conexion->prepare($consulta);
-      $resultado->execute();        
-      $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
+    case 6:
+      if(isset($_POST['_tipoUser'])){
+        if ($_POST['_tipoUser']!=="") {
+            $tipo=$_POST['_tipoUser'];
+            $sql="INSERT INTO rtipouser(idtipo,tipo) VALUES(null,'$tipo')";
+            mysqli_query($conn,$sql) or  die(''.mysqli_error($conn).'');
+            print "<script>
+                alert('Registro creado satisfactoriamente');
+               
+                </script>";
+        }
+      
+    }
     
     break; 
-    case 8:
+    case 7:
+      if(!empty($_POST['codigo'])|| !empty($_POST['descripcion'])||!empty($_POST['precio'])
+       ||!empty(['descuento'])||!empty(['impuesto'])||!empty($_FILES['image'])){
+           $codigo=$_POST['codigo'];
+           $precio=$_POST['precio'];
+           $description=($_POST['descripcion']);
+           $impuesto=$_POST['impuesto'];
+           $descuento=$_POST['descuento'];
+           $image=addslashes(file_get_contents($_FILES['image']['tmp_name']));
+    
+          
+          
+           $sql="INSERT INTO `rproductos`(`idproducto`, `codigo`, `descripcion`, `precio`, `descuento`, `impuesto`, `existencia`, `foto`) 
+           VALUES (null,'$codigo','$description','$precio','$descuento','$impuesto','0','$image')";
+           mysqli_query($conn, $sql) or die(''.mysqli_error($conn).'');
+
+       }
+       print_r($_POST);
       
+    break;
+    case 8: 
+      if($_POST['rtn']!=="" || $_POST['empresa']!=="" || $_POST['direccion']!==""||$_POST['telefono']!==""||$_POST['correo']!==""){
+        $rtn=$_POST['rtn'];
+        $id=$_POST['id'];
+        $empresa=$_POST['nombre'];
+        $direccion=$_POST['direccion'];
+        $telefono=$_POST['telefono'];
+        $correo=$_POST['correo'];
+        $imagen= addslashes(file_get_contents($_FILES['image']['tmp_name']));
+        $sql="UPDATE rempresa SET rtn='$rtn',nombre_empresa='$empresa',direccion='$direccion',telefono='$telefono',correo='$correo',logo='$imagen'
+        WHERE id='$id'";
+        mysqli_query($conn,$sql) ;
+        
+    }
+
     break;
     case 9:
       $consulta = "SELECT rpost.id as id_post, m.nombre as creador, `titulo`, 

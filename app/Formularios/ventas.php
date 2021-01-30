@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venta nueva</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
+    <?php
+     include('../mint/datatables.php');
+    ?>
+   
     <link rel="stylesheet" href="../../Styles/form.css">
    
-    
-    
 </head>
 <body>
 <header>
@@ -20,197 +19,362 @@
 ?>
 </header>
 <br>
+<!-- Detalle de factura -->
+<?php 
+    $sql=mysqli_query($conn, "SELECT LAST_INSERT_ID(correlativo) as last from rdetallefactura order by correlativo  desc limit 0,1 ");
+  $rw=mysqli_fetch_array($sql);
+  $numero=$rw['last']+1;
+  ?>
+    <!-- Detalle de empresa -->
+ <!-- detalles de empresa -->
+ <?php 
+  $sql="select*from rempresa";
+  $result=mysqli_query($conn,$sql);
+
+  $mostrar=mysqli_fetch_array($result);
+  ?>
+
+<div class="p-5">
 <form id="ventas" method="POST" >
     <div class="pt-5 card-deck">
 
-          <div  class="col-sm-9 card mb-4">
+          <div  class="col-sm-12  mb-4">
             <br>
             <div class="modal-header text-rigth  white darken-2">
-                    <h4 class="modal-title black-text w-100 font-weight-bold py-0">Nueva Venta</h4>
+                    <h4 class="modal-title black-text w-50 font-weight-bold py-0">Nueva Venta</h4>
+                    <button id="mostrar_ocultar"  type="button" class="btn btn-outline-black btn-rounded btn-sm px-3 waves-effect">Ver Menu <i class="fas fa-eye fa-1x"></i></button>
+
                 </div>
-                <br>
-                <div class="centrar_form" >
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                    <label for="inputEmail4">Fecha</label>
-                    <input type="date" class="form-control" id="_fecha" value="<?php echo date("Y-m-d");?>" >
-                    </div>
-                    <div class="form-group col-md-4">
-                   
-                      <label for="inputEmail4">Cliente</label>
-                      <select class="form-control" id="_cliente" name="_cliente">
-                                  <option value="0" disabled selected>Cliente</option>
-                                  <?php
-                                  
-                                  $sql="select*from rclientes";
-                                  $result=mysqli_query($conn,$sql);
-                                  while($mostrar=mysqli_fetch_array($result)){?>
-                                  <option value="<?php echo  $mostrar['id']?>"> <?php echo  $mostrar['cliente'] ?></option>
-                                  <?php } ?>
-                      </select>
-                   
+            
+          </div>
+           
+      </div>  
+<!-- mODAL DE PRODUTOS -->
+      <div class="modal fade" id="modal_productos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fluid modal-notify modal-success" role="document">
+          <!--Content-->
+          <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+              <p class="heading lead">Productos</p>
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">&times;</span>
+              </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="">
                 
-                    </div>
-                    <div class="form-group col-md-4 popup">
-                    <label for="inputPassword4">Producto</label>
-                    <select class="form-control" id="_codigo" name="codigo">
-                                  <option value="0" disabled selected>Producto</option>
-                                  <?php
-                                  
-                                  $sql="select*from rproductos";
-                                  $result=mysqli_query($conn,$sql);
-                                  while($mostrar=mysqli_fetch_array($result)){?>
-                                  <option value="<?php echo  $mostrar['codigo']?>"> <?php echo  $mostrar['descripcion'] ?></option>
-                                  <?php } ?>
-                      </select>
-                    </div>
-                  
+                <section id="" type="button" class="p-5  pt-4 text-center">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                      <!--Grid column-->
+
+                      <?php
+                      $sql="SELECT*FROM rproductos";
+                      $resultado = mysqli_query($conn,$sql);
+
+                      while($datos=mysqli_fetch_array($resultado)){
+                          $i=0;
+
+                      ?>
+                      <div class="col-lg-2 col-md-12 mb-4">
+
+                          <!-- Card -->
+                          <div class="card">
+
+                          <!-- Card image -->
+                          <div class="view overlay">
+                              <img class="card-img-top"  src="data:image/jpg; base64,<?php echo base64_encode($datos['foto']);?>"
+                              alt=" <?php echo $datos['descripcion'] ?>">
+                              <a href="#!">
+                              <div class="mask rgba-white-slight"></div>
+                              </a>
+                          </div>
+
+                          <!-- Card content -->
+                          <div class="card-body">
+
+                              <p class="mb-1"><a href="" class="font-weight-bold black-text"> <?php echo $datos['descripcion'] ?></a></p>
+
+                              <p class="mb-1"><small class="mr-1"><s>$299</s></small><strong> <?php echo $datos['precio'] ?></strong></p>
+
+                              <button type="button" class="btn btn-outline-black btn-rounded btn-sm px-3 waves-effect"><i class="fas fa-clipboard-check"></i></button>
+
+                          </div>
+
+                          </div>
+                          <!-- Card -->
+
+
+                      </div>
+                      <!--Grid column-->
+
+                      <?php $i++; } ?>
+
+                      </div>
+                      <!--Grid row-->
+
+
+                      </section>
+              </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+              
+              <a type="button" class="btn btn-elegant waves-effect" data-dismiss="modal">Cerrar</a>
+            </div>
+          </div>
+          <!--/.Content-->
+        </div>
+      </div>
+
+
+<!-- MODAL DE CLIENTES -->
+       <div class="modal fade" id="modal_clientes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-notify modal-success" role="document">
+              <!--Content-->
+              <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                  <p class="heading lead">Cliente</p>
+
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                  </button>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                    <label for="inputPassword4">Precio</label>
-                    <input type="text" class="form-control" name="precio" id="_precio">
-                    </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputEmail4">Cantidad</label>
-                    <input type="text" class="form-control" name="cantidad" id="_cantidad">
-                    </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputPassword4">ISV</label>
-                    <input type="text" class="form-control" name="isv" id="_isv" value="15">
-                    </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputEmail4">Descuento</label>
-                    <input type="text" class="form-control" name="descuento" id="_descuento">
-                    </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputEmail4">Subtotal</label>
-                    <input type="text" class="form-control" id="_subtotal" name="subtotal"readonly>
-                    </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputPassword4">Total</label>
-                    <input type="text" class="form-control" id="_total" name="total" readonly>
-                    </div>
-                    </div>
-                    <hr>  
-                    <div class="col-sm-12">
-                    <button id="_agregarC" type="button" class="btn btn-rounded btn-amber "><i class="fas fa-plus-square"></i>Agregar</button>
-                
-                    <button type="reset" class="btn btn-rounded btn-blue-grey"><i class="far fa-save pr-2" aria-hidden="true"></i>Limpiar</button>
-                    <div class="form-ro">
-                        <div id="table" class="table-editable">
-                                
-                                <table id="tabla" class="table table-bordered table-responsive-md table-striped text-center">
-                                    <thead>
-                                    <tr>
-                                        <th class="text-center">Codigo</th>
-                                        <th class="text-center">Precio</th>
-                                        <th class="text-center">Cantidad</th>
-                                        <th class="text-center">ISV</th>
-                                        <th class="text-center">Descuento</th>
-                                        <th class="text-center">Subtotal</th>
-                                        <th class="text-center">Total</th>
-                                        <th class="text-center">Acción</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    
-                                    </tbody>
-                                </table>
+
+                <!--Body-->
+                <div class="modal-body">
+                  <div class="">
+                    
+                    <section id="" type="button" class="">
+
+                    <div class=" table-responsive">
+                        
+                        <table id="clientes_ventas" class="table table-condensed   product-table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Identidad</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
                         </div>
-                    </div> 
-                  </div>
-                                   
+
+                        </section>
+                      </div>
+                    </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                  
+                  <a type="button" class="btn btn-elegant waves-effect" data-dismiss="modal">Cerrar</a>
+                </div>
+              </div>
+              <!--/.Content-->
+            </div>
           </div>
 
-          </div>
-                <!-- Card factura-->
-          <div class=" col-sm-3 card mb-4">
-                <br>
-                <div class="modal-header text-rigth  white darken-2">
-                    <h4 class="modal-title black-text w-100 font-weight-bold py-0">Factura</h4>
-                </div>
-                <br>
-                <div>
-                    <form action="">
-                    <div class="form-group col-sm-12">
+      <div class=" outer-section" >
+        
+        <form class="form-horizontal" role="form" id="datos_presupuesto" method="post">
+         <div id="print-area">
+            
+                <div class="row pad-top font-big">
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                   <a target="_blank">  <img style="width: 100px;" src="data:image/jpg; base64,<?php echo base64_encode($mostrar['logo']);?>" alt="Inveruta" /></a>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <strong>E-mail : </strong> <?php echo $mostrar['correo'];?>
+                     <br />
+                     <strong>Teléfono :</strong> (+504) <?php echo $mostrar['telefono'];?> <br />
+                     <!-- <strong>Sitio web :</strong> <?php echo $rw['web'];?>  -->
                     
-                    <br>
-                    <div class="form-group row"> 
-                    <?php 
-                       
-                        $id=$_SESSION['id'];
-                        $sql="SELECT usuario,nombre,id FROM rusuario where id='$id'";
-                        $result=mysqli_query($conn,$sql);
-                        while($mostrar=mysqli_fetch_array($result)){
-                        ?>
-                    <label for="inputEmail3" class="col-sm-12 col-form-label">Vendedor</label>
-                    <input style="color:red; " type="hidden" class="form-control" name="_idUsuario" id="_idUsuario" readonly value="<?php echo $mostrar['id'];?>">
-                    <input style="color:red; " type="text" class="form-control" id="colFormLabelS" readonly value="<?php echo $mostrar['nombre'];?>">
-                    <?php } ?>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                     <strong><?php echo $mostrar['nombre_empresa'];?>  </strong>
+                     <br />
+                     Dirección : <?php echo $mostrar['direccion'];?> 
+                 </div>
+ 
+             </div>
+            
+             
+             <!-- Detalles de cliente -->
+ 
+             <div class="row ">
+             <hr />
+                 <div class="col-lg-6 col-md-6 col-sm-6">
+                          
+               
+                    
+                 <div class="col-md-8 col-10">
+                    <div class="md-form">
+                    <input type="hidden" name="idCliente" id="idCliente">
+                    <input  name="cliente" id="cliente"class="form-control" placeholder="Detalles del cliente" required value="">
+                    
                     </div>
-                    <hr>
-                    <div class="form-group row"> 
-                 
-                    <?php 
-                     
-                        $sql="SELECT MAX(id_factura+1000000) AS num FROM rfactura";
-                        $result=mysqli_query($conn,$sql);
-                        while($mostrar=mysqli_fetch_array($result)){
-                        ?>
-                    <label for="inputEmail3" class="col-sm-12 col-form-label">N° Factura</label>
-                    <input style="color:red; " type="text" class="form-control" id="colFormLabelm" readonly value="<?php echo $mostrar['num'];?>">
-                    <?php } ?>
+                  </div>
+         
+                <div class="col-md-8 col-10">
+                    
+                   
+                    <div class="md-form ">
+                      
+                    <input class="form-control"  id="email" placeholder="Email" readonly>
+                    
                     </div>
-                        <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-12 col-form-label">Subtotal</label>
-                      
-                        <input type="text" class="form-control" name="subtotal2" id="_subtotal2" readonly>
-                        </div>
-                       
-                        <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-12 col-form-label">ISV</label>
-                       
-                        <input type="text" class="form-control" id="_ISV2"  readonly>
-                        </div>
-                        <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-12 col-form-label">Descuento</label>
-                       
-                        <input type="text" class="form-control" name="descuento2" id="_descuento2"  readonly>
-                        </div>
-                      
-                        <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-12 col-form-label">Total</label>
-                      
-                        <input type="text" class="form-control" name="total2" id="_total2"  readonly>
-                        </div>
-                        <div class="col-sm-12">
-                          <button id="guardar" type="button" class="btn btn-rounded btn-amber "><i class="fas fa-plus-square"></i>Guardar</button>
-                        </div>
-                        </div>
-                    </form>
-                    </div>  
-          </div>
+                </div>
           
-      </div>  
+                <div class="col-md-6 col-10">
+                    
+                   
+                    <div class="md-form form-sm">
+                      
+                    <input class="form-control form-control-sm" id="telefono" placeholder="Telefono" readonly>
+                    <!-- <label for="telefono">Telefono</label> -->
+                    </div>
+                </div>
+            
+                 </div>
+
+  
+           
+                 <div class="col-lg-6 col-md-6 col-sm-6">
+                    
+                     <div class="row">
+                         <div class="col-lg-6">
+                           <h4><strong>Numero de venta #: </strong><?php echo $numero;?></h4>
+                         </div>
+                         <div class="col-lg-6">
+                              <h4><strong>Fecha: </strong> <?php echo date("d/m/Y");?></h4>
+                         </div>
+                     
+                     </div>
+                     <div class="row">
+                         <div class="col-lg-12">
+                         <label>Términos y condiciones:</label>
+                         <input type="text" name="condiciones" id="condiciones" class="form-control" placeholder="Términos y condiciones de la orden">
+                         </div>
+                         
+                         
+                         
+                     </div>
+                   
+                   
+                   
+                 </div>
+             </div>
+             
+            
+     <!-- Seccion de registro de producto -->
+     <div class="">
+          
+          <section id="productos_catalago" type="button" class="productos_catalago p-5  pt-4 text-center">
+          <form class="form-horizontal" name="guardar_item" id="guardar_item">
+                <!--Grid row-->
+                <div class="row">
+                <div class="col-md-6">
+                    <label>Descripción del producto</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion"  required></textarea>
+                    <input type="hidden" class="form-control" id="action" name="action"  value="ajax">
+                </div>
+                <div class="col-md-6">
+                        <label>Color</label>
+                        <input type="text" class="form-control" id="color" name="color" required>
+                </div>
+                              
+                <div class="col-md-6">
+                        <label>Cantidad</label>
+                        <input type="text" class="form-control" id="cantidad" name="cantidad" required>
+                    </div>
+                                            
+                    <div class="col-md-6">
+                        <label>Precio</label>
+                      <input type="text" class="form-control" id="precio" name="precio" required>
+                    </div>
+                </div>
+                <!--Grid row-->
+          </form>
+    
+                </section>
+        </div>
+             
+             <div class="row">
+             <hr />
+                 <div class="col-lg-12 col-md-12 col-sm-12">
+                     <div class="table-responsive">
+                         <table class="table table-condensed table-hover table-striped product-table">
+                             <thead>
+                                 <tr>
+                                    
+                                     <th class='text-center'>Código</th> 
+                                     <th>Descripción</th>
+                                     <th class='text-center'>Precio</th>
+                                     <th class='text-center'>Cantidad</th>
+                                     <th class='text-right'>Precio unitario</th>
+                                     <th class='text-right'>Total</th>
+                                     <th class='text-right'></th>
+                                 </tr>
+                             </thead>
+                             <tbody class='items'>
+                                 
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+             </div>
+             
+            
+            
+             
+         
+         </div>
+        <div class="row"> <hr /></div>
+         <div class="row pad-bottom  pull-right">
+         
+             <div class="col-lg-12 col-md-12 col-sm-12">
+                 <button type="submit" class="btn btn-success ">Guardar orden de pedido</button>
+              
+             </div>
+         </div>
+         </form>
+     </div>
+
+
 </form> 
 <!-- Fin de formulario principal -->
   <!-- #######Modal de productos################# -->
 
-
+  </div>
 <footer>
     <?php
     include("../mint/footer.php");
     ?>
 </footer>   
-<script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
-    <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script>
-    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+
+    <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script> 
     <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset = " utf-8 "></script>
     <script src="../../Scripts/validaciones.js"></script>
     <script src="../../Scripts/FuncionesApp.js"></script>
-    <script src="../../Scripts/ventas.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+   
 </body>
 </html>

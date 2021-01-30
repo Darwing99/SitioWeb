@@ -49,7 +49,7 @@ $(document).ready(function() {
     
     
                 
-    tablaUsuarios = $('#usuarios').DataTable({
+        tablaUsers = $('#usuarios').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
@@ -199,6 +199,7 @@ $(document).ready(function() {
                 document.getElementById("estado").selectedIndex=1;
         }else{
             document.getElementById("estado").selectedIndex=0;
+            
         }
 
         $("#id_usuario").val(id_usuario);
@@ -225,17 +226,216 @@ $(document).ready(function() {
                opcion:opcion},
                success: function(r) {
                    if (r) {
-                    tablaUsuarios.ajax.reload(null, true);
+                      
+                  
+                    tablaUsers.ajax.reload(null,true);
+                   
                    }else{
                     
                    }
+                 
                                      
                 }
        });
        $('#modalUsuarios').modal('hide');	    
    });   
+      
 }); 
 
+
+// tipos de USUARIOS
+$(document).ready(function() {
+    
+    var opcion;
+    opcion = 13;
+    // Función para cambiar el idioma de la datatable
+    var idioma=
+
+            {
+                "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningun dato disponible en esta tabla",
+                "sInfo":           "_START_ - _END_  De _TOTAL_ Registros",
+                "sInfoEmpty":      "0 de 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "<i class='fas fa-fast-forward'></i>",
+                    "sLast":     "<i class='fas fa-fast-backward'></i>",
+                    "sNext":     "<i class='fas fa-forward'></i>",
+                    "sPrevious": "<i class='fas fa-backward'></i>"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                },
+                "buttons": {
+                    "copyTitle": 'Informacion copiada',
+                    "copyKeys": 'Use your keyboard or menu to select the copy command',
+                    "copySuccess": {
+                        "_": '%d filas copiadas al portapapeles',
+                        "1": '1 fila copiada al portapapeles'
+                    },
+
+                    "pageLength": {
+                    "_": "Mostrar %d filas",
+                    "-1": "Mostrar Todo"
+                    }
+                }
+            }
+    
+    
+                
+    tablaUsuarios = $('#id_usuarios').DataTable({
+        "paging": true,
+        "lengthChange": true,
+        "searching": true,
+        "ordering": true,
+        "info": true,
+        "autoWidth": true,
+        "language": idioma,
+        "lengthMenu": [[2,20,30, -1],[2,20,30,"Mostrar Todo"]],
+        dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
+
+    //AJAX//
+        "ajax":{            
+            "url": "../CRUD/crud.php", 
+            "method": 'POST', //usamos el metodo POST
+            "data":{opcion:opcion}, //enviamos opcion 1 para que haga un SELECT
+            "dataSrc":""
+        },
+        "columns":[
+        
+            {"data": "idtipo"},
+            {"data": "tipo"},
+          
+          
+            {"defaultContent": "<div class=' text-center'><div class=''> <button type='button' class='btn btn-warning p-2 btnBorrar' data-toggle='modal' ><i class='fas fa-trash '></i></button><button type='button' class='btn btn-success p-2 btnUpdate' data-toggle='modal' ><i class='fas fa-edit '></i></button></div></div>"}
+         ],
+        "columnDefs": [
+            {
+                "targets": [ 0 ],
+                "visible": true,
+                "searchable": true,
+                "width": "auto"
+            },  {
+                "targets": [ 2 ],
+                "visible": true,
+                "searchable": true,
+                "width": "150px"
+            },
+        ],
+        buttons: {
+            dom: {
+              container:{
+                tag:'div',
+                className:'flexcontent'
+              },
+              buttonLiner: {
+                tag: null
+              }
+            },
+            
+            buttons: [
+                      
+                    
+                      
+                      {
+                          extend:    'pageLength',
+                          titleAttr: 'Registros a mostrar',
+                          className: 'selectTable'
+                      }
+                  ]
+            
+            
+          }
+    }); 
+    $(document).on("click",".btnBorrar",function(){
+           
+        id_tipo=null;
+        fila = $(this).closest("tr");	
+        id_tipo = parseInt(fila.find('td:eq(0)').text()); //capturo el ID
+        rol = fila.find('td:eq(1)').text();		
+      
+     
+
+        $("#_idUserD").val(id_tipo);
+        $("#_idcargoD").val(rol);
+     
+       
+        $('#delete').modal('show');	    
+    });  
+    // borrando tipos de usuarios
+    $(".borrar").click(function(e){
+        opcion=14;
+        e.preventDefault();
+        var id_tipo=document.getElementById("_idUserD").value;
+       
+        $.ajax({
+            type: 'POST',
+            url: '../CRUD/crud.php',
+            datatype:'json',
+            data: {id_tipo:id_tipo,
+                    opcion:opcion},
+                success: function(r) {
+                    if (r) {
+                     tablaUsuarios.ajax.reload(null, true);
+                    }else{
+                       
+                     
+                    }
+                                      
+                 }
+        });
+       $('#delete').modal('hide');	    
+   });   
+
+   $(document).on("click",".btnUpdate",function(){
+           
+    id_tipo=null;
+    fila = $(this).closest("tr");	
+    id_tipo = parseInt(fila.find('td:eq(0)').text()); //capturo el ID
+    rol = fila.find('td:eq(1)').text();		
+  
+ 
+
+    $("#_idUser").val(id_tipo);
+    $("#_idcargo").val(rol);
+ 
+   
+    $('#update').modal('show');	    
+});  
+// actualizando tipos de usuarios
+$(".update").click(function(e){
+    opcion=15;
+    e.preventDefault();
+    var id_tipo=document.getElementById("_idUser").value;
+    var rol=document.getElementById('_idcargo').value;
+    $.ajax({
+        type: 'POST',
+        url: '../CRUD/crud.php',
+        datatype:'json',
+        data: {id_tipo:id_tipo,
+                rol:rol,
+                opcion:opcion},
+            success: function(r) {
+                if (r) {
+                 tablaUsuarios.ajax.reload(null, true);
+                }else{
+                   
+                 
+                }
+                                  
+             }
+    });
+   $('#update').modal('hide');	    
+});   
+}); 
 // Tabla de clientes
 $(document).ready(function() {
     
@@ -1021,7 +1221,7 @@ $(document).ready(function(){
 $(document).ready(function() {
     
     var opcion;
-    opcion = 7;
+   
     // Función para cambiar el idioma de la datatable
     var idioma=
 
@@ -1065,7 +1265,7 @@ $(document).ready(function() {
     
     
                 
-    tablaProductos = $('#productos').DataTable({
+    tablaProductos = $('#table_productos').DataTable({
         "paging": true,
         "lengthChange": true,
         "searching": true,
@@ -1076,33 +1276,6 @@ $(document).ready(function() {
         "lengthMenu": [[2,20,30, -1],[2,20,30,"Mostrar Todo"]],
         dom: 'Bfrt<"col-md-6 inline"i> <"col-md-6 inline"p>',
 
-    //AJAX//
-        "ajax":{            
-            "url": "../CRUD/crud.php", 
-            "method": 'POST', //usamos el metodo POST
-            "data":{opcion:opcion}, //enviamos opcion 1 para que haga un SELECT
-            "dataSrc":""
-        },
-        "columns":[
-        
-            {"data": "idproducto"},
-            {"data": "descripcion"},
-            {"data": "precio"},
-            {"data": "descuento"},
-            {"data": "impuesto"},
-            {"data": "existencia"},
-            // {"data": "foto","render":'<img class="card-img-top" src="data:image/jpg; base64,<?php echo base64_encode("foto"]);?>">'},
-          
-            {"defaultContent": "<div class='text-center'><div class=''> <button type='button' class='btn btn-floating btn-danger px-0 btnEliminar' data-toggle='modal' ><i class='fas fa-trash '></i></button></div></div>"}
-         ],
-        // "columnDefs": [
-        //      {
-        //         "targets": [ 5 ],
-        //         "visible": false,
-        //         "searchable": true,
-        //         "width": "150px"
-        //     },
-        // ],
         buttons: {
             dom: {
               container:{
@@ -1123,8 +1296,11 @@ $(document).ready(function() {
                           
                           className: 'botones botones-app export barras',
                           exportOptions: {
-                              columns: [ 0, 1, 2, 3, 4,5 ]
-                          }
+                              columns: [ 0, 1, 2, 3, 4,5,6,7 ],stripHtml: false,
+                          },
+                          customize: function (win) {
+                            /* ... */
+                        }
                       },
                       
                       {
@@ -1134,7 +1310,8 @@ $(document).ready(function() {
                           titleAttr: 'PDF',
                           className: 'botones botones-app export pdf',
                           exportOptions: {
-                            columns: [ 0, 1, 2, 3, 4,5 ]
+                            columns: [ 0, 1, 2, 3, 4,5,6,7 ],
+                            stripHtml: false,
                           },
                           customize:function(doc) {
                               doc.styles.title = {
@@ -1151,7 +1328,9 @@ $(document).ready(function() {
                                   color:'white',
                                   alignment:'center'
                               },
+                            
                               doc.content[1].margin = [ 20, 20, 20, 20 ]
+                              
   
                           }
   
@@ -1164,7 +1343,8 @@ $(document).ready(function() {
                           titleAttr: 'Excel',
                           className: 'botones botones-app export excel',
                           exportOptions: {
-                            columns: [ 0, 1, 2, 3, 4,5 ]
+                            columns: [ 0, 1, 2, 3, 4,5,6,7 ],
+                            stripHtml: false,
                           },
                       },
                     
@@ -1176,7 +1356,8 @@ $(document).ready(function() {
                           titleAttr: 'CSV',
                           className: 'botones botones-app export csv',
                           exportOptions: {
-                            columns: [ 0, 1, 2, 3, 4,5 ]
+                            columns: [ 0, 1, 2, 3, 4,5,6,7 ],
+                            stripHtml: false,
                           }
                       },
                       {
@@ -1186,7 +1367,8 @@ $(document).ready(function() {
                           titleAttr: 'Imprimir',
                           className: 'botones botones-app export imprimir',
                           exportOptions: {
-                            columns: [ 0, 1, 2, 3, 4,5 ]
+                            columns: [ 0, 1, 2, 3, 4,5,6,7 ],
+                            stripHtml: false,
                           }
                       },
                       {
@@ -1204,7 +1386,7 @@ $(document).ready(function() {
         id_producto=null;
         fila = $(this).closest("tr");	
         id_producto = parseInt(fila.find('td:eq(0)').text()); //capturo el ID
-        nombre = fila.find('td:eq(1)').text();		
+        nombre = fila.find('td:eq(2)').text();		
       
 
         $("#id_producto").val(id_producto);

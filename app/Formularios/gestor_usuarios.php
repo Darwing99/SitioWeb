@@ -27,16 +27,16 @@
         <div  class="col-sm-12  mb-4">
         <br>
         <div class="modal-header text-rigth  white darken-2">
-                <h4 class="modal-title black-text w-90 font-weight-bold py-0">Registro de Usuarios</h4>
+                <h4 class="modal-title black-text w-50 font-weight-bold py-0">Registro de Usuarios</h4>
                 <a id="ver"type="button" href="empleado" class="btn btn-elegant"><i class="far fa-plus-square"></i> Nuevo</a>
             </div>
          
             <br>        
-                <div  class="pt-5 tabla_hide">
-                <div id="table" class="table-responsive-sm col-lg-12">
+                <div  class="p-5 tabla_hide">
+                <div class="table-responsive-sm col-lg-12">
                     
-                    <table id="usuarios" class="table table-hover ">
-                        <thead class="">
+                    <table id="usuarios" class="table table-striped table-bordered ">
+                        <thead >
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Nombre</th>
@@ -65,7 +65,7 @@
 
 <div class="modal fade" id="modalUsuarios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                                 aria-hidden="true">
-<form  method="POST">
+<form method="POST">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header text-center">
@@ -117,14 +117,14 @@
 
 </footer>   
 
-    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
     <!-- <script type="text/javascript" src="../../Styles/js/jquery.min.js"></script> -->
     <script type="text/javascript" src="../../Styles/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="../../Styles/js/popper.min.js"></script>
     <script type="text/javascript" src="../../Styles/js/mdb.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-1.52.3.min.js" charset = " utf-8 "></script>
     <script src="../../Scripts/validaciones.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> -->
     <script src="../../Scripts/FuncionesApp.js"></script>
     <script src="../../Scripts/datatables.js"></script>
 </body>

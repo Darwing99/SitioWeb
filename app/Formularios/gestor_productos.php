@@ -35,22 +35,46 @@
     
  </div>
 
- <div class="p-5 table-responsive-sm">
+ <div class="outer_div p-5 table-responsive">
                         
-    <table id="productos" class="table">
-        <thead>
+    <table id="table_productos" class="table table-condensed table-hover table-striped product-table">
+        <thead class='mdb-color lighten-5'>
         <tr>
-            <th scope="col">Código</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Descuento</th>
-            <th scope="col">ISV</th>
-            <th scope="col">Stock</th>
-            <!-- <th scope="col">Foto</th> -->
-            <th scope="col">Acción</th>
+            <th  class="font-weight-bold">No</th>
+            <th class="font-weight-bold">Código</th>
+            <th  class="font-weight-bold">Descripción</th>
+            <th class="font-weight-bold">Precio</th>
+            <th  class="font-weight-bold">Descuento</th>
+            <th  class="font-weight-bold">ISV</th>
+            <th class="font-weight-bold">Stock</th>
+            <th  class="font-weight-bold">Foto</th>
+            <th  class="font-weight-bold">Acción</th>
         </tr>
         </thead>
         <tbody>
+        <?php
+
+            $sql="SELECT * FROM `rproductos`";
+            $resultado=mysqli_query($conn,$sql);
+
+
+            while($producto=mysqli_fetch_array($resultado)){$i=0;?>
+            <tr>
+            <td><?php echo $producto[0];?></td>
+            <td><?php echo $producto[1];?></td>
+            <td><?php echo $producto[2];?></td>
+            <td><?php echo $producto[3];?></td>
+            <td><?php echo $producto[4];?></td>
+            <td><?php echo $producto[5];?></td>
+            <td><?php echo $producto[6];?></td>
+            <td> <img style="width: 100px; height:auto;" class="card-img-top" src="data:image/jpg; base64,<?php echo base64_encode($producto[7]);?>"></td>
+            <td><a class="btn-floating btn-success  btn-sm"><i class="fas fa-edit fa-2x"></i></a>
+                <a class="btn-floating btn-warning btnEliminar btn-sm"><i class="fas fa-trash fa-2x"></i></a>
+                </td>
+            </tr>
+            <?php $i++; }
+
+            ?>
         </tbody>
     </table>
 </div>

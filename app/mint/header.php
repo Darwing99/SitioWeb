@@ -3,7 +3,7 @@
    $objeto = new Conexion();
    $conexion = $objeto->Conectar();
    session_start();
-   if(!isset($_SESSION['id'])){
+   if(!isset($_SESSION['id']) ){
     print "<script>
     alert('Acceso Denegado');
     window.location='../Formularios/login.php?sms=1';

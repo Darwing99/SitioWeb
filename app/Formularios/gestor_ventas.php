@@ -54,7 +54,7 @@
             <form  class="tabla_hide centrar_form">
                         <div id="table" class="table-editable">
                    
-                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <table class="table table-striped table-bordered">
                         <thead>
                         <tr>
                             <th class="text-center">Codigo venta</th>

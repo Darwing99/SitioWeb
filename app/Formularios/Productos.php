@@ -7,9 +7,7 @@
     <?php
      include('../mint/datatables.php');
     ?>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../Styles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../Styles/css/mdb.min.css">
+   
     <link rel="stylesheet" href="../../Styles/form.css">
    
 </head>
@@ -37,8 +35,9 @@
             </div>
             <br>
          
-            <form class="pt-5 centrar_form" method="POST" action="../CRUD/insertCliente.php">
+            <form class="pt-5 centrar_form" method="POST" id="productos"  enctype="multipart/form-data">
             <div class="row">
+            <input type="hidden" name="option" value="7" required>
             <div class="col-lg-9 mb-4 p-4">
                 <div class="text-left">
               
@@ -121,7 +120,7 @@
                 </div>
             </div>
             </div>
-            <button type="submit" id="_agregar" class="btn btn-elegant"><i class="fas fa-plus-square"></i> Agregar</button>
+            <button type="submit" id="guardar" class="btn btn-elegant"><i class="fas fa-plus-square"></i> Agregar</button>
            
             <button type="reset" class="btn btn-elegant"><i class="far fa-save pr-2" aria-hidden="true"></i> Limpiar</button>
             </form>

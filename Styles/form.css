@@ -286,7 +286,12 @@ div.dataTables_wrapper div.dataTables_filter {
   border-color: #545b62;
 }
 
-
+@media (min-width: 992px){
+.modal .modal-fluid {
+    width: 99%;
+    max-width: 99%;
+}
+}
 
 .titulos{
 color:#606263;
@@ -307,6 +312,15 @@ font-weight:bold;
     padding-left: 3px;
   
 }
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
 
 .double-nav .button-collapse {
   position: relative;
@@ -315,3 +329,6 @@ font-weight:bold;
   margin-left: 10px;
   font-size: 1.4rem;
 }}
+.productos_catalago{
+  display: none;
+}

@@ -1,4 +1,6 @@
+
 <?php
+
 $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 if($action == 'ajax'){
 	/* Connect To Database*/
@@ -15,7 +17,7 @@ if($action == 'ajax'){
 		$descripcion=mysqli_real_escape_string($conn,(strip_tags($_POST["descripcion"],ENT_QUOTES)));
 		$cantidad=intval($_POST['cantidad']);
 		$precio=floatval($_POST['precio']);
-		$color=mysqli_real_escape_string($conn,(strip_tags($_POST["color"],ENT_QUOTES)));
+		$descuento=mysqli_real_escape_string($conn,(strip_tags($_POST["descuento"],ENT_QUOTES)));
 		$talla=mysqli_real_escape_string($conn,(strip_tags($_POST["talla"],ENT_QUOTES)));
 		$sql="INSERT INTO `rdetallefactura` (`correlativo`, `nofactura`, `codproducto`, `cantidad`, `descuento_producto`, 
                                              `impuesto`, `subtotal`, `preciototal`) 
@@ -57,39 +59,36 @@ if($action == 'ajax'){
 	$total_impuestos=($neto*$impuestos) / 100;
 	$total=$neto+$total_impuestos;
 	?>
-	<tr>
-		<td colspan='7'>
-		
-			<button id="mostrar" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> Agregar producto</button>
-		</td>
-	</tr>
+	
 	<tr>
 		<td colspan='5' class='text-right'>
-			<h4>Sub Total :</h4>
+			<h5>Sub Total :</h5>
 		</td>
 		<th class='text-right'>
-			<h4><?php echo number_format($neto,2);?></h4>
+			<h6><?php echo number_format($neto,2);?></h6>
 		</th>
 		<td></td>
 	</tr>
 	<tr>
 		<td colspan='5' class='text-right'>
-			<h4>Impuestos <small><?=$impuestos?>%</small> :</h4>
+			<h5>Impuestos <small><?=$impuestos?>%</small> :</h5>
 		</td>
 		<th class='text-right'>
-			<h4><?php echo number_format($total_impuestos,2);?></h4>
+			<h6><?php echo number_format($total_impuestos,2);?></h6>
 		</th>
 		<td></td>
 	</tr>
 	<tr>
 		<td colspan='5' class='text-right'>
-			<h4>Total :</h4>
+			<h5>Total :</h5>
 		</td>
 		<th class='text-right'>
-			<h4><?php echo number_format($total,2);?></h4>
+			<h6><?php echo number_format($total,2);?></h6>
 		</th>
 		<td></td>
 	</tr>
 <?php
 
-}
+} ?>
+
+

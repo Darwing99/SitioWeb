@@ -274,6 +274,7 @@ $(document).ready(function(){
     
     $('#mostrar').click(function(){
         $('#productos_catalago').slideToggle("slow");
+    
     })
   
   
@@ -412,7 +413,7 @@ $(document).ready(function() {
         $("#telefono").val(telefono);
         $("#email").val(email);
        
-        $('#DeleteModal').modal('show');	    
+        $('#modal_clientes').modal('hide');	    
     }); 
 
    

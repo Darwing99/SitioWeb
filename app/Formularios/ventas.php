@@ -18,7 +18,7 @@
   include('../mint/header.php');
 ?>
 </header>
-<br>
+
 <!-- Detalle de factura -->
 <?php 
     $sql=mysqli_query($conn, "SELECT LAST_INSERT_ID(correlativo) as last from rdetallefactura order by correlativo  desc limit 0,1 ");
@@ -32,6 +32,12 @@
   $result=mysqli_query($conn,$sql);
 
   $mostrar=mysqli_fetch_array($result);
+
+  $factura='SELECT Max(idfactura) as Max FROM rfactura';
+  $resultado=mysqli_query($conn,$factura);
+  $array=mysqli_fetch_array($resultado);
+  $numero_fact=$array['Max']+1;
+  $factura='Fact-'.$numero;
   ?>
 
 <div class="p-5">
@@ -41,7 +47,7 @@
           <div  class="col-sm-12  mb-4">
             <br>
             <div class="modal-header text-rigth  white darken-2">
-                    <h4 class="modal-title black-text w-50 font-weight-bold py-0">Nueva Venta</h4>
+                    <h4 class="modal-title black-text w-50 font-weight-bold py-0"><?php echo $factura; ?></h4>
                     <button id="mostrar_ocultar"  type="button" class="btn btn-outline-black btn-rounded btn-sm px-3 waves-effect">Ver Menu <i class="fas fa-eye fa-1x"></i></button>
 
                 </div>
@@ -190,26 +196,32 @@
             </div>
           </div>
 
-      <div class=" outer-section" >
+      <div class="outer-section" >
         
         <form class="form-horizontal" role="form" id="datos_presupuesto" method="post">
          <div id="print-area">
             
                 <div class="row pad-top font-big">
-                 <div class="col-lg-4 col-md-4 col-sm-4">
+                 <div class="col-lg-3 col-md-3 col-sm-3">
                    <a target="_blank">  <img style="width: 100px;" src="data:image/jpg; base64,<?php echo base64_encode($mostrar['logo']);?>" alt="Inveruta" /></a>
                  </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4">
-                     <strong>E-mail : </strong> <?php echo $mostrar['correo'];?>
+                 <div class="col-lg-3 col-md-3 col-sm-3">
+
+                     <strong>E-mail : </strong><?php echo $mostrar['correo'];?>
                      <br />
                      <strong>Teléfono :</strong> (+504) <?php echo $mostrar['telefono'];?> <br />
-                     <!-- <strong>Sitio web :</strong> <?php echo $rw['web'];?>  -->
+        
                     
                  </div>
-                 <div class="col-lg-4 col-md-4 col-sm-4">
+                 <div class="col-lg-3 col-md-3 col-sm-3">
                      <strong><?php echo $mostrar['nombre_empresa'];?>  </strong>
                      <br />
-                     Dirección : <?php echo $mostrar['direccion'];?> 
+                     <strong> Dirección : <?php echo $mostrar['direccion'];?>  </strong>
+                 </div>
+                 <div class="col-lg-3 col-md-3 col-sm-3">
+                    <strong>Fecha: </strong> <?php echo date("d/m/Y");?>
+                     <br />
+                     <strong>Numero de venta #: </strong> <?php echo $numero;?>
                  </div>
  
              </div>
@@ -218,103 +230,116 @@
              <!-- Detalles de cliente -->
  
              <div class="row ">
-             <hr />
-                 <div class="col-lg-6 col-md-6 col-sm-6">
+            
+                 <div class="col-lg-4 col-md-4 col-sm-4">
                           
                
                     
-                 <div class="col-md-8 col-10">
+                 <div class="col-md-10 col-10">
                     <div class="md-form">
+                    <i class="fas fa-user-tag prefix"></i>
                     <input type="hidden" name="idCliente" id="idCliente">
-                    <input  name="cliente" id="cliente"class="form-control" placeholder="Detalles del cliente" required value="">
+                    <input  name="cliente" id="cliente" class="form-control" placeholder="Detalles del cliente" required value="">
                     
                     </div>
                   </div>
          
-                <div class="col-md-8 col-10">
-                    
-                   
-                    <div class="md-form ">
-                      
-                    <input class="form-control"  id="email" placeholder="Email" readonly>
-                    
-                    </div>
-                </div>
-          
-                <div class="col-md-6 col-10">
-                    
-                   
-                    <div class="md-form form-sm">
-                      
-                    <input class="form-control form-control-sm" id="telefono" placeholder="Telefono" readonly>
-                    <!-- <label for="telefono">Telefono</label> -->
-                    </div>
-                </div>
             
                  </div>
 
-  
-           
-                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    
-                     <div class="row">
-                         <div class="col-lg-6">
-                           <h4><strong>Numero de venta #: </strong><?php echo $numero;?></h4>
-                         </div>
-                         <div class="col-lg-6">
-                              <h4><strong>Fecha: </strong> <?php echo date("d/m/Y");?></h4>
-                         </div>
-                     
-                     </div>
-                     <div class="row">
-                         <div class="col-lg-12">
-                         <label>Términos y condiciones:</label>
-                         <input type="text" name="condiciones" id="condiciones" class="form-control" placeholder="Términos y condiciones de la orden">
-                         </div>
-                         
-                         
-                         
-                     </div>
-                   
-                   
-                   
-                 </div>
-             </div>
-             
-            
-     <!-- Seccion de registro de producto -->
-     <div class="">
+                 <div class="col-lg-4 col-md-4 col-sm-4">
+                          
+                  
           
-          <section id="productos_catalago" type="button" class="productos_catalago p-5  pt-4 text-center">
+                  <div class="col-md-10 col-10">
+                  <div class="md-form form-sm">
+                        <i class="fas fa-phone-square prefix"></i>
+                        <input class="form-control form-control-sm" id="telefono" placeholder="Telefono" readonly>
+                        <!-- <label for="telefono">Telefono</label> -->
+                        </div>
+                        
+                 
+                  </div> 
+            
+                  </div> 
+              
+                  
+                  <div class="col-lg-4 col-md-4 col-sm-4">
+                          
+               
+                    
+                    <div class="col-md-10 col-10">
+                        
+                      
+                        <div class="md-form ">
+                        <i class="fas fa-envelope prefix"></i>
+                        <input class="form-control"  id="email" placeholder="Email" readonly>
+                        
+                        </div>
+                    </div>
+              
+      
+                
+                    </div>
+            
+
+              
+                  </div>
+
+  
+         </div>
+                
+             
+        </form>
+            
+    
+        </div>
+ <!-- Seccion de registro de producto -->
+    
+
+        <div class="outer-section">
+        <div class="col-lg-12">
+          <button id="mostrar" type="button" class="btn btn-elegant btn-sm" ><span class="glyphicon glyphicon-plus"></span> Agregar producto</button>
+          </div>
+          <hr>
+          <section id="productos_catalago" type="button" class="px-2 productos_catalago">
           <form class="form-horizontal" name="guardar_item" id="guardar_item">
                 <!--Grid row-->
                 <div class="row">
-                <div class="col-md-6">
-                    <label>Descripción del producto</label>
-                    <textarea class="form-control" id="descripcion" name="descripcion"  required></textarea>
-                    <input type="hidden" class="form-control" id="action" name="action"  value="ajax">
-                </div>
-                <div class="col-md-6">
-                        <label>Color</label>
-                        <input type="text" class="form-control" id="color" name="color" required>
-                </div>
-                              
-                <div class="col-md-6">
-                        <label>Cantidad</label>
-                        <input type="text" class="form-control" id="cantidad" name="cantidad" required>
-                    </div>
-                                            
-                    <div class="col-md-6">
+                   <div class="col-md-3">
+                        <label>Descripción del producto</label>
+                        <input class="form-control" id="descripcion" name="descripcion"  required>
+                        <input type="hidden" class="form-control" id="action" name="action"  value="ajax">
+                   </div>
+                   <div class="col-md-1">
                         <label>Precio</label>
-                      <input type="text" class="form-control" id="precio" name="precio" required>
+                        <input type="text" class="form-control" id="precio" name="precio" required>
                     </div>
+                    <div class="col-md-1">
+                        <label>Cantidad</label>
+                        <input type="number" class="form-control" id="cantidad" name="cantidad" required>
+                    </div>
+                    
+                    <div class="col-md-1">
+                        <label>Descuento</label>
+                        <input type="number" class="form-control" id="descuento" name="descuento" required>
+                    </div>
+                    <div class="col-md-2 pt-3">
+                    <button type="submit" class="btn btn-info" >Guardar</button>
+                    </div>
+                        
                 </div>
+                 <hr>    
+                 
                 <!--Grid row-->
           </form>
     
                 </section>
-        </div>
+         </div>
+      
              
+
+
              <div class="row">
              <hr />
                  <div class="col-lg-12 col-md-12 col-sm-12">
@@ -343,25 +368,19 @@
             
             
              
-         
-         </div>
-        <div class="row"> <hr /></div>
+       
+        <div class="row"> <hr />
          <div class="row pad-bottom  pull-right">
          
              <div class="col-lg-12 col-md-12 col-sm-12">
-                 <button type="submit" class="btn btn-success ">Guardar orden de pedido</button>
+                 <button type="submit" class="btn btn-elegant ">Guardar orden de pedido</button>
               
              </div>
+         </div>
          </div>
          </form>
      </div>
 
-
-</form> 
-<!-- Fin de formulario principal -->
-  <!-- #######Modal de productos################# -->
-
-  </div>
 <footer>
     <?php
     include("../mint/footer.php");

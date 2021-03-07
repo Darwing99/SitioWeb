@@ -21,6 +21,15 @@
     <header>
       <?php
       include('../mint/header.php');
+
+
+      $query_dash=mysqli_query($conn,"CALL `datosDasboard`();");
+      $result_dash=mysqli_num_rows($query_dash);
+      if($result_dash>0){
+        $data_dash=mysqli_fetch_assoc($query_dash);
+        mysqli_close($conn);
+      }
+    
       ?>
     </header>
     <main class="pt-5">
@@ -48,8 +57,8 @@
                           <div class="">
                             <i class="far fa-money-bill-alt fa-lg primary-color z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
                             <div class="float-right text-right p-3">
-                              <p class="text-uppercase text-muted mb-1"><small>sales</small></p>
-                              <h4 class="font-weight-bold mb-0">23 000$</h4>
+                              <p class="text-uppercase text-muted mb-1"><small>Ventas</small></p>
+                              <h4 class="font-weight-bold mb-0"><?=  $data_dash['ventas'];?></h4>
                             </div>
                           </div>
 
@@ -76,8 +85,8 @@
                           <div class="">
                             <i class="fas fa-chart-line fa-lg teal z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
                             <div class="float-right text-right p-3">
-                              <p class="text-uppercase text-muted mb-1"><small>subscriptions</small></p>
-                              <h4 class="font-weight-bold mb-0">3534</h4>
+                              <p class="text-uppercase text-muted mb-1"><small>Compras</small></p>
+                              <h4 class="font-weight-bold mb-0"><?=$data_dash['compras'];?></h4>
                             </div>
                           </div>
 
@@ -104,8 +113,8 @@
                           <div class="">
                             <i class="fas fa-chart-pie fa-lg purple z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
                             <div class="float-right text-right p-3">
-                              <p class="text-uppercase text-muted mb-1"><small>traffic</small></p>
-                              <h4 class="font-weight-bold mb-0">656 234</h4>
+                              <p class="text-uppercase text-muted mb-1"><small>Productos</small></p>
+                              <h4 class="font-weight-bold mb-0"><?= $data_dash['productos'];?></h4>
                             </div>
                           </div>
 
@@ -121,141 +130,88 @@
                         <!-- Admin card -->
 
                         </div>
-                        <div class="col-xl-3 col-md-6 mb-4">
+                        <div  class="col-lg-4 col-md-6 mb-4">
 
-                          <!-- Card -->
-                          <div class="card dark-card-admin text-black">
+<!-- Admin card -->
+                            <div class="card mt-3">
 
-                            <!-- Card Data -->
-                            <div class="row mt-3">
-
-                              <div class="col-md-5 col-5 text-left pl-4">
-                                <a type="button" class="btn-floating btn-lg light-blue lighten-1 ml-4 waves-effect waves-light"><i class="fab fa-product-hunt"></i></a>
+                              <div class="">
+                              
+                                <i class="fas fa-user-tie fa-lg black z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
+                                <div class="float-right text-right p-3">
+                                  <p class="text-uppercase text-muted mb-1"><small>Usuarios</small></p>
+                                  <h4 class="font-weight-bold mb-0"><?= $data_dash['usuarios'];?></h4>
+                                </div>
                               </div>
 
-                              <div class="col-md-7 col-7 text-right pr-5">
-                               
-                                <h5 class="ml-4 mt-4 mb-2 font-black-bold"></h5>
-                                <p class="font-small black-text text-black"><h6 style="color:black;" >Insumos</h6> </p>
+                              <div class="card-body pt-0">
+                                <div class="progress md-progress">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                                </div>
+                                <p class="card-text">Better than last week (31%)</p>
                               </div>
 
                             </div>
-                           
-                            <hr>
-                              <div class="card-body">
-                                 <a href="insumos" class="btn btn-so"> <i class="fas fa-eye"></i> Mostrar</a>
-                              </div>
-                            <!-- Card content -->
+                            <!-- Admin card -->
 
-                          </div>
-                          <!-- Card -->
-
-                        </div>
-
-                        <div class="col-xl-3 col-md-6 mb-4">
-
-                          <!-- Card -->
-                          <div class="card dark-card-admin text-black">
-
-                            <!-- Card Data -->
-                            <div class="row mt-3">
-
-                              <div class="col-md-5 col-5 text-left pl-4">
-                                <a type="button" class="btn-floating btn-lg red accent-2 ml-4 waves-effect waves-light"><i class="fab fa-product-hunt"></i></a>
-                              </div>
-                              <?php 
-                         
-                                $sqlProductos="SELECT count(*) as suma FROM rproductos";
-                                $Productos=mysqli_query($conn,$sqlProductos);
-                                $datosP=mysqli_fetch_array($Productos);
-                                
-                                ?>
-
-                              <div class="col-md-7 col-7 text-right pr-5">
-                                <h5 class="ml-4 mt-4 mb-2 font-weight-bold"><?php echo $datosP['suma']; ?></h5>
-                                <p class="font-small grey-text text-white"><h6 style="color:black;" >Productos</h6> </p>
-                              </div>
                             </div>
-                            <hr>
-                            <div class="card-body">
-                            <a href="Productos"  class="btn btn-so"><i class="fas fa-eye"></i> Mostrar</a>
+                     
+
+                            <div class="col-lg-4 col-md-6 mb-4">
+
+<!-- Admin card -->
+                            <div class="card mt-3">
+
+                              <div class="">
+                                <i class="fas fa-chart-pie fa-lg purple z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
+                                <div class="float-right text-right p-3">
+                                  <p class="text-uppercase text-muted mb-1"><small>Clientes</small></p>
+                                  <h4 class="font-weight-bold mb-0"><?= $data_dash['clientes'];?></h4>
+                                </div>
+                              </div>
+
+                              <div class="card-body pt-0">
+                                <div class="progress md-progress">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                                </div>
+                                <p class="card-text">Better than last week (31%)</p>
+                              </div>
+
                             </div>
-                            <!-- Card content -->
+                            <!-- Admin card -->
 
-                          </div>
-                          <!-- Card -->
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-6 mb-4">
 
-                        </div>
+<!-- Admin card -->
+                            <div class="card mt-3">
+
+                              <div class="">
+                                <i class="fas fa-chart-pie fa-lg purple z-depth-2 p-4 ml-3 mt-n3 rounded text-white"></i>
+                                <div class="float-right text-right p-3">
+                                  <p class="text-uppercase text-muted mb-1"><small>Proveedores</small></p>
+                                  <h4 class="font-weight-bold mb-0"><?= $data_dash['proveedores'];?></h4>
+                                </div>
+                              </div>
+
+                              <div class="card-body pt-0">
+                                <div class="progress md-progress">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                                </div>
+                                <p class="card-text">Better than last week (31%)</p>
+                              </div>
+
+                            </div>
+                            <!-- Admin card -->
+
+                            </div>
+                     
                         <!-- Grid column -->
 
-                       <div class="col-xl-3 col-md-6 mb-4">
-
-                          <!-- Card -->
-                          <div class="card dark-card-admin text-black">
-
-                            <!-- Card Data -->
-                            <div class="row mt-3">
-
-                              <div class="col-md-5 col-5 text-left pl-4">
-                                <a type="button" class="btn-floating btn-lg red accent-2 ml-4 waves-effect waves-light"><i class="fas fa-user-edit"></i></a>
-                              </div>
-                              <?php 
-                     
-                                $sqlProveedores="SELECT count(*) as suma FROM rproveedores";
-                                $Proveedores=mysqli_query($conn,$sqlProductos);
-                                $datosPr=mysqli_fetch_array($Proveedores);
-                                
-                                ?>
-                              <div class="col-md-7 col-7 text-right pr-5">
-                                <h5 class="ml-4 mt-4 mb-2 font-weight-bold"><?php echo $datosPr['suma'] ?></h5>
-                                <p class="font-small grey-text text-white"><h6 style="color:black;" >Proveedores</h6> </p>
-                              </div>
-
-                            </div>
-                            <hr>
-                            <div class="card-body">
-                            <a href="proveedores"  class="btn btn-so"><i class="fas fa-eye"></i> Mostrar</a>
-                            </div>
-                            <!-- Card content -->
-
-                          </div>
-                          <!-- Card -->
-
-                        </div>
-                        <div class="col-xl-3 col-md-6 mb-4">
-
-                          <!-- Card -->
-                          <div class="card dark-card-admin text-black">
-
-                            <!-- Card Data -->
-                            <div class="row mt-3">
-
-                              <div class="col-md-5 col-5 text-left pl-4">
-                                <a type="button" class="btn-floating btn-lg red accent-2 ml-4 waves-effect waves-light"><i class="fas fa-user-edit"></i></a>
-                              </div>
-                              <?php 
-                          
-                                $sqlclientes="SELECT count(*) as suma FROM rclientes";
-                                $clientes=mysqli_query($conn,$sqlclientes);
-                                $datosC=mysqli_fetch_array($clientes);
-                                
-                                ?>
-                              <div class="col-md-7 col-7 text-right pr-5">
-                                <h5 class="ml-4 mt-4 mb-2 font-weight-bold"> <?php echo $datosC['suma'];?></h5>
-                                <p class="font-small grey-text text-white"><h6 style="color:black;" >Clientes</h6> </p>
-                              </div>
-
-                            </div>
-                            <hr>
-                            <div class="card-body">
-                            <a href="cliente"  class="btn btn-so"> <i class="fas fa-eye"></i> Mostrar</a>
-                            </div>
-                            <!-- Card content -->
-
-                          </div>
-                          <!-- Card -->
-
-                        </div>
                         <!-- Grafico de compras -->
                         <div class="col-xl-6 col-md-6 mb-6">
                         <div class="modal-header text-center modal-success darken-2">

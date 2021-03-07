@@ -43,6 +43,7 @@
 <div class="p-5">
 <form id="ventas" method="POST" >
     <div class="pt-5 card-deck">
+   
 
           <div  class="col-sm-12  mb-4">
             <br>
@@ -145,7 +146,7 @@
 <!-- MODAL DE CLIENTES -->
        <div class="modal fade" id="modal_clientes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-notify modal-success" role="document">
+            <div class="modal-dialog modal-xl modal-notify modal-info" role="document">
               <!--Content-->
               <div class="modal-content">
                 <!--Header-->
@@ -189,7 +190,7 @@
                 <!--Footer-->
                 <div class="modal-footer justify-content-center">
                   
-                  <a type="button" class="btn btn-elegant waves-effect" data-dismiss="modal">Cerrar</a>
+            
                 </div>
               </div>
               <!--/.Content-->
@@ -294,6 +295,87 @@
             
     
         </div>
+  <!-- Modal de productos -->
+
+
+        <div class="modal fade" id="_productos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-notify modal-info" role="document">
+              <!--Content-->
+              <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                  <p class="heading lead">Productos</p>
+
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                  </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                  <div class="">
+                    
+                    <section id="" type="button" class="">
+
+                    <div class=" table-responsive">
+                        
+                        <table id="tabla_productos" class="table table-condensed   product-table">
+                            <thead>
+                            <tr>
+                            <th  class="font-weight-bold">No</th>
+                              <th class="font-weight-bold">Código</th>
+                              <th  class="font-weight-bold">Descripción</th>
+                              <th class="font-weight-bold">Precio</th>
+                              <th  class="font-weight-bold">Descuento</th>
+                              <th  class="font-weight-bold">ISV</th>
+                              <th class="font-weight-bold">Stock</th>
+                              <th  class="font-weight-bold">Foto</th>
+                              <th  class="font-weight-bold">Acción</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+
+                                $sql="SELECT * FROM `rproductos`";
+                                $resultado=mysqli_query($conn,$sql);
+
+
+                                while($producto=mysqli_fetch_array($resultado)){$i=0;?>
+                                <tr>
+                                <td><?php echo $producto[0];?></td>
+                                <td><?php echo $producto[1];?></td>
+                                <td><?php echo $producto[2];?></td>
+                                <td><?php echo $producto[3];?></td>
+                                <td><?php echo $producto[4];?></td>
+                                <td><?php echo $producto[5];?></td>
+                                <td><?php echo $producto[6];?></td>
+                                <td> <img style="width: 100px; height:auto;" class="card-img-top" src="data:image/jpg; base64,<?php echo base64_encode($producto[7]);?>"></td>
+                                <td>
+                                     <a class="btn-floating btn-elegant btnSeleccionar btn-sm"><i class="fas fa-clipboard-check  fa-2x"></i></a>
+                                    </td>
+                                </tr>
+                                <?php $i++; }
+
+                                ?>
+                            </tbody>
+                        </table>
+                        </div>
+
+                        </section>
+                      </div>
+                    </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                  
+                
+                </div>
+              </div>
+              <!--/.Content-->
+            </div>
+          </div>
+
  <!-- Seccion de registro de producto -->
     
 
@@ -306,6 +388,14 @@
           <form class="form-horizontal" name="guardar_item" id="guardar_item">
                 <!--Grid row-->
                 <div class="row">
+                <!-- Numero de factura -->
+                <input type="hidden" id="factura" name="factura" value="<?php echo $factura;?>">
+                    <!-- Numero de factura -->
+                    <div class="col-md-3">
+                        <label>Codigo</label>
+                        <input class="form-control" id="codigo" name="codigo"  required>
+                        
+                   </div>
                    <div class="col-md-3">
                         <label>Descripción del producto</label>
                         <input class="form-control" id="descripcion" name="descripcion"  required>
@@ -315,6 +405,7 @@
                         <label>Precio</label>
                         <input type="text" class="form-control" id="precio" name="precio" required>
                     </div>
+
                     <div class="col-md-1">
                         <label>Cantidad</label>
                         <input type="number" class="form-control" id="cantidad" name="cantidad" required>

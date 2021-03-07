@@ -15,13 +15,19 @@ if($action == 'ajax'){
 	if (isset($_POST['descripcion'])){
 		
 		$descripcion=mysqli_real_escape_string($conn,(strip_tags($_POST["descripcion"],ENT_QUOTES)));
+		$factura=intval($_POST['factura']);
+		$codigo=intval($_POST['codigo']);
 		$cantidad=intval($_POST['cantidad']);
 		$precio=floatval($_POST['precio']);
-		$descuento=mysqli_real_escape_string($conn,(strip_tags($_POST["descuento"],ENT_QUOTES)));
-		$talla=mysqli_real_escape_string($conn,(strip_tags($_POST["talla"],ENT_QUOTES)));
+		$ddescuento=mysqli_real_escape_string($conn,(strip_tags($_POST["descuento"],ENT_QUOTES)));
+		$ssubtotal=$cantidad*$precio;
+		$ttotal=$ssubtotal-$ssubtotal*$ddescuento/100;
+
+	
+
 		$sql="INSERT INTO `rdetallefactura` (`correlativo`, `nofactura`, `codproducto`, `cantidad`, `descuento_producto`, 
-                                             `impuesto`, `subtotal`, `preciototal`) 
-		VALUES (NULL, '$descripcion', '$cantidad', '$precio','$color','$talla');";
+                                             `precio`, `subtotal`, `preciototal`) 
+		VALUES (NULL,'$factura','$codigo', '$cantidad','$ddescuento', '$precio','$ssubtotal','$ttotal');";
 		
 		$insert=mysqli_query($conn,$sql);
     }

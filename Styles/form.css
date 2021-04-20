@@ -243,7 +243,9 @@ table .dataTable thead {
   background: #2e2e2e!important;
   color:white;
 }
-
+table{
+  width: 100%;
+}
 
 /* Esto es opcional pero sirve para que todos los botones de exportacion se distribuyan de manera equitativa usando flexbox */
 
@@ -331,4 +333,8 @@ font-weight:bold;
 }}
 .productos_catalago{
   display: none;
+}
+.dataTables_wrapper .dataTables_filter {
+  float: right;
+  text-align: right;
 }

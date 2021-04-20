@@ -52,6 +52,11 @@ background-size: cover; opacity: 5; }
   .dropdown-toggle::after {
     content: none;
 }
+.edge-header {
+  display: block;
+  height: 180px;
+  background-color: #ccc;
+}
 .text-dark{
   font-size: 18px; 
   box-shadow: white;
@@ -60,7 +65,7 @@ background-size: cover; opacity: 5; }
   background-color: rgb(240, 122, 122);
 }
   .image{
-    height: 100px;
+    height: 80px;
   }
   .image:hover{
     border-radius: 50px; 

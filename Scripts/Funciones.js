@@ -90,6 +90,28 @@ $('#ver').click(function(){
       return false; 
     
     }else{
+      $.ajax({
+        type: 'POST',
+        url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+        data: {
+          'key': 'YOUR API KEY HERE',
+          'message': {
+            'from_email': 'darwing01000100gmail.com',
+            'to': [
+                {
+                  'email': email,
+                  'name': nombre,
+                  'type': 'to'
+                }
+              ],
+            'autotext': 'true',
+            'subject': mensaje,
+            'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+          }
+        }
+       }).done(function(response) {
+         console.log(response); // if you're into that sorta thing
+       });
       $('#modal_email').modal('show');
     }
 });
@@ -122,3 +144,4 @@ $('.icon').click(function(){
 	});
 });
 
+ 

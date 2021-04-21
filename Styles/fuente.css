@@ -59,7 +59,7 @@ background-size: cover; opacity: 5; }
 }
 .top-nav-collapse{
  height: 70px;
- transition-duration: 500ms; 
+ transition-duration: 1000ms; 
 }
 .text-dark{
   font-size: 18px; 
@@ -74,7 +74,7 @@ background-size: cover; opacity: 5; }
   .image:hover{
     border-radius: 50px; 
     box-shadow:  0 0 5px rgba(255, 54, 4, 0.993), 
-                  0 0 10px rgba(211, 36, 24, 0.993); 
+                  0 0 5px rgba(211, 36, 24, 0.993); 
   }
   .sombra:hover{
     border-radius: 5px;

@@ -147,8 +147,9 @@ $('.icon').click(function(){
 
 $(function (){
   $(window).scroll(function(){
-     if ($(this).scrollTop() > 100) {
+     if ($(this).scrollTop() > 80) {
       $('.navbar').addClass("aqua-gradient");
+
      } else {
       $(".navbar").removeClass("aqua-gradient");
      }

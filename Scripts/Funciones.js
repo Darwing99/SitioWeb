@@ -149,9 +149,11 @@ $(function (){
   $(window).scroll(function(){
      if ($(this).scrollTop() > 80) {
       $('.navbar').addClass("aqua-gradient");
+      $('.dropdown-menu').addClass("aqua-gradient");
 
      } else {
       $(".navbar").removeClass("aqua-gradient");
+      $('.dropdown-menu').removeClass("aqua-gradient");
      }
   });
 });

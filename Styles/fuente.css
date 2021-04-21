@@ -57,10 +57,7 @@ background-size: cover; opacity: 5; }
   height: 180px;
   background-color: #ccc;
 }
-.top-nav-collapse{
- height: 70px;
- transition-duration: 1000ms; 
-}
+
 .text-dark{
   font-size: 18px; 
   box-shadow: white;

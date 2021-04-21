@@ -48,7 +48,7 @@ background-size: cover; opacity: 5; }
       /*Without this, clicking will make it sticky*/
       pointer-events: none;
   }
- 
+
   .dropdown-toggle::after {
     content: none;
 }
@@ -56,6 +56,10 @@ background-size: cover; opacity: 5; }
   display: block;
   height: 180px;
   background-color: #ccc;
+}
+.top-nav-collapse{
+ height: 70px;
+ transition-duration: 500ms; 
 }
 .text-dark{
   font-size: 18px; 
@@ -79,6 +83,8 @@ background-size: cover; opacity: 5; }
   }
 
  
+
+
   .btn-floating:hover{
     background-color: rgb(253, 3, 3);
     size: 50px;

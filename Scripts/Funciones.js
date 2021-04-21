@@ -144,4 +144,15 @@ $('.icon').click(function(){
 	});
 });
 
+
+$(function (){
+  $(window).scroll(function(){
+     if ($(this).scrollTop() > 100) {
+      $('.navbar').addClass("aqua-gradient");
+     } else {
+      $(".navbar").removeClass("aqua-gradient");
+     }
+  });
+});
+
  
